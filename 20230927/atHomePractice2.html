@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        font-size: 30px;
+      }
+      td {
+        text-align: center;
+        background-color: rgb(191, 140, 238);
+        width: 150px;
+        height: 150px;
+        border: 2px solid black;
+      }
+
+      .c1 td {
+        color: yellow;
+      }
+
+      .c2 td {
+        color: rgb(66, 241, 139);
+      }
+
+      /* .c {
+        color: rgb(136, 51, 51);
+      } */
+
+      .c3 td {
+        color: rgb(83, 241, 241);
+        background-color: rgb(228, 73, 184);
+      }
+
+      .c4 td {
+        color: rgb(83, 241, 241);
+      }
+
+      .c5 td {
+        color: rgb(83, 241, 241);
+      }
+
+      .c6 {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>table 九宮格</h2>
+    <table>
+      <tr class="c1">
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr class="c2">
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr class="c4">
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </table>
+    <hr />
+    <h2>table 九宮格 colspan</h2>
+    <table>
+      <tr class="c1">
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr class="c2">
+        <td>4</td>
+        <td colspan="2">5</td>
+        <!-- <td>6</td> -->
+      </tr>
+      <tr class="c3">
+        <td class="c" colspan="3">7</td>
+        <!-- <td class="c">8</td>
+        <td class="c">9</td> -->
+      </tr>
+    </table>
+    <hr />
+    <h2>table 九宮格 rowspan</h2>
+    <table>
+      <tr class="c1">
+        <td class="c6" rowspan="3">1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr class="c2">
+        <!-- <td>4</td> -->
+        <td rowspan="2">5</td>
+        <td>6</td>
+      </tr>
+      <tr class="c5">
+        <!-- <td>7</td> -->
+        <!-- <td>8</td> -->
+        <td>9</td>
+      </tr>
+    </table>
+    <hr />
+  </body>
+</html>

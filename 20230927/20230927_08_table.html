@@ -19,7 +19,7 @@
       td {
         width: 100px;
         height: 100px;
-        background-color: antiquewhite;
+        background-color: rgb(227, 114, 113);
       }
 
       /* 下一層會改變 */
@@ -36,6 +36,7 @@
   </head>
   <body>
     <table>
+      <h2>table 九宮格</h2>
       <tr class="s1">
         <td>1</td>
         <td>2</td>
@@ -55,21 +56,44 @@
     <br /><br />
     <hr />
     <table>
-      <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
+      <h2>table 九宮格 colspan</h2>
+      <tr class="s1">
+        <td colspan="3">1</td>
+        <!-- <td>2</td> -->
+        <!-- <td>3</td> -->
       </tr>
-      <tr>
+      <tr class="s2">
         <td>4</td>
         <td>5</td>
         <td>6</td>
       </tr>
-      <tr>
+      <tr class="s3">
         <td>7</td>
         <td>8</td>
         <td>9</td>
       </tr>
     </table>
+    <br /><br />
+    <hr />
+    <table>
+      <h2>table 九宮格 rowspan</h2>
+      <tr class="s1">
+        <td rowspan="3">1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr class="s2">
+        <!-- <td>4</td> -->
+        <td>5</td>
+        <td rowspan="2">6</td>
+      </tr>
+      <tr class="s3">
+        <!-- <td>7</td> -->
+        <td>8</td>
+        <!-- <td>9</td> -->
+      </tr>
+    </table>
+    <br /><br />
+    <hr />
   </body>
 </html>
