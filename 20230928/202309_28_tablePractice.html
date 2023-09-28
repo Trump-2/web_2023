@@ -11,13 +11,25 @@
         width: 900px;
         font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
           "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-      }
-      td {
-        background-color: beige;
-        font-size: 20px;
         text-align: center;
+        font-size: 20px;
+        margin: 0 auto;
+      }
+      td,
+      th {
         border: 2px solid rgb(241, 183, 149);
         width: 70px;
+      }
+
+      th {
+        background-color: rgba(235, 208, 51, 0.52);
+        border: 2px solid rgb(241, 183, 149);
+        color: rgb(0, 0, 0);
+      }
+
+      td {
+        background-color: beige;
+        color: rgb(72, 178, 228);
       }
 
       .first {
@@ -28,12 +40,12 @@
   <body>
     <table>
       <tr>
-        <td class="first">節數</td>
-        <td>一</td>
-        <td>二</td>
-        <td>三</td>
-        <td>四</td>
-        <td>五</td>
+        <th class="first">節數</th>
+        <th>一</th>
+        <th>二</th>
+        <th>三</th>
+        <th>四</th>
+        <th>五</th>
       </tr>
       <tr>
         <td class="first">
