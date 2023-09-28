@@ -8,7 +8,7 @@
       table {
         /* border: 1px solid green; */
         border-collapse: collapse;
-        width: 900px;
+        width: 600px;
         font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
           "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
         text-align: center;
@@ -17,17 +17,17 @@
       }
       td,
       th {
-        border: 2px solid rgb(241, 183, 149);
         width: 70px;
       }
 
       th {
         background-color: rgba(235, 208, 51, 0.52);
-        border: 2px solid rgb(241, 183, 149);
+        border: thick double rgb(224, 112, 47);
         color: rgb(0, 0, 0);
       }
 
       td {
+        border: 2px solid rgb(241, 183, 149);
         background-color: beige;
         color: rgb(72, 178, 228);
       }
@@ -35,9 +35,28 @@
       .first {
         width: 150px;
       }
+
+      .one {
+        background-color: rgb(248, 211, 155);
+      }
+
+      .afternoon {
+        background-color: rgb(208, 244, 232);
+      }
+
+      .unique {
+        background-color: rgb(243, 209, 209);
+      }
+      h2 {
+        text-align: center;
+        text-decoration: rgba(248, 15, 15, 0.864) wavy underline;
+        text-decoration: underline wavy #f54236;
+        margin-bottom: 40px;
+      }
     </style>
   </head>
   <body>
+    <h2>工具人：劉展華</h2>
     <table>
       <tr>
         <th class="first">節數</th>
@@ -52,7 +71,7 @@
           早自習<br />
           0750 ~ 0830
         </td>
-        <td colspan="5"></td>
+        <td class="one" colspan="5"></td>
         <!-- <td></td>
         <td></td>
         <td></td>
@@ -155,7 +174,7 @@
           午休時間<br />
           1200 ~ 1320
         </td>
-        <td colspan="5"></td>
+        <td class="afternoon" colspan="5"></td>
         <!-- <td></td>
         <td></td>
         <td></td>
@@ -174,7 +193,7 @@
           美勞<br />
           許文杰
         </td>
-        <td rowspan="3"></td>
+        <td class="unique" rowspan="3"></td>
         <td rowspan="3">
           綜合<br />
           劉展華
