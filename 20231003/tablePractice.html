@@ -6,27 +6,64 @@
   <title>Document</title>
   <style>
     table,td{
-      border:1px solid red;
+      border:5px solid rgb(7, 157, 10);
       border-collapse:collapse;
+    }
+
+    body {
+      background-color:black
+    }
+
+    table {
+      width:80%;
+      margin:auto;
     }
 
     td {
       width:250px;
       height:350px;
     }
-    .t-2 {
-      width:1250px;
+
+    h2 {
+      color:#fff;
+    }
+    .container {
+      width:80%;
+      margin:auto;
+      text-align:center;
     }
 
-    .s-td2 {
-      width:500px;
+    
+    .h-20 {
+      height:20vh;
     }
-    .d-h {
-      height:100px;
+
+    .h-30 {
+      height:30vh;
     }
-    .d-h2 {
-      height:50px;
+
+    .h-60 {
+      height:60vh;
     }
+
+    .h-80 {
+      height:80vh;
+    }
+
+    .w-25 {
+      width:25%;
+    }
+
+    .w-30 {
+      width:30%;
+    }
+
+    .w-50 {
+      width:50%;
+    }
+    
+    
+
     /* 將第二個 table 和他的 td 的 border - top 清除，兩表格銜接處才不會看起來比較粗*/
     .t-2-2 {
       border-top:0;
@@ -37,7 +74,7 @@
 
     .a_container {
       text-align: center;
-      font-size:30px;
+      font-size:40px;
       font-weight: bolder;
       font-style:italic;
       margin-top:30px;
@@ -45,6 +82,20 @@
 
     a:link {
       margin-right:30px;
+      color:rgb(40, 200, 240);
+      text-decoration:none;
+    }
+
+    a:visited {
+      color:rgb(40, 200, 240);
+    }
+
+    a:hover {
+      color:red;
+    }
+
+    a:active {
+      color:red;
     }
 
     a:link:last-child{
@@ -52,28 +103,28 @@
     }
 
     hr {
-      border:3px dotted black;
+      border:3px dotted rgb(236, 168, 9);
     }
   </style>
 </head>
 <body>
-  <div class="a_container">
+  <nav class="a_container">
     <a href="#t1">康乃爾筆記法</a>
     <a href="#t2">東大筆記法</a>
     <a href="#t3">麥肯錫筆記法</a>
     <a href="#t4">較複雜表格</a>
 
-  </div>
+  </nav>
   <div id="t1" class="container">
     <hr>
     <h2>康乃爾筆記法</h2>
     <table>
       <tr>
-        <td></td>
+        <td class="w-30 h-60"></td>
         <td></td>
       </tr>
       <tr>
-        <td class="d-h" colspan="2"></td>
+        <td class="h-30" colspan="2"></td>
         <!-- <td ></td> -->
       </tr>
     </table>
@@ -83,7 +134,7 @@
     <h2>東大筆記法</h2>
     <table>
       <tr>
-        <td class="s-td2"></td>
+        <td class="w-50 h-80"></td>
         <!-- <td></td> -->
         <td></td>
         <td></td>
@@ -96,12 +147,12 @@
     <h2>麥肯錫筆記法</h2>
     <table>
       <tr>
-        <td class="d-h2" colspan="3"></td>
+        <td class="h-20" colspan="3"></td>
         <!-- <td></td>
           <td></td> -->
         </tr>
         <tr>
-          <td></td>
+          <td class="h-80 w-50"></td>
           <td></td>
           <td></td>
         </tr>
@@ -110,72 +161,31 @@
   <div id="t4" class="container">
     <hr>
     <h2>較複雜表格</h2>
-    <table class="t-2">
+    <table>
       <tr>
-        <td rowspan="2">1</td>
-        <td>2</td>
-        <td rowspan="2">3</td>
-        <td>4</td>
-        <td rowspan="2">5</td>
+        <td rowspan="2"></td>
+        <td></td>
+        <td rowspan="2"></td>
+        <td></td>
+        <td rowspan="2"></td>
       </tr>
       
       <tr>
         <!-- <td>6</td> -->
-        <td>7</td>
+        <td></td>
         <!-- <td>8</td> -->
-        <td>9</td>
+        <td></td>
         <!-- <td>10</td> -->
       </tr>
     </table>
-    <table class="t-2 t-2-2">
+    <table class="t-2-2">
       <tr>
-        <td class="t-2-td">16</td>
-        <td class="t-2-td">17</td>
+        <td class="t-2-td"></td>
+        <td class="t-2-td"></td>
       </tr>
     </table>
   </div>
-  <div class="container">
-    <hr>
-    <h2>較複雜表格 2</h2>
-    <table>
-      <tr>
-        <td colspan="2" rowspan="2">1</td>
-        <!-- <td>2</td> -->
-        <td colspan="2">3</td>
-        <!-- <td>4</td> -->
-        <td colspan="2" rowspan="2">5</td>
-        <!-- <td>6</td> -->
-        <td colspan="2">7</td>
-        <!-- <td>8</td> -->
-        <td colspan="2" rowspan="2">9</td>
-        <!-- <td>10</td> -->
-      </tr>
-      <tr>
-        <!-- <td colspan="2">11</td> -->
-        <!-- <td>12</td> -->
-        <td colspan="2">13</td>
-        <!-- <td>14</td> -->
-        <!-- <td colspan="2">15</td> -->
-        <!-- <td>16</td> -->
-        <td colspan="2">17</td>
-        <!-- <td>18</td> -->
-        <!-- <td colspan="2">19</td> -->
-        <!-- <td>20</td> -->
-      </tr>
-      <tr>
-        <td colspan="5">21</td>
-        <!-- <td>22</td> -->
-        <!-- <td>23</td> -->
-        <!-- <td>24</td> -->
-        <!-- <td>25</td> -->
-        <td colspan="5">26</td>
-        <!-- <td>27</td> -->
-        <!-- <td>28</td> -->
-        <!-- <td>29</td> -->
-        <!-- <td>30</td> -->
-      </tr>
-    </table>
-  </div>
+  
   <div class="a_container">
     <a href="#">top</a>
   </div> 
