@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    fieldset{
+      width:40%;
+      margin:0 auto;
+      border:3px solid #bab9b1;
+    }
+    legend {
+      font-size:40px;
+      font-weight:bold;
+      font-style:italic;
+      text-decoration:underline
+    }
+
+    .input-field {
+      width:70px;
+    }
+    .input-field-2 {
+      width:30px;
+    }
+
+    img {
+      width:250px;
+      height:250px;
+      float:right;
+    }
+  </style>
+</head>
+<body>
+  <form action="">
+    <fieldset>
+      <legend>新進人員資料表</legend>
+      <img src="./images/1.png" alt="">
+      <p>
+        <label for="lname">姓氏</label>
+        <input class="input-field" type="text" name="" id="lname">
+      </p>
+      <p>
+        <label for="fname">名子</label>
+        <input class="input-field" type="text" name="" id="fname">
+      </p>
+      <p>
+        <label for="identity">身分別</label><br>
+        <select name="" id="identity" size="3">
+          <option value="">一般民眾</option>
+          <option value="">身障人士</option>
+          <option value="" selected>退伍軍人</option>
+          <option value="">原住民</option>
+          <option value="">新住民</option>
+        </select>
+      </p>
+      <p>
+      <label for="comment">意見回饋</label><br>
+      <textarea name="" id="comment" cols="40" rows="5">
+感謝你的寶貴意見!
+      </textarea>
+    </p>
+    <p>
+      <button onclick="alert('繼續努力')">重置</button>
+    </p>
+    <p>
+      <label for="">應徵職務</label>
+      <input type="checkbox" name="" id="position">
+      <label for="position">廁所阿北</label>
+      <input type="checkbox" name="" id="position2">
+      <label for="position2">助理工程師</label>
+      <input type="checkbox" name="" id="position3">
+      <label for="position3">軟體工程師</label>
+      <input type="checkbox" name="" id="position4">
+      <label for="position4">專案經理</label>
+    </p>
+    <p>
+      <label for="">性別</label>
+      <input type="radio" name="gender" id="male">
+      <label for="male">男</label>
+      <input type="radio" name="gender" id="female">
+      <label for="female">女</label>
+    </p>
+    <p>
+      <input type="submit" name="" id="" value="提交">
+    </p>
+    <p>
+      <label for="age">年齡</label>
+      <input class="input-field-2" type="number">
+    </p>
+  </fieldset>
+  </form>
+</body>
+</html>
