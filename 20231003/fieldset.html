@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .submit{
+      margin-right:35px;
+    }
+
+    legend {
+      font-weight:bolder;
+      font-style:oblique;
+      text-decoration:underline;
+      color:rgb(0, 0, 0)
+    }
+
+    fieldset {
+      border:2px solid rgb(216, 213, 37);
+    }
+  </style>
+</head>
+<body>
+  <fieldset>
+    <legend>新進人員基本表格</legend>
+    <p>
+      <label for="firstname">姓氏</label>
+      <input type="text" name="" id="firstname">
+    </p>
+    <p>
+      <label for="lastname">名子</label>
+      <input type="text" name="" id="lastname">
+    </p>
+    <p>
+      <label for="">性別</label>
+      <input type="radio" name="mygender" id="gender">
+      <label for="gender">男</label>
+      <input type="radio" name="mygender" id="gender2">
+      <label for="gender2">女</label>
+    </p>
+    <p>
+      <label for="age">年齡</label>
+      <input type="number" name="myAge" id="age">
+    </p>
+    <p>
+      <label for=>日期&nbsp;&nbsp;</label>
+      <input type="date" value="2023-10-03">      
+    </p>
+    <p>
+      <label for="">身分別</label>
+      <input type="checkbox" name="" id="identity">
+      <label for="identity">一般民眾</label>
+      <input type="checkbox" name="" id="identity2">
+      <label for="identity2">身障人士</label>
+      <input type="checkbox" name="" id="identity3">
+      <label for="identity3">退伍軍人</label>
+      <input type="checkbox" name="" id="identity4">
+      <label for="identity4">皇親國戚</label>
+      <input type="checkbox" name="" id="identity5">
+      <label for="identity5">九五至尊</label>
+    </p>
+    <p>
+      <label for="mobile">聯絡電話</label>
+      <input type="text" name="" id="mobile">
+    </p>
+    <p>
+      <label for="">應徵職務</label>
+      <select name="" id="">
+        <option value="">請選擇</option>
+        <option value="">廁所阿北</option>
+        <option value="">助理工程師</option>
+        <option value="">軟體工程師</option>
+        <option value="">產品經理</option>
+      </select>
+    </p>
+    <p>
+     <label for="comment">意見回饋</label><br><br>
+     <textarea name="" id="comment" cols="40" rows="10"></textarea>
+    </p>
+    <p>
+      <input class="submit" type="submit" value="提交">
+      <input type="reset" value="重置">
+    </p>
+  </fieldset>
+</body>
+</html>
