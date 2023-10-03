@@ -25,17 +25,37 @@
     }
 
     img {
-      width:250px;
-      height:250px;
+      width:200px;
+      height:200px;
       float:right;
+    }
+
+    div {
+      /* background-color:#fd9d0c; */
+      position:relative;
+    }
+
+    div::after {
+      content:"錄取";
+      color:red;
+      background-color: #36393b;
+      font-size:18px;
+      font-weight:bold;
+      display:inline-block;
+      padding:5px 10px;
+      position:absolute;
+      top:-18px;
+      right:-25px;
     }
   </style>
 </head>
 <body>
   <form action="">
     <fieldset>
-      <legend>新進人員資料表</legend>
-      <img src="./images/1.png" alt="">
+      <legend>履歷表</legend>
+      <div>
+        <img src="./images/1.png" alt="">
+      </div>
       <p>
         <label for="lname">姓氏</label>
         <input class="input-field" type="text" name="" id="lname">
@@ -44,6 +64,18 @@
         <label for="fname">名子</label>
         <input class="input-field" type="text" name="" id="fname">
       </p>
+      <p>
+        <label for="age">年齡</label>
+        <input class="input-field-2" type="number">
+      </p>
+      <p>
+        <label for="">性別</label>
+        <input type="radio" name="gender" id="male">
+        <label for="male">男</label>
+        <input type="radio" name="gender" id="female">
+        <label for="female">女</label>
+      </p>
+  
       <p>
         <label for="identity">身分別</label><br>
         <select name="" id="identity" size="3">
@@ -55,38 +87,29 @@
         </select>
       </p>
       <p>
+        <label for="">應徵職務</label>
+        <input type="checkbox" name="" id="position">
+        <label for="position">廁所阿北</label>
+        <input type="checkbox" name="" id="position2">
+        <label for="position2">助理工程師</label>
+        <input type="checkbox" name="" id="position3">
+        <label for="position3">軟體工程師</label>
+        <input type="checkbox" name="" id="position4">
+        <label for="position4">專案經理</label>
+      </p>
+  
+    <p>
+      <button onclick="alert('繼續努力')">重置</button>
+    </p>
+    <p>
       <label for="comment">意見回饋</label><br>
       <textarea name="" id="comment" cols="40" rows="5">
 感謝你的寶貴意見!
       </textarea>
     </p>
-    <p>
-      <button onclick="alert('繼續努力')">重置</button>
-    </p>
-    <p>
-      <label for="">應徵職務</label>
-      <input type="checkbox" name="" id="position">
-      <label for="position">廁所阿北</label>
-      <input type="checkbox" name="" id="position2">
-      <label for="position2">助理工程師</label>
-      <input type="checkbox" name="" id="position3">
-      <label for="position3">軟體工程師</label>
-      <input type="checkbox" name="" id="position4">
-      <label for="position4">專案經理</label>
-    </p>
-    <p>
-      <label for="">性別</label>
-      <input type="radio" name="gender" id="male">
-      <label for="male">男</label>
-      <input type="radio" name="gender" id="female">
-      <label for="female">女</label>
-    </p>
+
     <p>
       <input type="submit" name="" id="" value="提交">
-    </p>
-    <p>
-      <label for="age">年齡</label>
-      <input class="input-field-2" type="number">
     </p>
   </fieldset>
   </form>
