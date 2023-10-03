@@ -4,21 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .box {
+      width:300px;
+      border:3px solid grey;
+      text-align:center;
+      margin:0 auto;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <h3>Form 表單</h3>
-    <form action="">
-      <p>
-        <input type="text" name="" id="">
-      </p>
-      <p>
-        <input type="text" name="" id="">
-      </p>
-      <p>
-        <input type="text" name="" id="">
-      </p>
-    </form>
+    <div class="box">
+
+      <form action="">
+        <p>
+          <label for="">&nbsp;First name</label>
+          <input type="text" name="" id="">
+        </p>
+        <p>
+          <label for="">&nbsp;Last name</label>
+          <input type="text" name="" id="">
+        </p>
+        <p>
+          <input type="submit" value="送出">
+          <input type="submit" value="清除">
+        </p>
+      </form>
+    </div>
   </div>
 </body>
 </html>
