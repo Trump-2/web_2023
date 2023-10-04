@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table,td {
+      /* border:2px solid brown; */
+      border-collapse: collapse;
+      font-size:30px;
+    }
+    td {
+      width:50%;
+      text-align:center;
+
+    }
+  video {
+    width:400px;
+    height:350px;
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+  <table>
+    <tr>
+      <td>
+        <h3>Video</h3>
+        <video controls loop autoplay muted>
+          <source src="./video/test.mp4" type="video/mp4"></source>
+        </video>
+      </td>
+      <td>
+        <h4>Lorem ipsum dolor sit.</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum sapiente ea quaerat ad nostrum? Architecto excepturi cum ullam similique dicta fugiat quia, error repudiandae sapiente assumenda iste nulla ut maxime.</p>
+      </td>
+    </tr>
+  </table>
+  </div>
+  
+    <div class="container">
+      <table>
+        <tr>
+          <td>
+            <h3>Audio</h3>
+            <audio controls loop autoplay muted>
+              <source src="./audio/test_mp3.mp3" type="audio/mp3"></source>
+            </audio>
+          </td>
+          <td>
+            <h4>Lorem ipsum dolor sit.</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum sapiente ea quaerat ad nostrum? Architecto excepturi cum ullam similique dicta fugiat quia, error repudiandae sapiente assumenda iste nulla ut maxime.</p>
+          </td>
+        </tr>
+      </table>
+      </div>   
+</body>
+</html>
