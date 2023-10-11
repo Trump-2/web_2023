@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .div1 > p {
+        color: red;
+      }
+      .div2 > p {
+        color: red;
+      }
+
+      /* 建議少用此選擇器，因為影響範圍很大 */
+      .div3 p {
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="div1">
+        div1
+        <p>&nbsp;&nbsp;Lorem ipsum dolor sit.</p>
+      </div>
+      <div class="div2">
+        div2
+        <p>&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur.</p>
+      </div>
+      <div class="div3">
+        div3
+        <div class="div31">
+          &nbsp;&nbsp;div31
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
