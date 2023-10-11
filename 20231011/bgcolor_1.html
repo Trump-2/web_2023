@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .container {
+      width:70%;
+      height:80vh;;
+      margin:0 auto;
+    }
+
+    .box1 {
+      background-color:rgb(226, 171, 6);
+      background-image:url("./images/4.png"),url("./images/7.jpg");
+      background-repeat:no-repeat;
+      background-position:right top, left bottom ;
+      
+    }
+
+    table,td {
+      border:5px solid rgb(251, 188, 29);
+    }
+
+    table {
+      width:80%;
+      height:90%;
+      border-collapse: collapse;
+      margin:0 auto;
+    }
+
+    td {
+      width:33%;
+      height:50%;
+    }
+
+    .box2 {
+      width:25%;
+      background-color:rgb(226, 171, 6);
+      background-image:url("./images/2.png");
+      background-repeat:no-repeat;
+    }
+
+    .box3 {
+      background-color:rgb(226, 171, 6);
+      background-image:url("./images/3.webp");
+      background-position:left bottom;
+      background-repeat:no-repeat;
+
+    }
+
+    img {
+      /* 透明度 property */
+      opacity:0.3;
+      width:150px;
+      height:150px;
+    }
+
+    iframe {
+      width:80%;
+    }
+
+    .my-img {
+     text-align: center;
+    }
+
+    .my-iframe {
+      text-align:center;
+    }
+    /* .box4 {
+      background-color:rgb(226, 171, 6);
+      position: relative;
+      } */
+    
+
+    /* img {
+      right:0;
+      bottom:0;
+      position:absolute;
+    } */
+  </style>
+</head>
+<body>
+  <div class="container box1">
+    <table>
+      <tr>
+        <td>
+          <div class="my-img">
+            <img src="./images/6.jpg" alt="">
+          </div>
+        </td>
+        <td>
+          <img src="./images/6.jpg" alt="">
+        </td>
+        <td>
+          <div class="my-img">
+            <img src="./images/6.jpg" alt="">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="./images/6.jpg" alt="">
+        </td>
+        <td>
+          <div class="my-iframe">
+
+            <iframe src="https://www.youtube.com/embed/O5C310bqCrY?si=vmJCblBUWCYfHxd3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </td>
+        <td>
+          <img src="./images/6.jpg" alt="">
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="container box2"></div>
+  <div class="container box3"></div>
+  <!-- <div class="container box4">
+    <img src="./images/3.webp" alt=""> -->
+  </div>
+</body>
+</html>
