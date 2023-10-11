@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 80%;
+        height: 90vh;
+        /* background-color: rgb(46, 16, 215); */
+        background-image: url("./images/4.png"), url("./images/1.png");
+        background-repeat: no-repeat;
+        /* background-repeat: no-repeat; */
+        background-position: left top, right;
+        margin: 0 auto;
+      }
+
+      table,
+      td {
+        border: 5px solid green;
+      }
+
+      table {
+        width: 80%;
+        height: 80vh;
+        border-collapse: collapse;
+        margin: 0 auto;
+      }
+
+      img {
+        opacity: 0.4;
+      }
+
+      .my-img {
+        text-align: center;
+      }
+
+      /* basic selector section */
+      h2 {
+        color: greenyellow;
+      }
+
+      p {
+        color: rgb(1, 1, 255);
+      }
+
+      /* 這裡跟下面選取相同的元素，但因為 specificity 比較大的關係，所以還是套用它的樣式 */
+      .box > p {
+        color: purple;
+      }
+
+      .color {
+        color: orange;
+      }
+
+      .myClass {
+        color: rgb(209, 209, 77);
+      }
+
+      #myID {
+        color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <tr>
+          <td class="my-img">
+            <img src="./images/2.jpg" alt="" />
+          </td>
+          <td>
+            <img src="./images/2.jpg" alt="" />
+          </td>
+          <td>
+            <img src="./images/2.jpg" alt="" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="./images/2.jpg" alt="" />
+          </td>
+          <td class="my-img">
+            <iframe
+              src="https://www.youtube.com/embed/O5C310bqCrY?si=vmJCblBUWCYfHxd3"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </td>
+          <td>
+            <img src="./images/2.jpg" alt="" />
+          </td>
+        </tr>
+      </table>
+    </div>
+    <hr />
+    <div class="container2">
+      <h2>basic selector</h2>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p class="myClass">Lorem ipsum dolor sit.</p>
+      <p id="myID">Lorem ipsum dolor sit amet.</p>
+      <div class="box">
+        <p class="color">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+      </div>
+    </div>
+  </body>
+</html>
