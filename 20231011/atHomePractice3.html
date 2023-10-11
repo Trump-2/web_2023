@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        /* padding: 0; */
+        box-sizing: border-box;
+      }
+
+      nav {
+        background-color: rgba(30, 230, 244, 0.75);
+        width: 90%;
+        height: 5vh;
+        margin: 0 auto;
+        /* 將元素固定在 viewport 的某個位置上 */
+        position: fixed;
+        left: 67.344px;
+      }
+
+      a {
+        color: brown;
+        /* line-height: 5vh; */
+        /* 這裡使用 display:inline-block，然後就可使用 margin property */
+        display: inline-block;
+        margin-top: 5px;
+        margin-right: 20px;
+        text-decoration: none;
+        font-size: 30px;
+      }
+
+      a:last-child {
+        margin-right: 0;
+      }
+      /* a:visited {
+        color: yellow;
+      } */
+
+      .container {
+        background-color: blue;
+        width: 90%;
+        height: 95vh;
+        margin: 0 auto;
+        background-image: url("./images/spy4.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      table,
+      td {
+        /* border: 3px solid palevioletred; */
+        border-collapse: collapse;
+      }
+
+      table {
+        width: 80%;
+        margin: 0 auto;
+        height: 100%;
+      }
+
+      img {
+        width: 350px;
+        height: 350px;
+        border: 10px solid rgb(14, 183, 87);
+        border-radius: 45px 10px;
+      }
+
+      td {
+        text-align: center;
+      }
+
+      h2 {
+        text-shadow: 5px 3px 7px rgb(46, 226, 61);
+      }
+
+      p {
+        border: 5px solid rgb(14, 183, 87);
+        border-radius: 10px;
+        font-size: 24px;
+        background-color: green;
+        font-weight: 600;
+      }
+
+      .box2 {
+        background-image: url("./images/spy5.png");
+      }
+
+      .box3 {
+        background-image: url("./images/spy6.jpg");
+      }
+
+      iframe {
+        width: 100%;
+        height: 60%;
+        /* border: 6px solid black; */
+        border-radius: 30px 15px;
+        box-shadow: 5px 5px 20px rgb(54, 241, 45);
+      }
+
+      .w-40 {
+        width: 40%;
+      }
+
+      .w-10 {
+        width: 10%;
+      }
+
+      .td-font {
+        font-size: 25px;
+        font-style: italic;
+        color: rgb(13, 182, 10);
+        font-weight: bold;
+        /* background-color: lightsteelblue; */
+      }
+
+      .icon {
+        width: 30px;
+        height: 30px;
+        margin-left: 20px;
+        border: 0;
+        /* border-radius: 0; */
+      }
+
+      .top {
+        font-size: 35px;
+        position: fixed;
+        right: 5px;
+        bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="">
+        <img class="icon" src="./images/spy7.png" alt="" />
+      </a>
+      <a href="#item1">Photo</a>
+      <a href="#item2">Youtube</a>
+      <a href="#item3">Map</a>
+    </nav>
+    <div id="item1"></div>
+    <div class="container">
+      <table>
+        <tr>
+          <td>
+            <h2>Lorem ipsum dolor sit.</h2>
+            <img src="./images/spy1.jpg" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At nemo
+              commodi aut dolorem neque expedita ullam nihil sed cum? Neque.
+            </p>
+          </td>
+          <td>
+            <h2>Lorem ipsum dolor sit.</h2>
+            <img src="./images/spy2.jpg" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At nemo
+              commodi aut dolorem neque expedita ullam nihil sed cum? Neque.
+            </p>
+          </td>
+          <td>
+            <h2>Lorem ipsum dolor sit.</h2>
+            <img src="./images/spy3.jpg" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At nemo
+              commodi aut dolorem neque expedita ullam nihil sed cum? Neque.
+            </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <br />
+    <div id="item2"></div>
+    <div class="container box2">
+      <table>
+        <tr>
+          <td class="w-40 td-font">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+            incidunt odit perferendis nesciunt quibusdam voluptates doloremque
+            non dignissimos ex obcaecati. Laboriosam, voluptate! Aliquid rem
+            necessitatibus nam dicta sequi harum corporis cum eius odit quisquam
+            nostrum illum quod at magni atque omnis facere officia, doloribus
+            iusto? Ea aliquam necessitatibus cupiditate ipsa.
+          </td>
+          <td class="w-10"></td>
+          <td>
+            <iframe
+              src="https://www.youtube.com/embed/v8ADV8OhMIA?si=_u8HhxcM838MxqnT"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <br />
+    <div id="item3"></div>
+    <div class="container box3">
+      <table>
+        <tr>
+          <td>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193366.0233662111!2d-112.2322987628969!3d40.77644836402737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87523d9488d131ed%3A0x5b53b7a0484d31ca!2z576O5ZyL54y25LuW6bm95rmW5Z-O!5e0!3m2!1szh-TW!2stw!4v1697044190929!5m2!1szh-TW!2stw"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </td>
+          <td class="w-10"></td>
+          <td class="w-40 td-font">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat
+            nam quibusdam amet id, dolores non ratione quod vero recusandae
+            autem eum doloremque blanditiis temporibus at repellat beatae
+            suscipit ipsum! Ratione ipsam, hic rerum iste ea ut quia soluta
+            temporibus laborum repellendus impedit ipsa pariatur laboriosam
+            ducimus praesentium quod expedita error?
+          </td>
+        </tr>
+      </table>
+    </div>
+    <a href="#" class="top">top</a>
+  </body>
+</html>
