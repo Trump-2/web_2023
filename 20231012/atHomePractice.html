@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .p1,
+      .p2,
+      .p3 {
+        background-color: rgb(35, 137, 227);
+      }
+
+      .div1 > p {
+        background-color: cadetblue;
+      }
+
+      .box1 > p {
+        background-color: chocolate;
+      }
+
+      .box2 > p {
+        background-color: cornsilk;
+      }
+
+      .box3 > p {
+        background-color: cyan;
+      }
+
+      .box2 > div > p {
+        background-color: darkblue;
+      }
+
+      .divA div {
+        background-color: crimson;
+      }
+
+      .divA > div {
+        background-color: darkslateblue;
+      }
+
+      .sibling ~ p {
+        background-color: darkgrey;
+      }
+
+      .sibling + p {
+        background-color: darkkhaki;
+      }
+
+      .my-span {
+        color: darkorange;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>, selector</h2>
+    <h4>多組選擇器一起</h4>
+    <p class="p1">Lorem ipsum dolor sit amet.</p>
+    <p class="p2">Lorem ipsum dolor sit amet.</p>
+    <p class="p3">Lorem ipsum dolor sit amet.</p>
+    <br />
+    <hr />
+    <hr />
+    <h2>> selector</h2>
+    <h4>下一層</h4>
+    <div class="div1">
+      div1
+      <p class="p21">&nbsp;&nbsp;Lorem ipsum dolor sit amet.</p>
+      <p class="p21">&nbsp;&nbsp;Lorem ipsum dolor sit amet.</p>
+      <p class="p21">&nbsp;&nbsp;Lorem ipsum dolor sit amet.</p>
+      <div class="div2">
+        <p class="p21">&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet.</p>
+      </div>
+      <p class="p21">&nbsp;&nbsp;Lorem ipsum dolor sit amet.</p>
+    </div>
+    <br />
+    <hr />
+    <hr />
+    <h2>> 在實務上的應用</h2>
+    <div class="box1">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+      <div>
+        <p>&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+      </div>
+    </div>
+    <div class="box2">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+      <div>
+        <p>&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+      </div>
+    </div>
+    <div class="box3">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+      <div>
+        <p>&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+      </div>
+    </div>
+    <br />
+    <hr />
+    <hr />
+    <h2>空格 selector</h2>
+    <div class="divA">
+      divA
+      <div class="divA1">
+        &nbsp;&nbsp;divA1
+        <div class="divA11">
+          &nbsp;&nbsp;&nbsp;&nbsp;divA11
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor
+            sit.
+          </p>
+        </div>
+      </div>
+    </div>
+    <br />
+    <hr />
+    <hr />
+    <h2>+ selector</h2>
+    <div class="sibling">
+      <p>&nbsp;&nbsp;Lorem ipsum dolor sit.</p>
+      <p>&nbsp;&nbsp;Lorem ipsum dolor sit.</p>
+      <p>&nbsp;&nbsp;Lorem ipsum dolor sit.</p>
+      <p>&nbsp;&nbsp;Lorem ipsum dolor sit.</p>
+    </div>
+    <p>Lorem ipsum dolor sit.</p>
+    <p>Lorem ipsum dolor sit.</p>
+    <hr />
+    <hr />
+    <!-- <div> 無語意，會斷行 -->
+    <div>123</div>
+
+    <!-- 底下都有語意，也都會斷行 -->
+    <header>456</header>
+    <nav>789</nav>
+    <main>10 11 12</main>
+    <article>19 20 21</article>
+    <aside>22 23 24</aside>
+    <section>13 14 15</section>
+    <footer>16 17 18</footer>
+
+    <!-- <span> 無語意，不會斷行，通常在文本內使用 -->
+    <!-- 這裡外圍加 <div> 是為了逃過上面的 selector -->
+    <div>
+      <p>
+        Lorem ipsum dolor <span class="my-span">sit amet,</span> consectetur
+        adipisicing.
+      </p>
+    </div>
+    <hr />
+    <hr />
+  </body>
+</html>
