@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* > 空格 + ~ , */
+      .p1,
+      .p2,
+      .p3 {
+        color: green;
+      }
+
+      .div2 > .p21 {
+        color:purple;
+      }
+
+      .box1 > p {
+        color:lightblue;
+      }
+
+      .box2 > p {
+        color:green;
+      }
+
+      .box3 > p {
+        color:yellow;
+      }
+
+      .box1 > div > p {
+        color:darkorange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- , -->
+      <h3>, selector</h3>
+      <h4>多組選擇器一起</h4>
+      <p class="p1">Lorem ipsum dolor sit amet.</p>
+      <p class="p2">Lorem ipsum dolor sit amet.</p>
+      <p class="p3">Lorem ipsum dolor sit amet.</p>
+
+      <br />
+      <hr />
+      <!-- > selector -->
+      <h3>> selector</h3>
+      <h4>下一層</h4>
+      <div class="div2">
+        div2
+        <p class="p21">&nbsp;&nbsp;Lorem ipsum dolor sit amet.</p>
+        <p class="p21">&nbsp;&nbsp;Lorem ipsum dolor sit amet.</p>
+        <p class="p21">&nbsp;&nbsp;Lorem ipsum dolor sit amet.
+          <div class="div">
+            <div class="p21">
+             &nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet.
+            </div>
+          </div>
+        </p>
+        <p class="p21">&nbsp;&nbsp;Lorem ipsum dolor sit amet.</p>
+      </div>
+      <br><hr>
+      <div class="container box1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        <div>
+                  <p>&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+
+        </div>
+      </div>
+      <div class="container box2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        <div>
+                  <p>&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+
+        </div>
+      </div>
+      <div class="container box3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        <div>
+                  <p>&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
