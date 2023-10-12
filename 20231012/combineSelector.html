@@ -31,6 +31,28 @@
       .box1 > div > p {
         color:darkorange;
       }
+
+      
+       /* 空格 全部被影響 */
+      .divA div {
+        color:red;
+      }
+
+      /* > 只會影響同一層 */
+      .divA>div {
+        color:blue;
+      }
+      
+      /*  */
+      /* 只會影響下一個兄弟姊妹 */
+      /* .sibling+p {
+        color:lightsteelblue;
+      } */
+
+      /* 會影響所有兄弟姐妹 */
+      .sibling ~ p {
+        color:lightsalmon;
+      }
     </style>
   </head>
   <body>
@@ -61,6 +83,7 @@
         <p class="p21">&nbsp;&nbsp;Lorem ipsum dolor sit amet.</p>
       </div>
       <br><hr>
+      <h3>> 在實務上的應用</h3>
       <div class="container box1">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         <div>
@@ -81,6 +104,35 @@
                   <p>&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         </div>
       </div>
+      <br><hr>
+      <h3>空格 selector</h3>
+      <div class="divA">
+        divA
+        <div class="divA1">
+          &nbsp;&nbsp;divA1
+          <div class="divA11">
+            &nbsp;&nbsp;&nbsp;&nbsp;divA11
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit.</p>
+          </div>
+        </div>
+      </div>
+      <br><hr>
+      <h3>+ selector</h3>
+      <div class="sibling">
+        <p>&nbsp;&nbsp;Lorem ipsum dolor sit.</p>
+        <p>&nbsp;&nbsp;Lorem ipsum dolor sit.</p>
+        <p>&nbsp;&nbsp;Lorem ipsum dolor sit.</p>
+        <p>&nbsp;&nbsp;Lorem ipsum dolor sit.</p>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet.
+      </p>
+
+<!--       
+       -->
     </div>
   </body>
 </html>
