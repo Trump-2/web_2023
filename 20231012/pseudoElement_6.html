@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      td,
+      th {
+        border: 2px solid palevioletred;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        text-align: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        box-shadow: 5px 10px 15px pink;
+        text-shadow: 1px 3px 3px rgb(249, 14, 116);
+      }
+
+      .money {
+        text-align: right;
+      }
+
+      .money::before {
+        content: "$";
+      }
+
+      .money::after {
+        content: "元";
+      }
+
+      .w-40 {
+        width: 40%;
+      }
+
+      .money + td {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <tr>
+          <th>name</th>
+          <th>bonus</th>
+          <th>performance</th>
+          <th class="w-40">note</th>
+        </tr>
+        <tr>
+          <td>Jack</td>
+          <td class="money">1000</td>
+          <td>20%</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Loren</td>
+          <td class="money">3500</td>
+          <td>30%</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Alex</td>
+          <td class="money">2000</td>
+          <td>55%</td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
