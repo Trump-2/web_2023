@@ -4,11 +4,122 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      table,
+      td,
+      th {
+        border: 2px solid palevioletred;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        text-align: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        box-shadow: 5px 10px 15px pink;
+        text-shadow: 1px 3px 3px rgb(249, 14, 116);
+      }
+
+      .money {
+        text-align: right;
+      }
+
+      .money::before {
+        content: "$";
+      }
+
+      .money::after {
+        content: "元";
+      }
+
+      .status::after {
+        content: "%";
+      }
+
+      .w-40 {
+        width: 40%;
+      }
+
+      .money + td {
+        text-align: right;
+      }
+      /*  */
+      td[data-level="1"] {
+        color: rgb(255, 47, 47);
+      }
+      /*  */
+      input[type="number"] {
+        background-color: cadetblue;
+      }
+      /*  */
+      p[class^="iphone14"] {
+        background-color: crimson;
+      }
+
+      p[class^="iphone15"] {
+        background-color: yellowgreen;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
-      <div class="box"></div>
-      <div class="box"></div>
+      <table>
+        <tr>
+          <th>name</th>
+          <th>bonus</th>
+          <th>performance</th>
+          <th class="w-40">note</th>
+        </tr>
+        <tr>
+          <td>Jack</td>
+          <td class="money">1000</td>
+          <td class="status">20</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Loren</td>
+          <td class="money">3500</td>
+          <td class="status">30</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Alex</td>
+          <td class="money">2000</td>
+          <td class="status" data-level="1">55</td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <br />
+    <hr />
+    <div class="container">
+      <form action="">
+        <p>
+          <label for=""></label>
+          <input type="text" name="" id="" />
+        </p>
+        <p>
+          <label for=""></label>
+          <input type="text" name="" id="" />
+        </p>
+        <p>
+          <label for=""></label>
+          <input type="text" name="" id="" />
+        </p>
+        <p>
+          <label for=""></label>
+          <input type="number" name="" id="" />
+        </p>
+        <p>
+          <label for=""></label>
+          <input type="number" name="" id="" />
+        </p>
+      </form>
+    </div>
+    <div class="container">
+      <p class="iphone14">Lorem ipsum dolor sit amet consectetur.</p>
+      <p class="iphone14-pro">Lorem ipsum dolor sit amet consectetur.</p>
+      <p class="iphone15">Lorem ipsum dolor sit amet consectetur.</p>
+      <p class="iphone15-pro">Lorem ipsum dolor sit amet consectetur.</p>
     </div>
   </body>
 </html>
