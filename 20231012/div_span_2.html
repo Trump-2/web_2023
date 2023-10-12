@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .my-span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- div 是無語意元素，會斷行 -->
+    <div class="container"></div>
+
+    <!-- 有語意元素 -->
+    <!-- 也都會斷行 -->
+    <nav>123</nav>
+
+    <header>456</header>
+
+    <footer>789</footer>
+
+    <!-- span 是無語意元素，不會斷行 -->
+
+    <p>Lorem ipsum dolor <span class="my-span">Hello</span> amet.</p>
+  </body>
+</html>

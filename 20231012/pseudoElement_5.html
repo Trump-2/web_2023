@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(31, 247, 203);
+      }
+      .nav > a {
+        color: yellow;
+        background-color: rgb(52, 177, 235);
+        padding: 15px 5px;
+        text-decoration: none;
+        border-radius: 10px;
+      }
+      .nav > a:hover {
+        color: rgb(238, 49, 182);
+        transition-duration: 1.5s;
+        border-radius: 20px;
+        background-color: rgb(15, 111, 207);
+      }
+
+      .nav {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        /* background-color: blueviolet; */
+        /* height: 100px; */
+      }
+
+      .box {
+        width: 40%;
+        height: 70vh;
+        background-image: url("./images/1.webp");
+        /* background-repeat: no-repeat; */
+        /* background-size: cover; */
+        background-position: center center;
+        margin: 0 auto;
+        border-radius: 30px;
+      }
+
+      .box:hover {
+        width: 40%;
+        height: 80vh;
+        background-image: url("./images/2.jpg");
+        background-repeat: no-repeat;
+        transition-duration: 2s;
+        border-radius: 10px;
+      }
+
+      .container {
+        width: 60%;
+        margin: 0 auto;
+        /* background-color: brown; */
+        text-align: center;
+      }
+      input:focus {
+        background-color: rgb(149, 142, 142);
+        transition-duration: 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="">Home</a>
+      <a href="">About</a>
+      <a href="">Other</a>
+    </nav>
+    <br />
+    <div class="box"></div>
+    <br />
+    <div class="container">
+      <form action="">
+        <label for="">Username：</label>
+        <input type="text" name="" id="" />
+        <br />
+        <br />
+        <label for="">Password：</label>
+        <input type="text" name="" id="" />
+      </form>
+    </div>
+  </body>
+</html>
