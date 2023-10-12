@@ -4,6 +4,373 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .box1 > h2,
+      .box1 > h3 {
+        color: blueviolet;
+      }
+
+      .box2 > h2,
+      .box2 > h3 {
+        color: cornflowerblue;
+      }
+
+      .box3 > h2,
+      .box3 > h3 {
+        color: darkcyan;
+      }
+
+      .container {
+        margin: 0 auto;
+        width: 75%;
+        text-align: center;
+        box-shadow: 15px 15px 10px lightblue inset;
+      }
+
+      .box1 {
+        background-color: rgba(239, 250, 25, 0.427);
+      }
+
+      .box2 {
+        background-color: rgba(97, 250, 97, 0.419);
+      }
+
+      .box3 {
+        background-color: rgba(240, 118, 42, 0.33);
+      }
+      /*
+
+      */
+      nav {
+        /* background-color: lightcoral; */
+        width: 80%;
+        /* height: 10vh; */
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      a {
+        color: rgb(13, 114, 255);
+        text-decoration: none;
+        font-size: 30px;
+        padding: 15px 0;
+        background-color: rgb(97, 185, 15);
+        border-radius: 30px;
+      }
+
+      a:hover {
+        color: coral;
+        font-size: 35px;
+        border-radius: 15px;
+        transition-duration: 1s;
+      }
+
+      .box {
+        /* background-color: lightseagreen; */
+        width: 40%;
+        height: 70vh;
+        margin: 0 auto;
+        background-image: url("./images/1.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 30px;
+      }
+
+      .box:hover {
+        width: 40%;
+        height: 70vh;
+        background-image: url("./images/4.jpg");
+        /* background-size: auto; */
+        background-repeat: no-repeat;
+        transition-duration: 1.5s;
+        border-radius: 70px;
+      }
+
+      .container2 {
+        width: 80%;
+        margin: 0 auto;
+        height: 20vh;
+        /* background-color: rgb(28, 106, 2); */
+        text-align: center;
+      }
+
+      form > p {
+        margin-top: 0;
+      }
+
+      input:focus {
+        background-color: rgb(254, 173, 51);
+      }
+      /*
+
+      */
+
+      table,
+      td,
+      th {
+        border: 2px solid palevioletred;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        text-align: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        box-shadow: 5px 10px 15px pink;
+      }
+      .money::before {
+        content: "$";
+      }
+      .money::after {
+        content: "元";
+      }
+      .status::after {
+        content: "%";
+      }
+
+      .w-15 {
+        width: 15%;
+      }
+
+      .w-30 {
+        width: 30%;
+      }
+
+      .money {
+        text-align: right;
+      }
+
+      .status {
+        text-align: right;
+      }
+      /* 
+       */
+      [type="text"] {
+        background-color: mediumvioletred;
+      }
+
+      [class^="iphone14"] {
+        background-color: peru;
+      }
+
+      [class^="iphone15"] {
+        background-color: rgba(239, 250, 25, 0.427);
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="container box1">
+      <h2>残響散歌</h2>
+      <h3>歌手：Aimer&nbsp;&nbsp;&nbsp;作詞：Aimerrhythm</h3>
+      <pre>
+        誰が袖に咲く幻花(げんか)
+        ただ そこに藍(あい)を落とした
+        派手に色を溶かす夜に 銀朱の月を添えて
+        転がるように風を切って
+        躓くごとに強くなった
+        光も痛みも怒りも全部 抱きしめて
+        選ばれなければ 選べばいい
+        声よ 轟け 夜のその向こうへ
+        涙で滲んでた あんなに遠くの景色まで響き渡れ
+        何を奏でて？ 誰に届けたくて？
+        不確かなままでいい
+        どんなに暗い感情も どんなに長い葛藤も
+        歌と散れ 残響
+        ただ一人舞う千夜
+        違えない帯(たい)を結べば
+        派手な色も負かす様に 深紅の香(か)こそあはれ
+        この先どんなつらい時も
+        口先よりも胸を張って
+        抱いた夢の灯りを全部 辿るだけ
+        逃げ出すため ここまで来たんじゃないだろ？
+        選ばれなければ 選べばいい
+        声をからして 燃える花のように
+        闇間を照らしたら
+        曖昧過ぎる正解も譜面にして
+        夜を数えて朝を描く様な
+        鮮やかな音(ね)を鳴らす
+        どんなに深い後悔も どんなに高い限界も
+        掻き消して 残響
+      </pre>
+    </div>
+    <div class="container box2">
+      <h2>LAST STARDUST</h2>
+      <h3>歌手：Aimer&nbsp;&nbsp;&nbsp;作詞：Aimerrhythm</h3>
+      <pre>
+        ふりしきる強い雨 描いた理想（ゆめ）の果て
+        震える肩濡らし 歩き続けた
+        擦り切れた小さな手 隙間を埋めるまで
+        色の消えた記憶 拾い集めた
+        愛しさ 優しさ すべて投げ出してもいい
+        失くしたもの 見つけたなら
+        傷つくのが運命（さだめ）だとしても
+        心はまだ彩（いろ）を放つ
+        最後のStardust 舞いあがれ
+        Dust to Dust, Ash to Ash 彼方へ
+        願いの破片よ 届け
+        遠ざかる通り雨 消えてく夜の風
+        孤独だけが 傍にたたずんでいた
+        選んだ 正しさ すべて間違いでもいい
+        信じたもの 守れたなら
+        傷だらけの硝子の心が
+        忘れかけた熱を灯す
+        最後のStardust 舞いあがれ
+        Dust to Dust, Earth to Earth 彼方へ
+        願いの破片よ 永遠（とわ）へ
+        Brave shine......
+        Stay the night......
+        Stay the night......
+        Your brave shine......
+        Brave shine
+        傷つくのが運命（さだめ）だとしても
+        心はまだ彩（いろ）を放つ
+        さよなら Judas 灰になれ
+        Dust to Dust いつかの弱さへ
+        傷だらけの硝子の心が
+        忘れかけた熱を灯す
+        最後のStardust 舞いあがれ
+        Dust to Dust, Ash to Ash 彼方へ
+        願いの破片よ 永遠（とわ）へ
+      </pre>
+    </div>
+    <div class="container box3">
+      <h2>forget-me-not</h2>
+      <h3>歌手：ReoNa&nbsp;&nbsp;&nbsp;作詞：ハヤシケイ(LIVE LAB.)</h3>
+      <pre>
+        So this is me 重すぎる鎧で
+        歩けなくなった 臆病な勇者
+        愛されたくて 守りたくて 振るった剣は
+        差し出された手に刺さって 抜けないよ
+        まだ 癒えないまま Life goes on
+        Oh Everything turns to ash to ash
+        命は彼方を目指す
+        傷つけた罪と痛み 引き摺って
+        And everything turns to dust to dust
+        倒れて土に還るとき
+        せめて小さな花がほら 咲きますように
+        forget-me-not
+        How do I escape 眼の前の怪物に
+        向き合えないまま 逃げ出した勇者
+        端っこなんて無いこんな星の上だ
+        巡り巡って同じ場所 Oh Yeah
+        ただ 繰り返して Life goes on
+        Oh Everything turns to ash to ash
+        命は証を探す
+        牙を剥く運命に飲まれ 消えたって
+        And everything turns to dust to dust
+        逃げ続けた轍もいつか
+        誰かが歩くための道に変わるなら
+        forget-me-not
+        肺呼吸の深海魚や
+        風に上手く乗れない鳥も
+        どこかで旅をしているのかな
+        出会うことはなくても
+        そこにいる
+        それだけで それだけでいいよ
+        体は灰へ変わって
+        記憶は塵へと化して
+        歴史の一文字も満たさず終わるだけ
+        それでも彼方を目指す
+        それでも証を探す
+        生きた理由を知りたくて 意味を残したくて
+        Oh Everything turns to ash to ash
+        命は彼方を目指す
+        消えることない罪と痛み 抱き締めて
+        And everything turns to dust to dust
+        倒れて土に還るとき
+        せめて小さな花がほら 咲きますように
+        forget-me-not
+        forget-me-not
+        forget-me-not
+        Ash to ash, dust to dust
+        どうか忘れないで
+      </pre>
+    </div>
+    <br />
+    <hr />
+    <hr />
+    <nav>
+      <a href="">Home</a>
+      <a href="">About</a>
+      <a href="">Other</a>
+    </nav>
+    <br />
+    <div class="box"></div>
+    <br />
+    <div class="container2">
+      <form action="">
+        <p>
+          <label for="">Username：</label>
+          <input type="text" name="" id="" />
+        </p>
+        <p>
+          <label for="">Password：</label>
+          <input type="text" name="" id="" />
+        </p>
+      </form>
+    </div>
+    <hr />
+    <hr />
+    <div class="container3">
+      <table>
+        <tr>
+          <th class="w-15">name</th>
+          <th class="w-30">bonus</th>
+          <th class="w-30">performance</th>
+          <th>note</th>
+        </tr>
+        <tr>
+          <td>Jack</td>
+          <td class="money">1000</td>
+          <td class="status">20</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Loren</td>
+          <td class="money">3500</td>
+          <td class="status">30</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Alex</td>
+          <td class="money">2000</td>
+          <td class="status">55</td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <hr />
+    <hr />
+    <div class="container4">
+      <form action="">
+        <p>
+          <label for=""></label>
+          <input type="text" name="" id="" />
+        </p>
+        <p>
+          <label for=""></label>
+          <input type="text" name="" id="" />
+        </p>
+        <p>
+          <label for=""></label>
+          <input type="text" name="" id="" />
+        </p>
+        <p>
+          <label for=""></label>
+          <input type="number" name="" id="" />
+        </p>
+        <p>
+          <label for=""></label>
+          <input type="number" name="" id="" />
+        </p>
+      </form>
+    </div>
+    <div class="container4">
+      <p class="iphone14">Lorem ipsum dolor sit amet consectetur.</p>
+      <p class="iphone14-pro">Lorem ipsum dolor sit amet consectetur.</p>
+      <p class="iphone15">Lorem ipsum dolor sit amet consectetur.</p>
+      <p class="iphone15-pro">Lorem ipsum dolor sit amet consectetur.</p>
+    </div>
+  </body>
 </html>
