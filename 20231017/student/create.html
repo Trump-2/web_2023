@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      td {
+        border: 3px solid silver;
+        border-collapse: collapse;
+        font-size: 30px;
+      }
+
+      table {
+        width: 30%;
+        margin: 0 auto;
+      }
+
+      td {
+        height: 50px;
+      }
+
+      .container {
+        text-align: center;
+        margin-top: 50px;
+      }
+      /* attribute selector */
+      input[type="file"] {
+        margin-left: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- form 裡面包 table
+     -->
+    <div class="container">
+      <h2>Create</h2>
+      <form action="" enctype="multipart/form-data">
+        <table>
+          <tr>
+            <td>
+              <label for="name">姓名</label>
+              <input type="text" name="name" id="name" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="age">年齡</label>
+              <input type="number" name="age" id="age" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="mobile">手機</label>
+              <input type="text" name="mobile" id="mobile" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="test">
+                <input type="file" name="file" id="file" multiple />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="submit" value="提交" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

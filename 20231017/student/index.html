@@ -9,6 +9,8 @@
         width: 80%;
         margin: 0 auto;
         margin-top: 50px;
+        text-align: right;
+        font-size: 25px;
       }
 
       table,
@@ -35,17 +37,24 @@
       }
 
       table tr:nth-child(even) {
-        background-color: rgb(247, 214, 251);
-        color: rgb(239, 67, 15);
+        background-color: cornflowerblue;
+        color: rgb(249, 218, 20);
       }
 
       table tr:first-child {
-        background-color: rgba(255, 255, 255, 0);
+        background-color: black;
+        color: white;
+      }
+
+      a {
+        text-decoration: none;
       }
     </style>
   </head>
   <body>
     <div class="container">
+      <h2>Student List</h2>
+      <a href="./create.html">Add</a>
       <table>
         <tr>
           <th>id</th>
@@ -55,19 +64,59 @@
         </tr>
         <tr>
           <td>1</td>
-          <td>amy</td>
+          <td><a href="./edit.html">amy</a></td>
           <td>0911-111-111</td>
-          <td>amy.jpg</td>
+          <td>
+            <img src="https://picsum.photos/id/41/100/100" alt="" />
+            <br />
+            amy.jpg
+          </td>
         </tr>
         <tr>
           <td>2</td>
-          <td>bob</td>
+          <td><a href="./edit.html">bob</a></td>
           <td>0912-345-678</td>
           <td>bob.jpg</td>
         </tr>
         <tr>
           <td>3</td>
-          <td>cat</td>
+          <td><a href="./edit.html">cat</a></td>
+          <td>0933-333-333</td>
+          <td>cat.jpg</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><a href="./edit.html">amy</a></td>
+          <td>0911-111-111</td>
+          <td>amy.jpg</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><a href="./edit.html">bob</a></td>
+          <td>0912-345-678</td>
+          <td>bob.jpg</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><a href="./edit.html">cat</a></td>
+          <td>0933-333-333</td>
+          <td>cat.jpg</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><a href="./edit.html">amy</a></td>
+          <td>0911-111-111</td>
+          <td>amy.jpg</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><a href="./edit.html">bob</a></td>
+          <td>0912-345-678</td>
+          <td>bob.jpg</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><a href="./edit.html">cat</a></td>
           <td>0933-333-333</td>
           <td>cat.jpg</td>
         </tr>
