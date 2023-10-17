@@ -5,12 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      /* g_r */
+      * {
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+      }
+
       .container {
         width: 80%;
         margin: 0 auto;
         margin-top: 50px;
         text-align: right;
         font-size: 25px;
+        font-family:sans-serif
+
+      }
+
+      .add:hover {
+        text-decoration: underline;
       }
 
       table,
@@ -37,8 +50,8 @@
       }
 
       table tr:nth-child(even) {
-        background-color: cornflowerblue;
-        color: rgb(249, 218, 20);
+        background-color: rgba(100, 148, 237, 0.667);
+        color: rgb(16, 3, 255);
       }
 
       table tr:first-child {
@@ -51,9 +64,6 @@
         color: black;
       }
 
-      /* a:nth-of-type(odd) {
-        color: rgb(249, 218, 20);
-      } */
 
       .box {
         display: flex;
@@ -62,21 +72,36 @@
       }
 
       span {
-        /* justify-content: space-between; */
         background-color: rgb(255, 203, 17);
         padding: 20px;
-        /* margin-right: 10px; */
-        border-radius: 20px;
+        border-radius: 25px;
         border: 3px solid black;
         color: black;
         text-shadow: 0px 0px 3px #ff0000;
+      }
+
+      th:last-child {
+        color:red;
+      }
+
+      tr:last-child {
+        padding:15px 0;
+      }
+
+      .add-padding {
+        padding:15px 0;
+      }
+
+      footer {
+        text-align:center;
+        margin:20px 0;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <h2>Student List</h2>
-      <a href="./create.html">Add</a>
+      <a class="add" href="./create.html">Add</a>
       <table>
         <tr>
           <th>id</th>
@@ -87,12 +112,14 @@
         </tr>
         <tr>
           <td>1</td>
-          <td><a href="./edit.html">amy</a></td>
+          <td>amy</a></td>
           <td>0911-111-111</td>
           <td>
-            <img src="https://picsum.photos/id/41/100/100" alt="" />
-            <br />
-            amy.jpg
+            <div class="add-padding">
+              <img src="https://picsum.photos/id/41/100/100" alt="" />
+              <br />
+              amy.jpg
+            </div>
           </td>
           <td>
             <div class="box">
@@ -103,12 +130,14 @@
         </tr>
         <tr>
           <td>2</td>
-          <td><a href="./edit.html">bob</a></td>
+          <td>bob</a></td>
           <td>0912-345-678</td>
           <td>
-            <img src="https://picsum.photos/id/41/100/100" alt="" />
-            <br />
-            bob.jpg
+            <div class="add-padding">
+              <img src="https://picsum.photos/id/41/100/100" alt="" />
+              <br />
+              bob.jpg
+            </div>
           </td>
           <td>
             <div class="box">
@@ -119,12 +148,15 @@
         </tr>
         <tr>
           <td>3</td>
-          <td><a href="./edit.html">cat</a></td>
+          <td>cat</a></td>
           <td>0933-333-333</td>
           <td>
+            <div class="add-padding">
+
             <img src="https://picsum.photos/id/41/100/100" alt="" />
             <br />
             cat.jpg
+            </div>
           </td>
           <td>
             <div class="box">
@@ -135,12 +167,15 @@
         </tr>
         <tr>
           <td>4</td>
-          <td><a href="./edit.html">amy</a></td>
+          <td>amy</a></td>
           <td>0911-111-111</td>
           <td>
+            <div class="add-padding">
+
             <img src="https://picsum.photos/id/41/100/100" alt="" />
             <br />
             amy.jpg
+            </div>
           </td>
           <td>
             <div class="box">
@@ -151,12 +186,15 @@
         </tr>
         <tr>
           <td>5</td>
-          <td><a href="./edit.html">bob</a></td>
+          <td>bob</a></td>
           <td>0912-345-678</td>
           <td>
+            <div class="add-padding">
+
             <img src="https://picsum.photos/id/41/100/100" alt="" />
             <br />
             bob.jpg
+            </div>
           </td>
           <td>
             <div class="box">
@@ -167,12 +205,15 @@
         </tr>
         <tr>
           <td>6</td>
-          <td><a href="./edit.html">cat</a></td>
+          <td>cat</a></td>
           <td>0933-333-333</td>
           <td>
+            <div class="add-padding">
+
             <img src="https://picsum.photos/id/41/100/100" alt="" />
             <br />
             cat.jpg
+            </div>
           </td>
           <td>
             <div class="box">
@@ -183,12 +224,15 @@
         </tr>
         <tr>
           <td>7</td>
-          <td><a href="./edit.html">amy</a></td>
+          <td>amy</a></td>
           <td>0911-111-111</td>
           <td>
+            <div class="add-padding">
+
             <img src="https://picsum.photos/id/41/100/100" alt="" />
             <br />
             amy.jpg
+            </div>
           </td>
           <td>
             <div class="box">
@@ -199,12 +243,15 @@
         </tr>
         <tr>
           <td>8</td>
-          <td><a href="./edit.html">bob</a></td>
+          <td>bob</a></td>
           <td>0912-345-678</td>
           <td>
+            <div class="add-padding">
+
             <img src="https://picsum.photos/id/41/100/100" alt="" />
             <br />
             bob.jpg
+            </div>
           </td>
           <td>
             <div class="box">
@@ -215,12 +262,15 @@
         </tr>
         <tr>
           <td>9</td>
-          <td><a href="./edit.html">cat</a></td>
+          <td>cat</a></td>
           <td>0933-333-333</td>
           <td>
+            <div class="add-padding">
+
             <img src="https://picsum.photos/id/41/100/100" alt="" />
             <br />
             cat.jpg
+            </div>
           </td>
           <td>
             <div class="box">
@@ -230,6 +280,7 @@
           </td>
         </tr>
       </table>
+      <footer>&copy; YiHongWU 04 2023/10/17</footer>
     </div>
   </body>
 </html>
