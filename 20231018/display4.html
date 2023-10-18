@@ -7,15 +7,36 @@
     <style>
       a {
         /* font-size: 30px; */
+        /* background-color: cornsilk; */
+
+        /* 這裡的 display:block 很重要，因為 <a> 是 inline element，所以就算指定了 width、height 給他也沒有作用，又因為 background-image 要吃 width、height，所以圖片跑不出來 */
+        display: block;
         width: 100px;
         height: 100px;
-        /* background-color: cornsilk; */
-        /* display: block; */
-        background-image: url("https://picsum.photos/id/136/200/200");
+        /* 問題：這裡的 margin-top 的結果跟我想像的有出入 */
+        margin-top: 10px;
+        margin-left: 10px;
+        background-image: url("https://picsum.photos/id/180/200/200");
+      }
+
+      .my-div {
+        width: 150px;
+        height: 150px;
+        /* margin-top: 10px; */
+        background-image: url("https://picsum.photos/id/200/150/150");
+      }
+
+      img {
+        display: block;
+      }
+
+      input {
+        display: block;
       }
 
       li {
         display: inline;
+        background-color: lightseagreen;
       }
     </style>
   </head>
@@ -25,9 +46,19 @@
       <a href="">About</a>
       <a href="">Other</a> -->
 
-      <a href="">1</a>
-      <a href="">2</a>
-      <a href="">3</a>
+      <a href=""></a>
+      <a href=""></a>
+      <a href=""></a>
+
+      <div class="my-div">
+        <a href=""></a>
+      </div>
+      <div class="my-div">
+        <a href=""></a>
+      </div>
+      <div class="my-div">
+        <a href=""></a>
+      </div>
     </nav>
 
     <div class="container">
@@ -35,15 +66,15 @@
       <img src="https://picsum.photos/id/116/367/267" alt="" />
       <img src="https://picsum.photos/id/121/367/267" alt="" />
       <!-- 這裡用 <p> 來換行 -->
-      <p>
-        <input type="text" name="" id="" />
-      </p>
-      <p>
-        <input type="text" name="" id="" />
-      </p>
-      <p>
-        <input type="text" name="" id="" />
-      </p>
+      <!-- <p> -->
+      <input type="text" name="" id="" />
+      <!-- </p> -->
+      <!-- <p> -->
+      <input type="text" name="" id="" />
+      <!-- </p> -->
+      <!-- <p> -->
+      <input type="text" name="" id="" />
+      <!-- </p> -->
     </div>
 
     <div class="container">
