@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* g_r */
+      * {
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+      }
+
+      nav {
+        width:80%;
+        margin:0 auto;
+        background:linear-gradient(to left, rgb(0, 0, 0,0),rgb(1, 1, 1,1));
+        position:fixed;
+        top:0;
+        left:173px;
+        height:10vh;
+        display:flex;
+        align-items: center;
+        /* justify-content:; */
+      }
+
+      .nav-link {
+        padding:10px 20px;
+        background-color:burlywood;
+        color:rgb(101, 108, 114);
+        font-family:'微軟正黑體';
+        font-weight:bold;
+        margin-left:20px;
+        border:3px solid rgb(255, 255, 255);
+        border-radius: 10px;
+
+      }
+
+      .nav-link:hover {
+        color:rgb(9, 112, 202);
+        font-family:'標楷體';
+
+      }
+
+
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 50px;
+        text-align: right;
+        font-size: 25px;
+        font-family:sans-serif
+
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+        font-size:30px;
+      }
+
+
+      .add {
+        padding:10px 20px;
+        /* background:linear-gradient(); */
+        border:3px solid black;
+        background:linear-gradient(to right, peachpuff 30%, rgb(253, 135, 32)); 
+        border-radius: 10px;
+        display:inline-block;
+        margin:20px 0;
+      }
+
+      .add:hover {
+        color:red;
+        border-radius:20px;
+        background:linear-gradient(to left , peachpuff 30%, rgb(255, 152, 61));  
+
+        transition-duration:1s;
+      }
+
+      table,
+      td,
+      th {
+        border: silver solid 3px;
+        border-collapse: collapse;
+      }
+
+      table {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 30px;
+      }
+
+      th,
+      td {
+        height: 50px;
+      }
+
+      table tr:nth-child(odd) {
+        background-color: rgb(239, 243, 243);
+      }
+
+      table tr:nth-child(even) {
+        background-color: rgba(100, 148, 237, 0.667);
+        color: rgb(16, 3, 255);
+      }
+
+      table tr:first-child {
+        background-color: linen;
+        color: black;
+      }
+
+
+
+      .box {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      span {
+        background-color: rgb(255, 203, 17);
+        padding: 20px;
+        border-radius: 25px;
+        border: 3px solid black;
+        color: black;
+        text-shadow: 0px 0px 3px #ff0000;
+      }
+
+      th:last-child {
+        color:red;
+      }
+
+      tr:last-child {
+        padding:15px 0;
+      }
+
+      .add-padding {
+        padding:15px 0;
+      }
+
+      footer {
+        text-align:center;
+        margin:20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a class="nav-link" href="">學生</a>
+      <a class="nav-link" href="../../20231018/teacher/index.html">老師</a>
+    </nav>
+    <div class="container">
+      <h2>Student List</h2>
+      <a class="add" href="./create.html">Add</a>
+      <table>
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>mobile</th>
+          <th>pic</th>
+          <th>operation</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>amy</a></td>
+          <td>0911-111-111</td>
+          <td>
+            <div class="add-padding">
+              <img src="https://picsum.photos/id/41/100/100" alt="" />
+              <br />
+              amy.jpg
+            </div>
+          </td>
+          <td>
+            <div class="box">
+              <span><a href="./edit.html">編輯</a></span
+              ><span><a href="./delete.html">刪除</a></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>bob</a></td>
+          <td>0912-345-678</td>
+          <td>
+            <div class="add-padding">
+              <img src="https://picsum.photos/id/41/100/100" alt="" />
+              <br />
+              bob.jpg
+            </div>
+          </td>
+          <td>
+            <div class="box">
+              <span><a href="./edit.html">編輯</a></span
+              ><span><a href="./delete.html">刪除</a></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>cat</a></td>
+          <td>0933-333-333</td>
+          <td>
+            <div class="add-padding">
+
+            <img src="https://picsum.photos/id/41/100/100" alt="" />
+            <br />
+            cat.jpg
+            </div>
+          </td>
+          <td>
+            <div class="box">
+              <span><a href="./edit.html">編輯</a></span
+              ><span><a href="./delete.html">刪除</a></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>amy</a></td>
+          <td>0911-111-111</td>
+          <td>
+            <div class="add-padding">
+
+            <img src="https://picsum.photos/id/41/100/100" alt="" />
+            <br />
+            amy.jpg
+            </div>
+          </td>
+          <td>
+            <div class="box">
+              <span><a href="./edit.html">編輯</a></span
+              ><span><a href="./delete.html">刪除</a></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>bob</a></td>
+          <td>0912-345-678</td>
+          <td>
+            <div class="add-padding">
+
+            <img src="https://picsum.photos/id/41/100/100" alt="" />
+            <br />
+            bob.jpg
+            </div>
+          </td>
+          <td>
+            <div class="box">
+              <span><a href="./edit.html">編輯</a></span
+              ><span><a href="./delete.html">刪除</a></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>cat</a></td>
+          <td>0933-333-333</td>
+          <td>
+            <div class="add-padding">
+
+            <img src="https://picsum.photos/id/41/100/100" alt="" />
+            <br />
+            cat.jpg
+            </div>
+          </td>
+          <td>
+            <div class="box">
+              <span><a href="./edit.html">編輯</a></span
+              ><span><a href="./delete.html">刪除</a></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>amy</a></td>
+          <td>0911-111-111</td>
+          <td>
+            <div class="add-padding">
+
+            <img src="https://picsum.photos/id/41/100/100" alt="" />
+            <br />
+            amy.jpg
+            </div>
+          </td>
+          <td>
+            <div class="box">
+              <span><a href="./edit.html">編輯</a></span
+              ><span><a href="./delete.html">刪除</a></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>bob</a></td>
+          <td>0912-345-678</td>
+          <td>
+            <div class="add-padding">
+
+            <img src="https://picsum.photos/id/41/100/100" alt="" />
+            <br />
+            bob.jpg
+            </div>
+          </td>
+          <td>
+            <div class="box">
+              <span><a href="./edit.html">編輯</a></span
+              ><span><a href="./delete.html">刪除</a></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>cat</a></td>
+          <td>0933-333-333</td>
+          <td>
+            <div class="add-padding">
+
+            <img src="https://picsum.photos/id/41/100/100" alt="" />
+            <br />
+            cat.jpg
+            </div>
+          </td>
+          <td>
+            <div class="box">
+              <span><a href="./edit.html">編輯</a></span
+              ><span><a href="./delete.html">刪除</a></span>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <footer>&copy; YiHongWU 04 2023/10/17</footer>
+    </div>
+  </body>
+</html>

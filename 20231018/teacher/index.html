@@ -12,6 +12,38 @@
         box-sizing: border-box;
       }
 
+      nav {
+        width:80%;
+        margin:0 auto;
+        background:linear-gradient(to left, rgb(0, 0, 0,0),rgb(1, 1, 1,1));
+        position:fixed;
+        top:0;
+        left:173px;
+        height:10vh;
+        display:flex;
+        align-items: center;
+        /* justify-content:; */
+      }
+
+      .nav-link {
+        padding:10px 20px;
+        background-color:burlywood;
+        color:rgb(101, 108, 114);
+        font-family:'微軟正黑體';
+        font-weight:bold;
+        margin-left:20px;
+        border:3px solid rgb(255, 255, 255);
+        border-radius: 10px;
+
+      }
+
+      .nav-link:hover {
+        color:rgb(9, 112, 202);
+        font-family:'標楷體';
+
+      }
+
+
       .container {
         width: 80%;
         margin: 0 auto;
@@ -35,12 +67,14 @@
         border:3px solid black;
         background:linear-gradient(to right, peachpuff 30%, rgb(253, 135, 32)); 
         border-radius: 10px;
+        display:inline-block;
+        margin:20px 0;
       }
 
       .add:hover {
         color:red;
         border-radius:20px;
-        background:linear-gradient(to left top, peachpuff 30%, rgb(255, 152, 61));  
+        background:linear-gradient(to left , peachpuff 30%, rgb(255, 152, 61));  
 
         transition-duration:1s;
       }
@@ -65,7 +99,7 @@
       }
 
       table tr:nth-child(odd) {
-        background-color: rgb(220, 227, 227);
+        background-color: rgb(239, 243, 243);
       }
 
       table tr:nth-child(even) {
@@ -114,8 +148,12 @@
     </style>
   </head>
   <body>
+    <nav>
+      <a class="nav-link" href="">老師</a>
+      <a class="nav-link" href="../../20231017/student/index.html">學生</a>
+    </nav>
     <div class="container">
-      <h2>Student List</h2>
+      <h2>Teacher List</h2>
       <a class="add" href="./create.html">Add</a>
       <table>
         <tr>
