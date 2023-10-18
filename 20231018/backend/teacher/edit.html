@@ -36,7 +36,7 @@
       }
 
       input[type="file"] {
-        margin-left: 130px;
+        margin-left: 250px;
       }
 
       h2 {
@@ -51,6 +51,14 @@
         color: red;
         text-decoration: underline;
       }
+
+      input {
+        font-size: 30px;
+      }
+
+      input:focus {
+        background-color: rgb(229, 229, 229);
+      }
     </style>
   </head>
   <body>
@@ -61,21 +69,25 @@
           <tr>
             <td>
               <label for="">姓名</label>
-              <input type="text" name="" id="" />
+              <input type="text" name="" id="" value="Amy" />
             </td>
           </tr>
           <tr>
             <td>
               <label for="">年齡</label>
-              <input type="text" name="" id="" />
+              <input type="number" name="" id="" value="18" />
             </td>
           </tr>
           <tr>
             <td>
               <label for="">手機</label>
-              <input type="text" name="" id="" />
+              <input type="text" name="" id="" value="0977-777-777" />
             </td>
           </tr>
+          <td>
+            <label for="">郵箱</label>
+            <input type="text" name="" id="" value="abc_@gmail.com" />
+          </td>
           <tr>
             <td>
               <input type="file" name="" id="" />

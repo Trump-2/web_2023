@@ -21,7 +21,7 @@
       }
 
       .t-box {
-        background-color: darksalmon;
+        background-color: rgb(255, 176, 66);
         width: 80%;
         margin: 0 auto;
         text-align: center;
@@ -48,23 +48,31 @@
         font-size: 70px;
         /* text 的垂直置中就使用 line-height property */
         line-height: 500px;
-        border-left: 10px solid white;
-        border-right: 10px solid white;
+        border-left: 10px solid rgb(158, 89, 0);
+        border-right: 10px solid rgb(158, 89, 0);
         font-family: sans-serif;
       }
 
       .box1 {
-        background: radial-gradient(yellow 45%, rgb(255, 146, 22) 60%);
+        /* background: radial-gradient(yellow 45%, rgb(255, 146, 22) 60%); */
+        background: radial-gradient(
+          rgb(255, 190, 106) 45%,
+          rgb(255, 142, 14) 60%
+        );
       }
 
       a:hover {
-        color: rgb(196, 190, 190);
+        color: rgb(255, 255, 255);
         font-family: "Courier New", Courier, monospace;
         font-weight: bold;
       }
 
       .box2 {
-        background: radial-gradient(rgb(255, 146, 22) 45%, yellow 60%);
+        /* background: radial-gradient(rgb(255, 146, 22) 45%, yellow 60%); */
+        background: radial-gradient(
+          rgb(255, 190, 106) 45%,
+          rgb(255, 142, 14) 60%
+        );
       }
 
       .w-20 {
@@ -79,13 +87,13 @@
         <tr>
           <td>
             <div class="box box1">
-              <a href="./teacher/index.html">Teacher</a>
+              <a href="./backend/teacher/index.html">Teacher</a>
             </div>
           </td>
           <td class="w-20"></td>
           <td>
             <div class="box box2">
-              <a href="../20231017/student/index.html">Student</a>
+              <a href="./backend/student/index.html">Student</a>
             </div>
           </td>
         </tr>

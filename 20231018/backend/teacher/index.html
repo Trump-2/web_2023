@@ -38,8 +38,9 @@
       }
 
       .nav-link:hover {
-        color:rgb(9, 112, 202);
+        color:rgb(251, 251, 251);
         font-family:'標楷體';
+        border:6px solid rgb(133, 133, 133);
 
       }
 
@@ -120,13 +121,19 @@
         align-items: center;
       }
 
-      span {
+      span > a {
         background-color: rgb(255, 203, 17);
         padding: 20px;
         border-radius: 25px;
         border: 3px solid black;
-        color: black;
-        text-shadow: 0px 0px 3px #ff0000;
+        color:white;
+        text-shadow: 3px 3px 5px black;
+      }
+
+      span > a:hover{
+        background-color:white;
+        text-shadow: 0px 0px 5px rgb(255, 203, 17);
+        color:black;
       }
 
       th:last-child {
@@ -149,17 +156,18 @@
   </head>
   <body>
     <nav>
-      <a class="nav-link" href="">學生</a>
-      <a class="nav-link" href="../../20231018/teacher/index.html">老師</a>
+      <a class="nav-link" href="">老師</a>
+      <a class="nav-link" href="../student/index.html">學生</a>
     </nav>
     <div class="container">
-      <h2>Student List</h2>
+      <h2>Teacher List</h2>
       <a class="add" href="./create.html">Add</a>
       <table>
         <tr>
           <th>id</th>
           <th>name</th>
           <th>mobile</th>
+          <th>email</th>
           <th>pic</th>
           <th>operation</th>
         </tr>
@@ -167,6 +175,7 @@
           <td>1</td>
           <td>amy</a></td>
           <td>0911-111-111</td>
+          <td>abc_@gmail.com</td>
           <td>
             <div class="add-padding">
               <img src="https://picsum.photos/id/41/100/100" alt="" />
@@ -177,14 +186,15 @@
           <td>
             <div class="box">
               <span><a href="./edit.html">編輯</a></span
-              ><span><a href="./delete.html">刪除</a></span>
-            </div>
-          </td>
+                ><span><a href="./delete.html">刪除</a></span>
+              </div>
+            </td>
         </tr>
         <tr>
           <td>2</td>
           <td>bob</a></td>
           <td>0912-345-678</td>
+          <td>abc_@gmail.com</td>
           <td>
             <div class="add-padding">
               <img src="https://picsum.photos/id/41/100/100" alt="" />
@@ -195,142 +205,149 @@
           <td>
             <div class="box">
               <span><a href="./edit.html">編輯</a></span
-              ><span><a href="./delete.html">刪除</a></span>
-            </div>
-          </td>
+                ><span><a href="./delete.html">刪除</a></span>
+              </div>
+            </td>
         </tr>
         <tr>
           <td>3</td>
           <td>cat</a></td>
           <td>0933-333-333</td>
+          <td>abc_@gmail.com</td>
           <td>
             <div class="add-padding">
-
-            <img src="https://picsum.photos/id/41/100/100" alt="" />
-            <br />
-            cat.jpg
+              
+              <img src="https://picsum.photos/id/41/100/100" alt="" />
+              <br />
+              cat.jpg
             </div>
           </td>
           <td>
             <div class="box">
               <span><a href="./edit.html">編輯</a></span
-              ><span><a href="./delete.html">刪除</a></span>
-            </div>
-          </td>
+                ><span><a href="./delete.html">刪除</a></span>
+              </div>
+            </td>
         </tr>
         <tr>
           <td>4</td>
           <td>amy</a></td>
           <td>0911-111-111</td>
+          <td>abc_@gmail.com</td>
           <td>
             <div class="add-padding">
-
-            <img src="https://picsum.photos/id/41/100/100" alt="" />
-            <br />
-            amy.jpg
+              
+              <img src="https://picsum.photos/id/41/100/100" alt="" />
+              <br />
+              amy.jpg
             </div>
           </td>
           <td>
             <div class="box">
               <span><a href="./edit.html">編輯</a></span
-              ><span><a href="./delete.html">刪除</a></span>
-            </div>
-          </td>
+                ><span><a href="./delete.html">刪除</a></span>
+              </div>
+            </td>
         </tr>
         <tr>
           <td>5</td>
           <td>bob</a></td>
           <td>0912-345-678</td>
+          <td>abc_@gmail.com</td>
           <td>
             <div class="add-padding">
-
-            <img src="https://picsum.photos/id/41/100/100" alt="" />
-            <br />
-            bob.jpg
+              
+              <img src="https://picsum.photos/id/41/100/100" alt="" />
+              <br />
+              bob.jpg
             </div>
           </td>
           <td>
             <div class="box">
               <span><a href="./edit.html">編輯</a></span
-              ><span><a href="./delete.html">刪除</a></span>
-            </div>
-          </td>
+                ><span><a href="./delete.html">刪除</a></span>
+              </div>
+            </td>
         </tr>
         <tr>
           <td>6</td>
           <td>cat</a></td>
           <td>0933-333-333</td>
+          <td>abc_@gmail.com</td>
           <td>
             <div class="add-padding">
-
-            <img src="https://picsum.photos/id/41/100/100" alt="" />
-            <br />
-            cat.jpg
+              
+              <img src="https://picsum.photos/id/41/100/100" alt="" />
+              <br />
+              cat.jpg
             </div>
           </td>
           <td>
             <div class="box">
               <span><a href="./edit.html">編輯</a></span
-              ><span><a href="./delete.html">刪除</a></span>
-            </div>
-          </td>
+                ><span><a href="./delete.html">刪除</a></span>
+              </div>
+            </td>
         </tr>
         <tr>
           <td>7</td>
           <td>amy</a></td>
           <td>0911-111-111</td>
+          <td>abc_@gmail.com</td>
           <td>
             <div class="add-padding">
-
-            <img src="https://picsum.photos/id/41/100/100" alt="" />
-            <br />
-            amy.jpg
+              
+              <img src="https://picsum.photos/id/41/100/100" alt="" />
+              <br />
+              amy.jpg
             </div>
           </td>
           <td>
             <div class="box">
               <span><a href="./edit.html">編輯</a></span
-              ><span><a href="./delete.html">刪除</a></span>
-            </div>
-          </td>
+                ><span><a href="./delete.html">刪除</a></span>
+              </div>
+            </td>
         </tr>
         <tr>
           <td>8</td>
           <td>bob</a></td>
           <td>0912-345-678</td>
+          <td>abc_@gmail.com</td>
           <td>
             <div class="add-padding">
-
-            <img src="https://picsum.photos/id/41/100/100" alt="" />
-            <br />
-            bob.jpg
+              
+              <img src="https://picsum.photos/id/41/100/100" alt="" />
+              <br />
+              bob.jpg
             </div>
           </td>
           <td>
             <div class="box">
               <span><a href="./edit.html">編輯</a></span
-              ><span><a href="./delete.html">刪除</a></span>
-            </div>
-          </td>
+                ><span><a href="./delete.html">刪除</a></span>
+              </div>
+            </td>
         </tr>
         <tr>
           <td>9</td>
           <td>cat</a></td>
           <td>0933-333-333</td>
+          <td>abc_@gmail.com</td>
           <td>
             <div class="add-padding">
-
-            <img src="https://picsum.photos/id/41/100/100" alt="" />
-            <br />
-            cat.jpg
+              
+              <img src="https://picsum.photos/id/41/100/100" alt="" />
+              <br />
+              cat.jpg
             </div>
           </td>
           <td>
             <div class="box">
               <span><a href="./edit.html">編輯</a></span
-              ><span><a href="./delete.html">刪除</a></span>
-            </div>
-          </td>
+                ><span><a href="./delete.html">刪除</a></span>
+              </div>
+            </td>
         </tr>
       </table>
       <footer>&copy; YiHongWU 04 2023/10/17</footer>
