@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      body {
+        height: 2000px;
+      }
+
+      h3 {
+        display: none;
+      }
       .pos-static {
         left: 30px;
         /* 這是 position property 的預設值 */
@@ -14,11 +21,83 @@
       .pos-relative {
         position: relative;
         left: 30px;
+        z-index: 200;
+      }
+
+      .pos-fixed {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+      }
+
+      .nav-fixed {
+        position: fixed;
+        top: 0;
+        background-color: lightsalmon;
+        width: 100%;
+        height: 5vh;
+        z-index: 100;
+        /* z-index property 用來調整元素網頁內上下順序 */
+      }
+
+      .footer-fixed {
+        text-align: center;
+        line-height: 15vh;
+        position: fixed;
+        bottom: 0;
+        background-color: rgb(23, 158, 225);
+        width: 100%;
+        height: 5vh;
+        z-index: 100;
+      }
+
+      .box-relative {
+        position: relative;
+        width: 700px;
+        height: 700px;
+        background-color: darkgoldenrod;
+      }
+
+      .box1 {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background-color: darkmagenta;
+        top: 0;
+        left: 0;
+      }
+
+      .box2 {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background-color: rgb(220, 255, 43);
+        top: 0;
+        right: 0;
+      }
+
+      .box3 {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background-color: rgb(22, 243, 88);
+        bottom: 0;
+        left: 0;
+      }
+
+      .box4 {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background-color: rgb(56, 20, 237);
+        bottom: 0;
+        right: 0;
       }
     </style>
   </head>
   <body>
     <div class="container">
+      <nav class="nav-fixed"></nav>
       <h3>position</h3>
       <br />
       <hr />
@@ -28,6 +107,24 @@
       <hr />
       <h4>relative</h4>
       <p class="pos-relative">Lorem ipsum dolor sit amet consectetur.</p>
+      <br />
+      <hr />
+      <h4>absolute</h4>
+      <div class="box-relative">
+        <div class="box-absolute box1"></div>
+        <div class="box-absolute box2"></div>
+        <div class="box-absolute box3"></div>
+        <div class="box-absolute box4"></div>
+      </div>
+      <br />
+      <hr />
+
+      <h4>fixed</h4>
+      <a href="#" class="pos-fixed"> Top </a>
+      <br />
+      <hr />
+
+      <footer class="footer-fixed">&copy;YiHongWU 2023/10/19</footer>
     </div>
   </body>
 </html>
