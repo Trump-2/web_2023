@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 100%;
+        height: 100vh;
+        background-color: darkgoldenrod;
+        /* padding-top: 50px; */
+      }
+
+      .box1 {
+        height: 150px;
+        background-color: black;
+        /* margin-top: 50px; */
+        /* padding-top: 50px; */
+      }
+
+      .box2 {
+        height: 50px;
+        background-color: cadetblue;
+        /* margin-top: 50px; */
+        /* padding-top: 50px; */
+      }
+
+      .parent {
+        /* margin-bottom: 20px; */
+        height: 150px;
+        background-color: gray;
+      }
+
+      .child {
+        margin-top: 30px;
+        height: 100px;
+        background-color: rgb(225, 225, 143);
+      }
+
+      .container2 {
+        background-image: url("images/practice.png");
+        width: 100%;
+        height: 80vh;
+        text-align: center;
+        /* 因為不能對 a 使用 margin 所以改對 div 用 padding-top */
+        padding-top: 28vh;
+      }
+
+      a {
+        text-decoration: none;
+        display: inline-block;
+        background-color: cornflowerblue;
+        padding: 5px;
+        font-family: sans-serif;
+        border-radius: 30px;
+        text-align: center;
+        opacity: 0;
+        /* 
+        不能在這裡對 a 使用 margin-top，因為這樣會將其父 div 也一起往下推，因為 margin collapse 的關係 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="container">
+      <div class="box1">
+        <div class="box2"></div>
+      </div>
+    </div> -->
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+    <br />
+    <hr />
+    <div class="container2">
+      <a href="https://www.w3schools.com/">Buy&nbsp;&nbsp;&nbsp;</a>
+      <a href="https://www.gamer.com.tw/">Learn more</a>
+    </div>
+    <br />
+    <hr />
+  </body>
+</html>
