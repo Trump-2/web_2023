@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url(./images/12.webp);
+        background-size: cover;
+      }
+
+      .container {
+        width: 80vw;
+        /* height: 100vh; */
+        background-color: rgba(159, 122, 245, 0.265);
+        margin: auto;
+      }
+
+      nav {
+        background-color: darksalmon;
+        height: 10vh;
+        /* 會跳脫 flow，所以 nav 不會繼承父元素的寬度 */
+        position: fixed;
+        /* 用 vw 可以解決上面的問題，% 會怪怪的 */
+        width: 80vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      a {
+        font-size: 40px;
+        text-decoration: none;
+        color: burlywood;
+        margin-left: 30px;
+        /* margin-right: 20px; */
+      }
+
+      .box {
+        height: 70vh;
+        width: 70vw;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        /* overflow: auto; */
+        margin-bottom: 10px;
+      }
+
+      .box1 {
+        background-color: burlywood;
+      }
+
+      .box2 {
+        background-color: chocolate;
+      }
+
+      .item1 {
+        background-color: blanchedalmond;
+        width: 350px;
+        text-align: center;
+        box-shadow: 8px 8px 10px black;
+        padding-top: 15px;
+        border-radius: 20px;
+      }
+
+      .item2 {
+        background-color: rgb(240, 199, 137);
+        width: 280px;
+        text-align: center;
+        box-shadow: 8px 8px 10px black;
+        padding-top: 15px;
+        border-radius: 20px;
+      }
+
+      img {
+        width: 80%;
+        height: 200px;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <a href="#section1">Top</a>
+        <a href="#section2">Bottom</a>
+      </nav>
+      <div id="section1" class="box box1">
+        <div class="item1">
+          <img src="./images/1.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi
+            libero deleniti consequatur rerum laudantium reprehenderit facere
+            est odio eum nihil?
+          </p>
+        </div>
+        <div class="item1">
+          <img src="./images/2.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
+            deleniti reiciendis! Ratione distinctio impedit deleniti quis eius
+            magnam quia excepturi!
+          </p>
+        </div>
+        <div class="item1">
+          <img src="./images/3.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
+            deleniti reiciendis! Ratione distinctio impedit deleniti quis eius
+            magnam quia excepturi!
+          </p>
+        </div>
+      </div>
+      <div id="section2" class="box box2">
+        <div class="item2">
+          <img src="./images/4.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+            repellendus.
+          </p>
+        </div>
+        <div class="item2">
+          <img src="./images/5.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, quod.
+          </p>
+        </div>
+        <div class="item2">
+          <img src="./images/6.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, quod.
+          </p>
+        </div>
+        <div class="item2">
+          <img src="./images/7.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, quod.
+          </p>
+        </div>
+        <div class="item2">
+          <img src="./images/8.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, quod.
+          </p>
+        </div>
+        <div class="item2">
+          <img src="./images/9.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, quod.
+          </p>
+        </div>
+        <div class="item2">
+          <img src="./images/10.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, quod.
+          </p>
+        </div>
+        <div class="item2">
+          <img src="./images/11.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, quod.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -6,7 +6,6 @@
     <title>Document</title>
     <style>
       .container {
-        height: 80vh;
         background-color: rgba(31, 157, 235, 0.508);
         /* 讓該元素變成 flex container，而且也等同宣告要使用 flexbox */
         display: flex;
@@ -15,10 +14,11 @@
         justify-content: space-around;
 
         /* 垂直對齊 flex item 的方式 */
-        align-items: center;
+        align-items: flex-end;
 
         /* flex container 不是滿 width，想要置中的作法 */
-        width: 90%;
+        width: 900px;
+        height: 900px;
         margin: auto;
 
         /* 指定 flex item 在需要的情況下要不要換行 */
@@ -26,15 +26,17 @@
       }
 
       .item {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         background-color: rgb(191, 188, 184);
         border: 1px solid black;
+        text-align: center;
+        line-height: 250px;
       }
 
       .item-none {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         background-color: rgb(191, 188, 184);
         border: 1px solid black;
         /* 讓下一行的 flex item 可以跟前一行一樣的方式對齊 */
@@ -47,19 +49,43 @@
       .bottom {
         align-self: flex-end;
       } */
+
+      .red {
+        background-color: red;
+      }
+
+      .red::after {
+        content: "X";
+        font-size: 130px;
+      }
+
+      .green {
+        background-color: green;
+      }
+
+      .green::after {
+        content: "O";
+        font-size: 130px;
+      }
+
+      .shadow {
+        box-shadow: 20px 20px 10px black;
+        text-shadow: 5px 5px 8px white;
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <!-- flex container -->
-      <div class="item top">item1</div>
-      <div class="item">item2</div>
-      <div class="item bottom">item3</div>
-      <div class="item">item4</div>
-      <div class="item">item5</div>
-      <div class="item">item6</div>
-      <div class="item item-none">item7</div>
-      <div class="item item-none">item8</div>
+      <div class="item green shadow"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item green shadow"></div>
+      <div class="item red shadow"></div>
+      <!-- <div class="item red shadow"></div>
+      <div class="item"></div>
+      <div class="item green shadow"></div> -->
     </div>
   </body>
 </html>
