@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halloween</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-image:url(./images/bg/3.jpg);
+        background-size:cover;
+        background-repeat:no-repeat;
+      }
+
+      .container {
+        width: 80%;
+        background-color: rgba(44, 47, 47, 0.526);
+        margin: auto;
+      }
+
+      header {
+        height: 17vh;
+        background-color: rgba(154, 111, 247, 0.713);
+        /* position:relative; */
+      }
+
+      nav {
+        /* 使用 fixed 後，子元素的寬度跟其父元素的寬度無關，會對應到 body 或 viewport ( 不確定 ) 的寬度
+        但其在網頁中的位置還是取決於父元素*/
+        /* position: fixed; */
+        /* 使用 sticky 後，子元素的寬度又跟其父元素有關了 */
+        position: sticky;
+        /* sticky 一樣要跟 top、bottom、left、right 搭配使用 */
+        top: 0;
+        height: 15vh;
+        /* width: 80%; */
+        background-color: rgba(109, 57, 241, 0.438);
+        display:flex;
+        justify-content:space-evenly;
+        align-items:center;
+      }
+
+      .text-a {
+        text-decoration:none;
+        font-size:40px;
+        display:inline-block;
+        color:rgb(255, 255, 255);
+        padding:10px 20px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+      
+      }
+      
+      .text-a:hover {
+        background:linear-gradient(to bottom, rgb(255, 255, 255) 30%, rgb(47, 47, 47)); 
+        border-radius:30px;
+        /* color:white; */
+        transition-duration:1s;
+        text-shadow:3px 3px black;
+      }
+
+      /* .add {
+        padding:10px 20px;
+        border:3px solid black;
+        background:linear-gradient(to right, peachpuff 30%, rgb(253, 135, 32)); 
+        border-radius: 10px;
+        display:inline-block;
+        margin:20px 0;
+      } */
+
+      /* .add:hover {
+        color:red;
+        border-radius:20px;
+        background:linear-gradient(to left , peachpuff 30%, rgb(255, 152, 61));  
+
+        transition-duration:1s;
+      } */
+
+
+      .box {
+        width: 90%;
+        height: 75vh;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap:wrap;
+      }
+
+      .box1 {
+        background-color: rgba(187, 9, 251, 0.467);
+        font-size:25px;
+        font-weight: bold;
+      }
+      .box2 {
+        background-color: rgba(70, 4, 127, 0.618);
+        font-size:20px;
+        color:rgb(196, 196, 196)
+      }
+
+      .item {
+        text-align: center;
+        padding: 20px;
+        /* box-shadow: 10px 10px 2px black; */
+      }
+
+      .item1 {
+        width: 350px;
+        background-color: rgba(169, 53, 241, 0.98);
+        
+        border-radius: 2em / 5em;
+        border-top:15px solid black;
+        border-left:15px solid black;
+      }
+
+      .item2 {
+        width:280px;
+        /* height:250px; */
+        /* margin-bottom:10px; */
+        /* border:2.5px solid white; */
+        border-top:10px solid white;
+        border-bottom:2px solid white;
+        border-right:10px solid white;
+        border-radius:20px;
+      }
+
+      img {
+        margin-bottom:15px;
+        border-radius:20px;
+      }
+
+      .item>img {
+        width:250px;
+        height:250px;
+      }
+
+      .item2>img {
+        width: 200px;;
+        height:200px;
+      }
+
+      footer {
+        text-align:center;
+        font-size:20px;
+        color:white;
+        margin-top:50px;
+      }
+
+      header>img {
+        width:20%;
+      }
+
+      header>img:hover {
+        width:5%;
+        /* position:absolute;
+        right:0; */
+        /* bottom:0; */
+        transition-duration:2s;
+        opacity:0;
+      }
+
+      
+      .toTop>img {
+        position:fixed;
+        width:10%;
+        bottom:0;
+        right:0;
+      }
+
+      .toTop>img:hover {
+        opacity:0.5;
+        transition-duration: 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="./images/logo/logo4.png" alt="">
+      </header>
+      <nav>
+        <a class="text-a" href="#box1">Best sellers</a>
+        <a class="text-a" href="#box2">More</a>
+      </nav>
+      <div class="box box1" id="box1">
+        <div class="item item1">
+          <img src="./images/12.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, ea.
+          </p>
+        </div>
+        <div class="item item1">
+          <img src="./images/13.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, ea.
+          </p>
+        </div>
+        <div class="item item1">
+          <img src="./images/11.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, ea.
+          </p>
+        </div>
+      </div>
+      <div class="box box2" id="box2">
+        
+        <div class="item item2">
+          <img src="./images/5.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, ea.
+          </p>
+        </div>
+        <div class="item item2">
+          <img src="./images/8.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, ea.
+          </p>
+        </div>
+        <div class="item item2">
+          <img src="./images/9.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, ea.
+          </p>
+        </div>
+        <div class="item item2">
+          <img src="./images/10.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, ea.
+          </p>
+        </div>
+        <div class="item item2">
+          <img src="./images/14.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, ea.
+          </p>
+        </div>
+        <div class="item item2">
+          <img src="./images/1.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, ea.
+          </p>
+        </div>
+        <div class="item item2">
+          <img src="./images/3.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, ea.
+          </p>
+        </div>
+        <div class="item item2">
+          <img src="./images/4.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, ea.
+          </p>
+        </div>
+      </div>
+      <a href="#" class="toTop">
+        <img src="./images/logo/logoTop.png" alt="">
+      </a>
+      <br>
+      <footer>&copy;Wu-YiHong 2023/10/26</footer>
+    </div>
+    <!-- <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p> -->
+  </body>
+</html>
