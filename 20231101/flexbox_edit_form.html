@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .header {
+        width: 80%;
+        margin: auto;
+        height: 15vh;
+        /* background-color: darkgoldenrod; */
+        text-align: center;
+        /* margin-bottom:30px; */
+      }
+
+      .box {
+        width: 100%;
+        border-bottom: 3px solid black;
+        height: 5vh;
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+        height: 75vh;
+        /* background-color: chocolate; */
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .item {
+        height: 20vh;
+        /* background-color: wheat; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* box-shadow: 5px 5px 5px black; */
+      }
+
+      /* .h-5 {
+        height: 5vh;
+      }
+
+      .h-30 {
+        height: 30vh;
+      }
+ */
+      .w-20 {
+        width: 20%;
+      }
+      .w-30 {
+        width: 30%;
+      }
+
+      .w-50 {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="box"></div>
+      <h3>Project photo Edit</h3>
+    </div>
+    <form action="" method="post" enctype="multipart/form-data">
+      <div class="container">
+        <div class="item w-20 h-30">name</div>
+        <div class="item w-50 h-30">
+          <img src="https://picsum.photos/id/237/600/100" alt="" />
+        </div>
+        <div class="item w-20 h-30">change</div>
+        <div class="item w-20 h-5">name</div>
+        <div class="item w-50 h-5">photo</div>
+        <div class="item w-20 h-5">
+          <input type="file" name="" id="" />
+        </div>
+        <div class="item w-20">
+          <input type="submit" value="提交" />
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
