@@ -14,15 +14,17 @@
 .header {
   width: 1024px;
   height: 65px;
-  background-color: thistle;
+  /* background-color: thistle; */
   margin: auto;
   border: 1px solid black;
   border-bottom: 0;
+  text-align: center;
+  padding-top: 2px;
 }
 
 .container {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin: auto;
   width: 1024px;
 }
@@ -31,7 +33,7 @@
   width: 215px;
   /* css 的函數 calc() */
   height: calc(768px - 65px - 20px);
-  background-color: darkgray;
+  /* background-color: darkgray; */
   border: 1px solid black;
   border-right: 0;
   display: flex;
@@ -39,20 +41,53 @@
   /* margin: auto; */
 }
 
+.aside-title {
+  font-size: 24px;
+  /* text-decoration: underline; */
+  border-bottom: 2px solid #000000;
+  color: #ff00ff;
+}
+
 .aside-header {
   height: calc(100% - 25px);
-  background-color: coral;
+  /* background-color: coral; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "標楷體";
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+}
+
+.aside-header > .box {
+  width: 200px;
+  height: 35px;
+  /* background-color: antiquewhite; */
+  background-image: url(./images/menu1.png);
+  text-align: center;
+  padding-top: 7px;
+  margin-bottom: 10px;
+}
+
+.aside-header > .box:hover {
+  background-image: url(./images/menu2.png);
 }
 
 .aside-footer {
   height: 25px;
-  background-color: darkblue;
+  font-family: "標楷體";
+  font-size: 16px;
+  text-align: center;
+  color: #000000;
+  /* background-color: darkblue; */
 }
 
 .main {
   width: calc(1024px - 215px);
   height: calc(768px - 65px - 20px);
-  background-color: peru;
+  /* background-color: peru; */
   border: 1px solid black;
 
   /* margin: auto; */
@@ -60,18 +95,28 @@
 
 .main-header {
   height: 29px;
-  background-color: darkorange;
+  font-size: 24px;
+  color: #0000ff;
+  font-family: "標楷體";
+  border-bottom: 1px solid black;
+  /* background-color: darkorange; */
 }
 
 .main-footer {
   height: calc(100% - 29px);
-  background-color: darkgoldenrod;
+  /* background-color: darkgoldenrod; */
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  /* background-color: #ff00ff; */
 }
 
 .footer {
   width: 1024px;
   height: 20px;
-  background-color: olive;
+  /* background-color: olive; */
   margin: auto;
   border: 1px solid black;
   border-top: 0;
