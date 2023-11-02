@@ -1,67 +1,80 @@
 * {
   margin: 0;
-  box-sizing: border-box;
   padding: 0;
-  /* overflow: hidden; */
+  box-sizing: border-box;
 }
 
 .container {
   width: 1024px;
   height: 768px;
+  /* background-color: wheat; */
   margin: auto;
-  background-color: bisque;
   border: 1px solid black;
 }
 
 header {
   width: 1000px;
   height: 65px;
-  background-color: aquamarine;
+  /* background-color: thistle; */
   margin: auto;
+  border: 1px solid black;
+  border-top: 0;
 }
 
 .box {
   display: flex;
   width: 1000px;
   margin: auto;
-  justify-content: space-between;
 }
 
 aside {
   width: 215px;
   height: calc(768px - 65px - 20px);
-  background-color: burlywood;
+  /* background-color: skyblue; */
+  margin-right: 15px;
 }
 
 .aside-header {
   height: calc(100% - 25px);
-  background-color: darkgoldenrod;
+  /* background-color: rgb(95, 95, 220); */
+  border: 1px solid black;
+  border-top: 0;
 }
 
 .aside-footer {
   height: 25px;
-  background-color: rgb(245, 184, 179);
+  /* background-color: rgb(178, 162, 97); */
+  border: 1px solid black;
+  border-top: 0;
+  border-bottom: 0;
 }
 
 main {
   width: 770px;
-  /* height: calc(768px - 65px - 20px); */
-  background-color: brown;
+  height: calc(768px - 65px - 20px);
+  /* background-color: rgb(188, 72, 43); */
 }
 
 .main-header {
   height: 29px;
-  background-color: tomato;
+  /* background-color: cadetblue; */
+  border: 1px solid black;
+  border-top: 0;
 }
 
 .main-footer {
   height: calc(100% - 29px);
-  background-color: slateblue;
+  color: darkgrey;
+  border: 1px solid black;
+  border-top: 0;
+  border-bottom: 0;
 }
 
 footer {
-  height: 20px;
   width: 1000px;
-  background-color: cadetblue;
+  height: 20px;
+  /* background-color: cadetblue; */
   margin: auto;
+  border: 1px solid black;
+  border-bottom: 0;
 }
