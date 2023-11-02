@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* body {
+  width: 1024px;
+  height: 768px;
+  background-color: tomato;
+  margin: auto;
+} */
+
+.header {
+  width: 1024px;
+  height: 65px;
+  background-color: thistle;
+  margin: auto;
+  border: 1px solid black;
+  border-bottom: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 1024px;
+}
+
+.aside {
+  width: 215px;
+  /* css 的函數 calc() */
+  height: calc(768px - 65px - 20px);
+  background-color: darkgray;
+  border: 1px solid black;
+  border-right: 0;
+  display: flex;
+  flex-direction: column;
+  /* margin: auto; */
+}
+
+.aside-header {
+  height: calc(100% - 25px);
+  background-color: coral;
+}
+
+.aside-footer {
+  height: 25px;
+  background-color: darkblue;
+}
+
+.main {
+  width: calc(1024px - 215px);
+  height: calc(768px - 65px - 20px);
+  background-color: peru;
+  border: 1px solid black;
+
+  /* margin: auto; */
+}
+
+.main-header {
+  height: 29px;
+  background-color: darkorange;
+}
+
+.main-footer {
+  height: calc(100% - 29px);
+  background-color: darkgoldenrod;
+}
+
+.footer {
+  width: 1024px;
+  height: 20px;
+  background-color: olive;
+  margin: auto;
+  border: 1px solid black;
+  border-top: 0;
+}
