@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border: 2px solid black;
+        border-collapse: collapse;
+        width: 80%;
+        margin: auto;
+      }
+
+      td,
+      th {
+        border: 2px solid black;
+      }
+
+      tr:nth-child(2) {
+        text-align: center;
+      }
+
+      td > span {
+        background-color: thistle;
+      }
+
+      tr:nth-child(4) > td:nth-child(3) > span {
+        display: block;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+        line-height: 100px;
+        text-align: center;
+      }
+
+      tr:nth-child(5) > td:nth-child(3) > span {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+        text-align: center;
+        line-height: 100px;
+      }
+
+      td > div {
+        background-color: tomato;
+        margin-bottom: 10px;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+      }
+
+      tr:nth-child(3) > td:nth-child(3) > div {
+        display: inline;
+        width: 100px;
+        height: 100px;
+        margin-right: 15px;
+      }
+
+      tr:nth-child(5) > td:nth-child(3) > div {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+      }
+
+      th:nth-child(1) {
+        width: 10%;
+      }
+      th:nth-child(2) {
+        width: 20%;
+      }
+      th:nth-child(3) {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="span">
+      <tr>
+        <th>display</th>
+        <th>origin</th>
+        <th>after</th>
+      </tr>
+      <tr>
+        <td colspan="3">span</td>
+        <!-- <td></td> -->
+        <!-- <td></td> -->
+      </tr>
+      <tr>
+        <td>inline</td>
+        <td><span>123</span><span>456</span><span>789</span></td>
+        <td><span>123</span><span>456</span><span>789</span></td>
+      </tr>
+      <tr>
+        <td>block</td>
+        <td><span>123</span><span>456</span><span>789</span></td>
+        <td><span>123</span><span>456</span><span>789</span></td>
+      </tr>
+      <tr>
+        <td>inline-block</td>
+        <td><span>123</span><span>456</span><span>789</span></td>
+        <td><span>123</span><span>456</span><span>789</span></td>
+      </tr>
+    </table>
+    <br /><br />
+    <table class="div">
+      <tr>
+        <th>display</th>
+        <th>origin</th>
+        <th>after</th>
+      </tr>
+      <tr>
+        <td colspan="3">div</td>
+        <!-- <td></td> -->
+        <!-- <td></td> -->
+      </tr>
+      <tr>
+        <td>inline</td>
+        <td>
+          <div>123</div>
+          <div>456</div>
+          <div>789</div>
+        </td>
+        <td>
+          <div>123</div>
+          <div>456</div>
+          <div>789</div>
+        </td>
+      </tr>
+      <tr>
+        <td>block</td>
+        <td>
+          <div>123</div>
+          <div>456</div>
+          <div>789</div>
+        </td>
+        <td>
+          <div>123</div>
+          <div>456</div>
+          <div>789</div>
+        </td>
+      </tr>
+      <tr>
+        <td>inline-block</td>
+        <td>
+          <div>123</div>
+          <div>456</div>
+          <div>789</div>
+        </td>
+        <td>
+          <div>123</div>
+          <div>456</div>
+          <div>789</div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
