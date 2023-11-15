@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        background-color: lightseagreen;
+        width: 80%;
+        margin: auto;
+        /* height: 80vh; */
+      }
+      .item {
+        width: 30%;
+        border: 3px solid goldenrod;
+        height: 300px;
+        margin-bottom: 20px;
+        background-color: lightskyblue;
+      }
+
+      @media screen and (max-width: 576px) {
+        .container {
+          display: flex;
+          background-color: rgb(156, 32, 178);
+          width: 100%;
+          margin: 0 auto;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          align-items: center;
+          height: auto;
+        }
+
+        .item {
+          width: 70%;
+          border: 3px solid goldenrod;
+          height: 300px;
+          margin-bottom: 20px;
+          background-color: lightskyblue;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .container {
+          display: flex;
+          background-color: rgb(36, 54, 214);
+          width: 100%;
+          margin: 0 auto;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          align-items: center;
+          height: auto;
+        }
+
+        .item {
+          width: 45%;
+          border: 3px solid goldenrod;
+          height: 300px;
+          margin-bottom: 20px;
+          background-color: lightskyblue;
+        }
+      }
+
+      /* mobile size*/
+
+      /* large size*/
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+  </body>
+</html>
