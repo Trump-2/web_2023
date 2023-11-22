@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- font awesome 的 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      body {
+        height: 1250px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar -->
+    <!-- fixed-top 用來固定 navbar 在頂部 -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <!-- navbar-brand 可在 navbar 中放入 text 或 image -->
+        <a class="navbar-brand" href="javascript:void(0)">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mynavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#sec1">page1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sec2">page2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sec3">page3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sec4">page3</a>
+            </li>
+          </ul>
+
+          <form class="d-flex">
+            <!-- Nav text -->
+            <!-- <div class="container-fluid"> -->
+            <span class="navbar-text"
+              >Hi~Admin&nbsp;&nbsp;: ) )&nbsp;&nbsp;</span
+            >
+            <!-- </div> -->
+            <!--  -->
+
+            <!-- <input class="form-control me-2" type="text" placeholder="Search" /> -->
+            <button class="btn btn-primary" type="button">LogOut</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- <br /><br /><br /> -->
+
+    <!-- carousel -->
+    <div id="sec1"></div>
+    <div class="container" style="margin-top: 40px">
+      <div class="row">
+        <div class="col-12">
+          <!-- data-bs-ride="carousel" 控制自動輪播 -->
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide mt-5"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <!-- data-bs-interval 控制圖片抽換的時間 -->
+              <div class="carousel-item active" data-bs-interval="1000">
+                <img
+                  src="https://picsum.photos/id/401/1920/600"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="text-danger">First slide label</h5>
+                  <p class="text-primary">
+                    Some representative placeholder content for the first slide.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img
+                  src="https://picsum.photos/id/123/1920/600"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item" data-bs-interval="5000">
+                <img
+                  src="https://picsum.photos/id/94/1920/600"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- card -->
+    <div id="sec2"></div>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-4 col-12">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Jane Doe</h4>
+              <p class="card-text">
+                Some example text some example text. Jane Doe is an architect
+                and engineer
+              </p>
+              <div class="d-grid gap-2">
+                <a href="#" class="btn btn-primary">See Profile</a>
+              </div>
+            </div>
+            <img
+              class="card-img-bottom m-auto mb-3"
+              src="https://picsum.photos/id/100/200/300"
+              alt="Card image"
+              style="width: 90%; height: 300px; border-radius: 20px"
+            />
+          </div>
+        </div>
+        <div class="col-md-4 col-12">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Jane Doe</h4>
+              <p class="card-text">
+                Some example text some example text. Jane Doe is an architect
+                and engineer
+              </p>
+              <div class="d-grid gap-2">
+                <a href="#" class="btn btn-primary">See Profile</a>
+              </div>
+            </div>
+            <img
+              class="card-img-bottom m-auto mb-3"
+              src="https://picsum.photos/id/301/200/300"
+              alt="Card image"
+              style="width: 90%; height: 300px; border-radius: 20px"
+            />
+          </div>
+        </div>
+        <div class="col-md-4 col-12">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Jane Doe</h4>
+              <p class="card-text">
+                Some example text some example text. Jane Doe is an architect
+                and engineer
+              </p>
+              <div class="d-grid gap-2">
+                <a href="#" class="btn btn-primary">See Profile</a>
+              </div>
+            </div>
+            <img
+              class="card-img-bottom m-auto mb-3"
+              src="https://picsum.photos/id/588/200/300"
+              alt="Card image"
+              style="width: 90%; height: 300px; border-radius: 20px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- collapse -->
+    <div id="sec3"></div>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-8">
+          <button
+            class="btn btn-primary w-100"
+            data-bs-toggle="collapse"
+            href="#multiCollapseExample1"
+            type="button"
+            aria-expanded="false"
+            aria-controls="multiCollapseExample1"
+          >
+            Toggle first element
+          </button>
+        </div>
+        <div class="col-4">
+          <button
+            class="btn btn-primary w-100"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#multiCollapseExample2"
+            aria-expanded="false"
+            aria-controls="multiCollapseExample2"
+          >
+            Toggle second element
+          </button>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col-8">
+          <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body">
+              Some placeholder content for the first collapse component of this
+              multi-collapse example. This panel is hidden by default but
+              revealed when the user activates the relevant trigger.
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <div class="card card-body">
+              Some placeholder content for the second collapse component of this
+              multi-collapse example. This panel is hidden by default but
+              revealed when the user activates the relevant trigger.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- dropdown -->
+    <div id="sec4"></div>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-4">
+          <div class="dropdown">
+            <button
+              class="btn btn-info dropdown-toggle btn-lg w-100"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="dropdown w-100">
+            <button
+              class="btn btn-info dropdown-toggle w-100"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
