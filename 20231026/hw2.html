@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halloween</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 80%;
+        background-color: bisque;
+        margin: auto;
+      }
+
+      header {
+        height: 17vh;
+        background-color: chocolate;
+      }
+
+      nav {
+        /* 使用 fixed 後，子元素的寬度跟其父元素的寬度無關，會對應到 body 或 viewport ( 不確定 ) 的寬度
+        但其在網頁中的位置還是取決於父元素*/
+        /* position: fixed; */
+        /* 使用 sticky 後，子元素的寬度又跟其父元素有關了 */
+        position: sticky;
+        /* sticky 一樣要跟 top、bottom、left、right 搭配使用 */
+        top: 0;
+        height: 15vh;
+        /* width: 80%; */
+        background-color: rgb(173, 246, 114);
+      }
+
+      .box {
+        width: 90%;
+        height: 70vh;
+        margin: auto;
+        background-color: cadetblue;
+      }
+
+      .box2 {
+        width: 90%;
+        margin: auto;
+        height: 70vh;
+        background-color: rgb(28, 101, 153);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>test</header>
+      <nav>123</nav>
+      <div class="box">123</div>
+      <div class="box2">123</div>
+    </div>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+  </body>
+</html>
