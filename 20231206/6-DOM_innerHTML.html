@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My title</title>
+</head>
+
+<body>
+  <h1 id="myH1">A heading</h1>
+  <a href="">Link text</a>
+  <button id="myBtn">我的按鈕</button>
+
+
+  <script>
+    // 1. 取得 HTML 元素
+    let myBtn = document.getElementById('myBtn');
+    let myH1 = document.getElementById('myH1');
+
+
+
+    // 2. 添加 button 的事件
+    myBtn.addEventListener('click', () => myH1.innerHTML = `My title` /* 這裡在 callback function 的地方使用 arrow function，因為 function body 內只有一行程式碼 */);
+
+
+    console.log(myBtn);
+    console.log(myH1);
+    // 列印 console 物件
+    console.log(console);
+  </script>
+</body>
+
+</html>
