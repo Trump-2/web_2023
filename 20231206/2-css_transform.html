@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 300px;
+      height: 300px;
+
+    }
+
+    .box:hover {
+      width: 400px;
+      /*  */
+
+      /* 好像寫在 .box 也可以 */
+      transition: 2s;
+    }
+
+    .bg-khaki {
+      background-color: darkkhaki;
+      margin-bottom: 2vh;
+      transform: rotate(20deg);
+    }
+
+    .bg-orange {
+      background-color: darkorange;
+      transform: rotate(-20deg);
+
+    }
+
+    div>img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box bg-khaki">
+      <img src="https://picsum.photos/id/237/400/400" alt="">
+    </div>
+    <div class="box bg-orange">
+      <div class="container">
+      </div>
+      <img src="https://picsum.photos/id/237/400/400" alt="">
+    </div>
+  </div>
+</body>
+
+</html>
