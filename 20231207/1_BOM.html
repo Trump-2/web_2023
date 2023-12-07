@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body id="demo">
+
+  <h2>JavaScript Window</h2>
+
+  <button id="myBtn">myBtn</button>
+  <button id="closeBtn">closeBtn</button>
+
+  <script>
+    let myBtn = document.getElementById('myBtn');
+    let closeBtn = document.getElementById('closeBtn');
+
+    let screenHeight = screen.height;
+    let screenWidth = screen.width;
+    console.log('screenWidth', screenWidth);
+    console.log('screenHeight', screenHeight);
+
+
+    myBtn.addEventListener('click', function () {
+      // 會新開一個頁面
+      // window.open("https://www.w3schools.com");
+
+      // 會直接在目前頁面開新頁面
+      window.location.assign("https://www.w3schools.com");
+    });
+    closeBtn.addEventListener('click', () => window.close());
+
+    // document.getElementById("demo").innerHTML =
+    //   "Browser inner window width: " + window.innerWidth + "px<br>" +
+    //   "Browser inner window height: " + window.innerHeight + "px";
+  </script>
+
+</body>
+
+</html>
