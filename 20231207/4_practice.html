@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" name="" id="in-1" class="">
+  <input type="text" name="" id="in-2" class="">
+  <button type="button" class="" id="myBtn">加總</button>
+  <div id="in-4"></div>
+
+
+  <script>
+    let in1 = document.getElementById('in-1');
+    let in2 = document.getElementById('in-2');
+    let myBtn = document.getElementById('myBtn');
+    let in4 = document.getElementById('in-4');
+
+    myBtn.addEventListener('click', function () {
+      let in1Value = Number(in1.value);
+      let in2Value = Number(in2.value);
+      let sum = in1Value + in2Value;
+      in4.innerText = `${in1Value} + ${in2Value} = ${sum}`;
+
+    });
+
+  </script>
+</body>
+
+</html>
