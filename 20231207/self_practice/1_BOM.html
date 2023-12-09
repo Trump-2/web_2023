@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <body id="demo">
+    <h2>JavaScript Window</h2>
+
+    <button id="myBtn">myBtn</button>
+    <button id="closeBtn">closeBtn</button>
+
+    <script>
+      let myBtn = document.getElementById("myBtn")
+      let closeBtn = document.getElementById("closeBtn")
+
+      // 取得螢幕的寬度、高度
+      // let screenHeight = screen.height
+      // let screenWidth = screen.width
+      // console.log("screenWidth", screenWidth)
+      // console.log("screenHeight", screenHeight)
+
+      let searchText = "domain"
+
+      myBtn.addEventListener("click", function () {
+        // 會新開一個頁面
+        // window.open("https://www.w3schools.com")
+        // 下面這些都會直接在目前頁面開新頁面
+        // window.location.assign("https://www.w3schools.com")
+        // window.location.href = "https://www.w3schools.com"
+
+        window.open(`https://www.merriam-webster.com/dictionary/${searchText}`)
+        window.open(
+          `https://dictionary.cambridge.org/dictionary/english-chinese-traditional/${searchText}`
+        )
+      })
+      closeBtn.addEventListener("click", () => window.close())
+    </script>
+  </body>
+</html>
