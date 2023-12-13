@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        text-align: center;
+        margin-top: 30vh;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <input type="text" name="" id="input1" class="" />
+      <input type="text" name="" id="input2" class="" />
+      <button type="button" class="" id="myBtn">加總</button>
+      <div>
+        <br />
+        <span id="result">請輸入兩個數字</span>
+      </div>
+    </div>
+
+    <script>
+      let in1 = document.getElementById("input1")
+      let in2 = document.getElementById("input2")
+      let myBtn = document.getElementById("myBtn")
+      let result = document.getElementById("result")
+
+      myBtn.addEventListener("click", function () {
+        result.innerText = `${in1.value} + ${in2.value} = ${
+          Number(in1.value) + Number(in2.value)
+        }`
+      })
+    </script>
+  </body>
+</html>
