@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-theme="primary">
 
 <head>
   <title>Title</title>
@@ -12,6 +12,11 @@
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
   <style>
+    body {
+      /* 要加上這個，因為動畫會超出畫面，會產生下面的捲動軸，導致版面的高度會有問題 */
+      overflow: hidden;
+    }
+
     .traffic-light {
       width: 150px;
       height: 150px;
@@ -31,24 +36,65 @@
     .yellow {
       background-color: yellow;
     }
+
+    @keyframes moveRight {
+      from {
+        left: 0
+      }
+
+      to {
+        left: 100%;
+      }
+    }
+
+    .animation-block {
+      position: relative;
+      animation: moveRight 10s ease;
+    }
+
+    .myShadow {
+      box-shadow: inset 5px 10px 5px rgb(0, 0, 0);
+    }
+
+    .box {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .myHeight {
+      height: 20vh;
+    }
+
+    /* .myShadow {
+      box-shadow: 0 -3px 1px -3px black;
+    } */
   </style>
 </head>
 
-<body>
+<body class="bg-warning bg-opacity-25">
   <div class="container mt-5">
 
     <div class="row text-center">
       <div class="col button-Area">
 
-        <button type="button" class="btn btn-lg btn-outline-danger border-4">紅綠燈切換</button>
+        <button type="button" class="btn btn-lg btn-outline-danger border-4 p-3">紅綠燈切換</button>
       </div>
       <div
         class="col d-flex justify-content-evenly rounded-pill border border-primary border-4 p-3 shadow-lg ligth-Area">
-        <div id="light-1" class=" traffic-light rounded-circle me-4"></div>
-        <div id="light-2" class=" traffic-light rounded-circle me-4"></div>
-        <div id="light-3" class=" traffic-light rounded-circle"></div>
+        <div id="light-1" class="myShadow traffic-light rounded-circle me-4"></div>
+        <div id="light-2" class="myShadow traffic-light rounded-circle me-4"></div>
+        <div id="light-3" class="myShadow traffic-light rounded-circle"></div>
 
       </div>
+    </div>
+  </div>
+  <div class="container-fluid box myShadow shadow-lg">
+    <div class="row mt-5">
+      <img class="" style="width:350px;height:350px" src="./images/walk.gif" alt="">
+    </div>
+    <div class="row">
+      <div class="bg-secondary myHeight"></div>
     </div>
   </div>
   <!-- Bootstrap JavaScript Libraries -->
@@ -67,32 +113,55 @@
     let light1 = document.getElementById("light-1");
     let light2 = document.getElementById("light-2");
     let light3 = document.getElementById("light-3");
+    let myImg = document.querySelector('img');
 
-    function change() {
+
+    myBtn.addEventListener('click', function () {
       buttonArea.setAttribute('class', "d-none")
 
       setTimeout(function () {
-        light1.setAttribute('class', 'traffic-light rounded-circle me-4 green')
+
+        light1.setAttribute('class', 'traffic-light rounded-circle me-4 red')
+      }, 1000);
+
+      setTimeout(function () {
+        light1.setAttribute('class', "myShadow traffic-light rounded-circle me-4")
+        light3.setAttribute('class', 'traffic-light rounded-circle green')
+      }, 2000);
+
+      // 動畫開始
+      setTimeout(function () {
+        myImg.setAttribute('class', "animation-block")
+
       }, 3000);
+
       setTimeout(function () {
+        light3.setAttribute('class', "myShadow traffic-light rounded-circle")
         light2.setAttribute('class', 'traffic-light rounded-circle me-4 yellow')
-      }, 4000);
-      setTimeout(function () {
-        light3.setAttribute('class', 'traffic-light rounded-circle red')
-      }, 5000);
+      }, 8000);
+
 
       setTimeout(function () {
-        light1.setAttribute('class', 'traffic-light rounded-circle me-4')
+        light2.setAttribute('class', 'myShadow traffic-light rounded-circle me-4')
+        light1.setAttribute('class', "traffic-light rounded-circle me-4 red")
+      }, 11000);
 
-        light2.setAttribute('class', 'traffic-light rounded-circle me-4')
+      // setTimeout(function () {
+      //   light3.setAttribute('class', 'traffic-light rounded-circle red')
+      // }, 5000);
 
-        light3.setAttribute('class', 'traffic-light rounded-circle ')
+      setTimeout(function () {
 
         buttonArea.setAttribute('class', "col")
 
-      }, 6000);
-    }
-    myBtn.addEventListener('click', change)
+        light1.setAttribute('class', 'myShadow traffic-light rounded-circle me-4')
+
+        myImg.setAttribute('class', "")
+
+      }, 13000);
+
+
+    })
   </script>
 </body>
 
