@@ -14,6 +14,9 @@
 
 <body>
   <input type="text" name="" id="" value="">
+
+
+
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -24,46 +27,13 @@
     crossorigin="anonymous"></script>
 
   <script>
-
-
-
-    // 宣告變數時，盡量都使用 const
     const myInput = document.querySelector('input');
-    console.log(myInput);
 
-    // .value 讀取了 myInput 這個 input tag 的值
-    myInput.value = '55688';
-    // myInput.setAttribute('value', 8576);
-
-    console.log(myInput);
-
-
-    // 變數的有效範圍跟生命週期
-    function aFun() {
-      const testStr = "Hello aFun";
-      console.log(testStr);
-    }
-
-    function fun() {
-      const testStr = "Hello fun";
-      console.log(testStr)
-    }
-
-
-    let x = 10;
-    console.log('x', x);
-    x = 100;
-    console.log('x', x);
-
-    function test() {
-      let x = 10;
-      console.log(x);
-    }
-    aFun();
-    fun();
-    test();
-
+    console.log(typeof myInput);
+    console.info(myInput);
+    console.dir(myInput);
   </script>
+
 </body>
 
 </html>

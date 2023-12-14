@@ -13,7 +13,12 @@
 </head>
 
 <body>
-  <input type="text" name="" id="" value="">
+  <input type="text" id="num1">
+  <input type="text" id="num2">
+
+  <hr>
+  <button type="button" id="myBtn">myBtn</button>
+
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -24,44 +29,22 @@
     crossorigin="anonymous"></script>
 
   <script>
+    // console.log(typeof NaN)
 
+    const num1 = document.getElementById('num1');
+    const num2 = document.getElementById('num2');
+    const myBtn = document.getElementById('myBtn');
 
+    console.log('num1 typeof', typeof num1);
+    console.log('num2 typeof', typeof num2);
 
-    // 宣告變數時，盡量都使用 const
-    const myInput = document.querySelector('input');
-    console.log(myInput);
+    myBtn.addEventListener('click', function () {
+      console.log('myBtn ok');
+      let sum = +num1.value + +num2.value;
+      console.log('sum', sum);
+      console.log('typeof sum', typeof sum)
+    })
 
-    // .value 讀取了 myInput 這個 input tag 的值
-    myInput.value = '55688';
-    // myInput.setAttribute('value', 8576);
-
-    console.log(myInput);
-
-
-    // 變數的有效範圍跟生命週期
-    function aFun() {
-      const testStr = "Hello aFun";
-      console.log(testStr);
-    }
-
-    function fun() {
-      const testStr = "Hello fun";
-      console.log(testStr)
-    }
-
-
-    let x = 10;
-    console.log('x', x);
-    x = 100;
-    console.log('x', x);
-
-    function test() {
-      let x = 10;
-      console.log(x);
-    }
-    aFun();
-    fun();
-    test();
 
   </script>
 </body>

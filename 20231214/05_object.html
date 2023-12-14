@@ -13,7 +13,18 @@
 </head>
 
 <body>
-  <input type="text" name="" id="" value="">
+  <table>
+    <tr>
+      <td>Key</td>
+      <td>Value</td>
+    </tr>
+    <tr>
+      <td class="keyID"></td>
+      <td class="valueID"></td>
+    </tr>
+  </table>
+
+
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -25,44 +36,33 @@
 
   <script>
 
+    const keyID = document.querySelector('.keyID');
+    const valueID = document.querySelector('.valueID');
 
 
-    // 宣告變數時，盡量都使用 const
-    const myInput = document.querySelector('input');
-    console.log(myInput);
 
-    // .value 讀取了 myInput 這個 input tag 的值
-    myInput.value = '55688';
-    // myInput.setAttribute('value', 8576);
-
-    console.log(myInput);
-
-
-    // 變數的有效範圍跟生命週期
-    function aFun() {
-      const testStr = "Hello aFun";
-      console.log(testStr);
-    }
-
-    function fun() {
-      const testStr = "Hello fun";
-      console.log(testStr)
+    const obj = {
+      age: 50,
+      name: "Jackson",
+      birthday: "1992/01/06",
+      // 在物件內放 array
+      siblings: ['Bob', 'Collins', "Tracy"]
     }
 
 
-    let x = 10;
-    console.log('x', x);
-    x = 100;
-    console.log('x', x);
 
-    function test() {
-      let x = 10;
-      console.log(x);
-    }
-    aFun();
-    fun();
-    test();
+    // js 印出物件直接使用 console.log () 就可以了
+    console.log(obj);
+    console.log(typeof obj)
 
+    // 第一種存取物件屬性、方法的方式
+    console.log(obj.age);
+    console.log(obj.siblings)
+    // 第二種存取物件屬性、方法的方式
+    console.log(obj['age']);
+
+    keyID.innerHTML = "age";
+    valueID.innerHTML = obj.age;
   </script>
 </body>
 
