@@ -14,8 +14,8 @@
 
 <body>
 
-  <button type="button" onclick="interval()">one</button>
-
+  <button type="button" onclick="onceFun();">once</button>
+  <button type="button" onclick="clearFun();">once</button>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -28,18 +28,40 @@
 
   <script>
 
-    function interval() {
-      // 無限重複
-      setInterval(function () {
-        console.log("test")
-      }, 1000)
-
+    function onceFun() {
 
       // 一次性
       setTimeout(() => {
         console.log("setTimeout");
       });
+
     }
+
+    // 無限重複
+    // setInterval(function () {
+    //   console.log("test")
+    // }, 1000)
+
+
+    function fname() {
+      console.log("hello fname");
+    }
+
+    // function clear() {
+    //   console.log('clear ok')
+    // clearInterval(refreshIntervalId)
+    // }
+
+    function clearFun() {
+      console.log('clear ok')
+      // clearInterval(refreshIntervalId)
+    }
+
+    // let refreshIntervalId = setInterval(fname, 1000);
+
+
+
+
 
   </script>
 </body>
