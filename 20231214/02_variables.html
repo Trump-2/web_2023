@@ -13,10 +13,8 @@
 </head>
 
 <body>
-
-  <button type="button" onclick="onceFun();">once</button>
-  <button type="button" onclick="clearFun();">once</button>
-
+  <input type="text" name="" id="" value="test">
+  <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
@@ -25,45 +23,35 @@
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"></script>
 
-
   <script>
+    let x = 10;
+    console.log('x', x);
+    x = 100;
+    console.log('x', x);
 
-    function onceFun() {
 
-      // 一次性
-      setTimeout(() => {
-        console.log("setTimeout");
-      });
+    // 宣告變數時，盡量都使用 const
+    const myInput = document.querySelector('input');
+    console.log(myInput);
 
+    // .value 讀取了 myInput 這個 input tag 的值
+    myInput.value = '55688'
+    console.log(myInput);
+
+
+    // 變數的有效範圍跟生命週期
+    function aFun() {
+      const testStr = "Hello aFun";
+      console.log(testStr);
     }
 
-    // 無限重複
-    // setInterval(function () {
-    //   console.log("test")
-    // }, 1000)
-
-
-    function fname() {
-      console.log("hello fname");
+    function fun() {
+      const testStr = "Hello fun";
+      console.log(testStr)
     }
 
-    // clear () 是內建函數
-    // function clear() {
-    // console.log('clear ok')
-    // clearInterval(refreshIntervalId)
-    // }
-
-    function clearFun() {
-      // 這行測試用，了解函數有沒有被吃到
-      console.log('clear ok')
-      clearInterval(refreshIntervalId)
-    }
-
-    let refreshIntervalId = setInterval(fname, 1000);
-
-
-
-
+    aFun();
+    fun();
 
   </script>
 </body>
