@@ -34,6 +34,11 @@
       </div>
     </div>
     <div class="row">
+      <div class="col-2">
+        <button class="btn btn-dark myBtn-all">全部</button>
+      </div>
+    </div>
+    <div class="row">
       <div class="col">
         <span class="result">result...</span>
       </div>
@@ -56,6 +61,7 @@
     const myBtn2 = document.querySelector('.myBtn2');
     const myBtn3 = document.querySelector('.myBtn3');
     const myBtn4 = document.querySelector('.myBtn4');
+    const myBtnAll = document.querySelector('.myBtn-all');
     const mySpan = document.querySelector('.result');
 
 
@@ -75,30 +81,61 @@
 
       calObj.divFun(+num1.value, +num2.value);
     })
+    myBtnAll.addEventListener('click', function () {
+
+      mySpan.innerHTML =
+        `
+      ${num1.value} + ${num2.value} = ${calObj.sumFunA(+num1.value, +num2.value)}<br>
+      ${num1.value} - ${num2.value} = ${calObj.subFunA(+num1.value, +num2.value)}<br>
+      ${num1.value} * ${num2.value} = ${calObj.multiFunA(+num1.value, +num2.value)}<br>
+      ${num1.value} / ${num2.value} = ${calObj.divFunA(+num1.value, +num2.value)}<br>
+      `
+    })
 
     let calObj = {
 
       sumFun: function (num1, num2) {
         let result = num1 + num2;
-        mySpan.innerHTML = `num1 + num2 = ${result}`;
+        mySpan.innerHTML = `${num1} + ${num2} = ${result}<br>`;
 
       },
 
       subFun: function (num1, num2) {
         let result = num1 - num2;
-        mySpan.innerHTML = `num1 - num2 = ${result}`;
+        mySpan.innerHTML = `${num1} + ${num2} = ${result}`;
       }
       ,
       multiFun: function (num1, num2) {
         let result = num1 * num2;
 
-        mySpan.innerHTML = `num1 * num2 = ${result}`;
+        mySpan.innerHTML = `${num1} + ${num2} = ${result}`;
       }
       ,
       divFun: function (num1, num2) {
         let result = num1 / num2;
 
-        mySpan.innerHTML = `num1 / num2 = ${result}`;
+        mySpan.innerHTML = `${num1} + ${num2} = ${result}`;
+      },
+      sumFunA: function (num1, num2) {
+        let result = num1 + num2;
+        return result;
+      },
+
+      subFunA: function (num1, num2) {
+        let result = num1 - num2;
+        return result;
+      }
+      ,
+      multiFunA: function (num1, num2) {
+        let result = num1 * num2;
+
+        return result;
+      }
+      ,
+      divFunA: function (num1, num2) {
+        let result = num1 / num2;
+
+        return result;
       }
     }
   </script>
