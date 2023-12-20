@@ -53,12 +53,26 @@
     // }
 
     // arrow function 版本
-    const sumFun = (num1, num2) => {
-      console.log(+num1 + +num2);
-    }
+    // const sumFun = (num1, num2) => {
+    //   console.log(+num1 + +num2);
+    // }
 
-    dayFun(12, 20);
-    sumFun(10, 20)
+    // dayFun(12, 20);
+    // sumFun(10, 20)
+
+    // let sumFun = (num1, num2) => {return num1 + num2};
+    // 上下兩行相等
+    let sumFun = (num1, num2) => num1 + num2;
+
+
+    const result = sumFun(10, 50);
+    console.log('result 123', result);
+
+
+    const sum = (a, b) => a + b;
+    console.log('sum', sum);
+    console.log('sum(100,5000)', sum(100, 5000));
+
   </script>
 </body>
 
