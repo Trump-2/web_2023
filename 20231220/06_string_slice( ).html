@@ -38,6 +38,21 @@
     // trim () : 清除字串頭尾的空白
     let trimedText = toTrimText.trim();
     console.log(trimedText)
+
+    // string to array
+    let str = "Jack;Amber;Leon";
+    let strArray = str.split(';');
+    console.log(strArray)
+
+    // array to string
+
+    // 第一種方式
+    // const array2string = strArray.toString();
+    // 第二種方式
+    const array2string = strArray.join(' && ');
+
+    console.log(array2string)
+
   </script>
 </body>
 
