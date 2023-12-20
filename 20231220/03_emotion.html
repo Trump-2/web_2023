@@ -23,8 +23,8 @@
         <select type="text" id="myOption" class="num2 form-control">
           <option value="">--請選擇心情--</option>
           <option value="happy">快樂</option>
-          <option value="sad">普通</option>
-          <option value="soso">難過</option>
+          <option value="soso">普通</option>
+          <option value="sad">難過</option>
         </select>
       </div>
     </div>
@@ -77,7 +77,27 @@
       // 測試用
       // console.log("su3");
 
+      let text = "";
+      // confirm() 跟 alert() 一樣是彈出視窗
+      if (confirm('是否要計算?') == true) {
+        text = "You pressed OK!";
+        console.log('text', text);
+      } else {
+        text = "You canceled!";
+        console.log('text', text);
+        return false;
+      }
+
+
       obj.name = myName.value;
+
+      // 要使用者一定要選擇 select 中的某個選項
+      if (myOption.value.length <= 0) {
+        console.log('myOption.length:', myOption.length);
+        alert("請選擇 心情狀態");
+        // 這行會讓整個 click handler 結束，不會往下執行
+        return false;
+      }
 
 
       let getResult = '';
