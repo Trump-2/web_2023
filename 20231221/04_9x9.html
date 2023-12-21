@@ -33,7 +33,7 @@
       for (let j = 1; j <= 9; j++) {
 
         // 邏輯
-        row += `${i.toString().padStart(2, '0')} x ${j.toString().padStart(2, '0')} = ${(i * j).toString().padStart(2, '0')} | `;
+        row += `${i.toString().padStart(2, '0')} x ${j.toString().padStart(2, '0')} = <span class='text-danger'>${(i * j).toString().padStart(2, '0')}</span> | `;
 
         // 畫面顯示
         // pTag.innerText = row;
