@@ -13,6 +13,9 @@
 </head>
 
 <body>
+
+  <div class="multi bg-primary bg-opacity-10 text-center" style="height:500px"></div>
+  <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
@@ -22,28 +25,27 @@
     crossorigin="anonymous"></script>
 
   <script>
-    let sum = 0;
-    for (let i = 1; i <= 10; i++) {
-      sum += i;
+    const multi = document.querySelector('.multi');
+    let resultText = '';
+    for (let i = 1; i <= 9; i++) {
+      let row = '';
+      // const pTag = document.createElement('p');
+      for (let j = 1; j <= 9; j++) {
+
+        // 邏輯
+        row += `${i.toString().padStart(2, '0')} x ${j.toString().padStart(2, '0')} = ${(i * j).toString().padStart(2, '0')} | `;
+
+        // 畫面顯示
+        // pTag.innerText = row;
+
+
+      }
+      // console.log(row)
+      // multi.appendChild(pTag);
+      resultText += `${row}<br>`;
     }
-    console.log(sum)
 
-    let j = 1;
-    let sum2 = 0;
-    while (j <= 10) {
-      sum2 += j;
-      j++;
-    }
-    console.log(sum2);
-
-    let k = 1;
-    let sum3 = 0;
-    do {
-      sum3 += k;
-      k++;
-    } while (k <= 10);
-
-    console.log(sum3)
+    multi.innerHTML = resultText;
   </script>
 </body>
 
