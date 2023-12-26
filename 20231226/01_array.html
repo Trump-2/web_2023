@@ -112,22 +112,24 @@
 
 
     // 練習的題目
-    // 自己的版本
-    // const shop = {
-    //   order: ['s202312226001', 's20231226002', '20231226003'],
-    //   price: [1000, 5000, 20000]
-    // }
+    //自己的版本
+    const shop = {
+      order: ['s202312226001', 's20231226002', '20231226003'],
+      price: [1000, 5000, 20000]
+    }
 
-    // let sum = 0;
-    // for (const key in shop) {
-    //   if (key == 'price') {
-    //     shop[key].forEach(function (val, idx) {
-    //       sum += val;
-    //     })
-    //   }
-    // }
+    // console.log(shop.price)
 
-    // console.log(sum)
+    let sum1 = 0;
+    for (const key in shop) {
+      if (key == 'price') {
+        shop[key].forEach(function (val, idx) {
+          sum1 += val;
+        })
+      }
+    }
+
+    console.log(sum1)
 
     // 老師的版本
     let data = [
@@ -146,14 +148,14 @@
       }
     ]
 
-    let sum = 0;
+    let sum2 = 0;
     data.forEach(function (val, idx) {
 
       // 一樣的寫法
-      // sum += val['price'];
-      sum += val.price;
+      // sum2 += val['price'];
+      sum2 += val.price;
     })
-    console.log(sum)
+    // console.log(sum2)
   </script>
 </body>
 
