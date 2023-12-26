@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<body>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+  <script>
+    // 題目:基於原始的陣列，創造出一個值不重複的陣列
+
+    // 方法一 : 搭配 .filter() 和 .indexOf() 使用
+    let data = [3, 5, 5, 6, 3, 5, 10];
+    let newData = [];
+
+    newData = data.filter(function (val, idx, arr) {
+      return arr.indexOf(val) === idx;
+    })
+
+    console.log(newData);
+
+    // 方法二 : 使用 Set object
+    let data2 = [3, 5, 5, 6, 3, 5, 10];
+    let set = new Set(data2);
+    // console.log(newData2)
+
+    // let newData2 = [...set];
+    let newData2 = Array.from(set);
+    console.log(newData2)
+
+  </script>
+</body>
+
+</html>
