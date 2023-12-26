@@ -85,32 +85,75 @@
 
 
     // 另一種用 forEach() 讀取物件的方式，把物件寫在陣列裡面
-    let storeArr = [
-      {
-        'name': '台北店',
-        'tel': '0911-111-111',
-      },
-      {
-        'name': '台中店',
-        'tel': '0922-222-222',
-      },
-      {
-        'name': '高雄店',
-        'tel': '0933-333-333'
-      }
-    ];
-    console.log('storeArr', storeArr);
-    storeArr.forEach(function (value, key) {
-      console.log('key', key);
-      console.log('value', value);
-      console.log('value["name"]', value['name']);
-      console.log('value["tel"]', value['tel']);
-      if (value['name'] == '台北店') {
-        console.log('這是台北店');
-      }
-    });
+    // let storeArr = [
+    //   {
+    //     'name': '台北店',
+    //     'tel': '0911-111-111',
+    //   },
+    //   {
+    //     'name': '台中店',
+    //     'tel': '0922-222-222',
+    //   },
+    //   {
+    //     'name': '高雄店',
+    //     'tel': '0933-333-333'
+    //   }
+    // ];
+    // console.log('storeArr', storeArr);
+    // storeArr.forEach(function (value, key) {
+    //   console.log('key', key);
+    //   console.log('value', value);
+    //   console.log('value["name"]', value['name']);
+    //   console.log('value["tel"]', value['tel']);
+    //   if (value['name'] == '台北店') {
+    //     console.log('這是台北店');
+    //   }
+    // });
 
 
+    // 練習的題目
+    // 自己的版本
+    // const shop = {
+    //   order: ['s202312226001', 's20231226002', '20231226003'],
+    //   price: [1000, 5000, 20000]
+    // }
+
+    // let sum = 0;
+    // for (const key in shop) {
+    //   if (key == 'price') {
+    //     shop[key].forEach(function (val, idx) {
+    //       sum += val;
+    //     })
+    //   }
+    // }
+
+    // console.log(sum)
+
+    // 老師的版本
+    let data = [
+      {
+        'order': 's20231226001',
+        'price': 1000
+      },
+      {
+        'order': 's20231226002',
+        'price': 5000
+      }
+      ,
+      {
+        'order': 's20231226003',
+        'price': 20000
+      }
+    ]
+
+    let sum = 0;
+    data.forEach(function (val, idx) {
+
+      // 一樣的寫法
+      // sum += val['price'];
+      sum += val.price;
+    })
+    console.log(sum)
   </script>
 </body>
 
