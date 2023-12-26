@@ -41,6 +41,25 @@
       // console.log('arr', arr);
     })
 
+    // Object 
+    let obj = {
+      's1': 'klay',
+      's2': 'Davis',
+      's3': 'booker'
+    }
+
+    console.log('obj', typeof obj);
+    let resultObj = Array.isArray(obj);
+    // 證明 object 不是 array
+    console.log('resultObj', resultObj);
+
+    // 測試 object 能否使用 array 的方法
+    obj.forEach(function (val) {
+      console.log('val', val);
+      // console.log('idx', idx);
+      // console.log('arr', arr);
+    })
+
 
 
   </script>
