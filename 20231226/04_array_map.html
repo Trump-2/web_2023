@@ -23,14 +23,39 @@
     crossorigin="anonymous"></script>
 
   <script>
-    let data = [3, 5, 5, 6, 3, 5, 10];
-    // array 的 .map ()
-    let newData = data.map(function (val, idx) {
-      return val * 2;
-    })
 
+
+
+    // 方法一
+    // data.forEach(function (val) {
+    // .push() 將值放進 array 中
+    // newData.push(val * 2);
+    // })
+
+
+    let data = [3, 5, 5, 6, 3, 5, 10];
+    let newData = [];
+    // 方法二
+    // array 的 .map ()
+    newData = data.map(function (val, idx) {
+      // return val * 2
+      return val > 5 ? val * 10 : val * 2;
+    })
+    // 方法二-二
+    // newData = data.map(val => val * 2)
+
+    console.log(data);
     console.log(newData)
 
+    console.log('-------------------------------------------')
+
+    const data2 = [2, 5, 9, 10, 65, 87, 212]
+
+    const sum = data2.reduce(function (acc, cur) {
+      return acc + cur
+    });
+
+    console.log(sum);
   </script>
 </body>
 
