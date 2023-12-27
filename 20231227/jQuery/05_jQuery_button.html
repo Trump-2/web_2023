@@ -42,7 +42,10 @@
         alert('click ok')
         console.log('this', this);
         console.log('$(this)', $(this)) // 透過 $( ) 將this 指向的物件變成 jQuery 的物件
-        $(this).hide() // jQuery 的物件才能使用 jQuery 的方法
+        // $(this).hide() // jQuery 的物件才能使用 jQuery 的方法
+
+
+        $(this).text('jQuery button');
       });
     })
   </script>
