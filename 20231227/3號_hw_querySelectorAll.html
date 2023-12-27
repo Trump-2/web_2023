@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <style>
+    img {
+      width: 200px;
+      box-shadow: 10px 10px 10px black;
+      margin: 10px;
+    }
+    th {
+      text-align: center;
+    }
+    button {
+      box-shadow: inset 2px 2px 5px rgb(0, 0, 0);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1 class="mt-2">ORDER</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">WINE</th>
+            <th scope="col">Price/pre</th>
+            <th scope="col">Qty</th>
+            <th scope="col">Sale</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><img src="./img/1.jpg" alt="" /></th>
+            <td>
+              <input
+                type="number"
+                name=""
+                value="8000"
+                class="Price form-control"
+                readonly
+              />
+            </td>
+            <td>
+              <input type="number" name="" value="1" class="Num form-control" />
+            </td>
+            <td class="text-center"><span class="item"></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><img src="./img/2.jpg" alt="" /></th>
+            <td>
+              <input
+                type="number"
+                name=""
+                value="5000"
+                class="Price form-control"
+                readonly
+              />
+            </td>
+            <td>
+              <input type="number" name="" value="1" class="Num form-control" />
+            </td>
+            <td class="text-center"><span class="item"></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><img src="./img/3.jpg" alt="" /></th>
+            <td>
+              <input
+                type="number"
+                name=""
+                value="15000"
+                class="Price form-control"
+                readonly
+              />
+            </td>
+            <td>
+              <input type="number" name="" value="1" class="Num form-control" />
+            </td>
+            <td class="text-center"><span class="item"></span></td>
+          </tr>
+          <tr>
+            <th class="bg-light">Gross Sales</th>
+            <td class="text-center"><span id="total"></span></td>
+            <td class="bg-secondary bg-opacity-10">
+              <span class="pe-1 ps-5 fw-bolder">Discount:</span
+              ><span id="dis"></span>
+            </td>
+            <td class="text-end bg-secondary bg-opacity-10">
+              <button type="button" id="myBtn" class="btn p-3">
+                60,000 up 10% discount
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script>
+      let total = document.getElementById("total");
+      let dis = document.getElementById("dis");
+      const Price = document.querySelectorAll(".Price");
+      const Num = document.querySelectorAll(".Num");
+      let item = document.querySelectorAll(".item");
+
+      Num.forEach((val, key) => {
+        val.addEventListener("change", () => {
+          let num = val.value;
+          let price = Price[key].value;
+          let result = price * num;
+          item[key].innerText = result;
+        });
+      });
+
+      myBtn.addEventListener("click", function () {
+        let totalAll = 0;
+        item.forEach((val, key) => {
+          totalAll += Number(val.innerText);
+          if (totalAll >= 60000) {
+            total.innerText = totalAll * 0.9;
+            dis.innerText = totalAll * 0.1;
+          } else {
+            total.innerText = totalAll;
+            dis.innerText = 0;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
