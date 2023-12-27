@@ -42,6 +42,15 @@
     })
 
     console.log('reduce_method:', sum);
+
+
+    // 題目 : 用 .reduce() 做 mapping
+    newData = data.reduce(function (acc, cur) {
+      acc.push(cur * 2);
+      return acc;
+    }, newData)
+
+    console.log(newData)
   </script>
 </body>
 
