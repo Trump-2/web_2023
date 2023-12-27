@@ -16,7 +16,7 @@
 
 <body>
 
-  <button class="myBtn">按鈕 1</button>
+  <button class="myBtn btn btn-dark btn-lg">按鈕 1</button>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -40,6 +40,9 @@
 
       $('.myBtn').click(function (e) {
         alert('click ok')
+        console.log('this', this);
+        console.log('$(this)', $(this)) // 透過 $( ) 將this 指向的物件變成 jQuery 的物件
+        $(this).hide() // jQuery 的物件才能使用 jQuery 的方法
       });
     })
   </script>
