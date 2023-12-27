@@ -33,6 +33,14 @@
   <div class="container">
     <div class="row">
       <div class="col">
+        <input type="text" name="" id="" class="form-control myInput">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
         <div class="box bg-blue"></div>
       </div>
     </div>
@@ -66,6 +74,8 @@
 
     const myBtn = document.querySelector('.myBtn');
     const myBox = document.querySelector('.box');
+    const myInput = document.querySelector('.myInput')
+
     // 1. click 事件
     myBtn.addEventListener('click', function () {
       console.log('click ok')
@@ -83,13 +93,24 @@
     myBox.addEventListener('mouseenter', function () {
       console.log('box mouseenter ok');
       this.setAttribute('class', 'box bg-pink');
-      alert('Hello Box');
+      // alert('Hello Box');
     });
 
     myBox.addEventListener('mouseout', function () {
       console.log('box mouseout ok');
       this.setAttribute('class', 'box bg-blue');
     });
+
+    // 3. focus 事件
+    myInput.addEventListener('focus', function () {
+      this.value = "請輸入文字"
+    })
+
+    //4. blur 事件 ( 和 focus 事件相反 )
+    myInput.addEventListener('blur', function () {
+      this.value = "" // 清空內容
+    })
+
 
   </script>
 </body>
