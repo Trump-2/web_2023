@@ -11,10 +11,32 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 </head>
+<style>
+  .box {
+    width: 200px;
+    height: 200px;
+  }
+
+  .bg-blue {
+    background-color: lightskyblue;
+  }
+
+  .bg-pink {
+    background-color: lightcoral;
+  }
+</style>
 
 <body>
   <button class="myBtn p-3 btn btn-outline-info text-warning fs-4">我的按鈕</button>
   <button class="myBtn2 p-3 btn btn-outline-success text-primary fs-4" onclick="myBtn2Fun(this)">我的按鈕</button>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="box bg-blue"></div>
+      </div>
+    </div>
+  </div>
 
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -40,15 +62,35 @@
       // console.log(this)
       console.log(this)
     }
-    myBtn2Fun2();
+    // myBtn2Fun2();
 
     const myBtn = document.querySelector('.myBtn');
-    // console.log(myBtn)
-
-    // 1.
+    const myBox = document.querySelector('.box');
+    // 1. click 事件
     myBtn.addEventListener('click', function () {
-      console.log('myBtn ok')
+      console.log('click ok')
     })
+
+    //2. mouseenter、mouseout 事件
+    myBtn.addEventListener('mouseenter', function () {
+      console.log('mouseenter ok')
+    })
+
+    myBtn.addEventListener('mouseout', function () {
+      console.log('mouseout ok')
+    })
+
+    myBox.addEventListener('mouseenter', function () {
+      console.log('box mouseenter ok');
+      this.setAttribute('class', 'box bg-pink');
+      alert('Hello Box');
+    });
+
+    myBox.addEventListener('mouseout', function () {
+      console.log('box mouseout ok');
+      this.setAttribute('class', 'box bg-blue');
+    });
+
   </script>
 </body>
 
