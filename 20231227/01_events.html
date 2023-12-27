@@ -14,7 +14,7 @@
 
 <body>
   <button class="myBtn p-3 btn btn-outline-info text-warning fs-4">我的按鈕</button>
-  <button class="myBtn2 p-3 btn btn-outline-success text-primary fs-4" onclick="myBtn2Fun()">我的按鈕</button>
+  <button class="myBtn2 p-3 btn btn-outline-success text-primary fs-4" onclick="myBtn2Fun(this)">我的按鈕</button>
 
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -26,11 +26,21 @@
     crossorigin="anonymous"></script>
 
   <script>
-    function myBtn2Fun() {
+    function myBtn2Fun(data) { // 17行呼叫函數時傳入 this，但因為 myBtn2Fun() 在 17 行做為 event handler，所以 this 會指向綁定事件的 HTML 標籤物件
       console.log('myBtn2 ok')
       console.log('myBtn2 nice')
+      // console.log(this)
+      console.log(data)
     }
 
+    //
+    function myBtn2Fun2() {
+      console.log('myBtn2 ok')
+      console.log('myBtn2 nice')
+      // console.log(this)
+      console.log(this)
+    }
+    myBtn2Fun2();
 
     const myBtn = document.querySelector('.myBtn');
     // console.log(myBtn)
