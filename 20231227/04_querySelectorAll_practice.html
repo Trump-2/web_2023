@@ -37,13 +37,13 @@
             <img src="https://miro.medium.com/max/1920/1*IgK6HpPjPShEe9yRRVle2w.png" alt="" class="img-size">
           </th>
           <td>
-            <input type="number" name="" id="" class="form-control myInputNumber">
+            <input type="number" name="" id="" class="form-control price">
           </td>
           <td class="table-warning">
-            <input type="number" name="" id="" class="form-control myInputNumber">
+            <input type="number" name="" id="" class="form-control num">
           </td>
           <td>
-            <input type="text" name="" id="" class="form-control myInputText" readonly>
+            <input type="text" name="" id="" class="form-control item" readonly>
           </td>
         </tr>
         <tr>
@@ -51,13 +51,13 @@
             <img src="https://miro.medium.com/max/1920/1*hfrgRLw8BnSsFPMhqK0-_g.png" alt="" class="img-size">
           </th>
           <td>
-            <input type="number" name="" id="" class="form-control myInputNumber">
+            <input type="number" name="" id="" class="form-control price">
           </td>
           <td class="table-warning">
-            <input type="number" name="" id="" class="form-control myInputNumber">
+            <input type="number" name="" id="" class="form-control num">
           </td>
           <td>
-            <input type="text" name="" id="" class="form-control myInputText" readonly>
+            <input type="text" name="" id="" class="form-control item" readonly>
           </td>
         </tr>
         <tr>
@@ -67,13 +67,13 @@
               alt="" class="img-size">
           </th>
           <td>
-            <input type="number" name="" id="" class="form-control myInputNumber">
+            <input type="number" name="" id="" class="form-control price">
           </td>
           <td class="table-warning">
-            <input type="number" name="" id="" class="form-control myInputNumber">
+            <input type="number" name="" id="" class="form-control num">
           </td>
           <td>
-            <input type="text" name="" id="" class="form-control myInputText" readonly>
+            <input type="text" name="" id="" class="form-control item" readonly>
           </td>
         </tr>
         <tr>
@@ -103,32 +103,40 @@
     crossorigin="anonymous"></script>
 
   <script>
-    const myInputNums = document.querySelectorAll('.myInputNumber');
-    const myInputTexts = document.querySelector('.myInputText');
+    const prices = document.querySelectorAll('.price');
+    const nums = document.querySelectorAll('.num');
+    const items = document.querySelectorAll('.item');
     const totalPrice = document.querySelector('.totalPrice');
     const myBtn = document.querySelector('.myBtn');
 
 
     // 使用 querySelectorAll() 的版本
 
-    myInputNums.forEach(function (inputElement, idx) {
-      // console.log(inputElement)
+    prices.forEach(function (val, idx) {
 
-      inputElement.addEventListener('change', function () {
-        calTotal();
+
+      val.addEventListener('change', function () {
+        let price = val.value;
+        let num = nums[idx].value;
+        items[idx].value = price * num;
+
+      })
+    })
+
+    myBtn.addEventListener('click', function () {
+      let sum = 0;
+      items.forEach(function (val, idx) {
+        sum += +val.value;
+        if (sum > 500) {
+          totalPrice.value = sum * 0.8
+        } else {
+          totalPrice.value = sum;
+        }
       })
     })
 
 
 
-    // 通用 function，計算出每一筆資料的總金額
-    function calTotal() {
-      let getPrice = +myInputNums[idx].value;
-      let getAmount = +myInputNums[idx + 1].value;
-      // console.log(getAmount) // 問為甚麼沒寫會是 0
-      myInputTexts[1].value = getPrice * getAmount
-
-    }
 
     // myInputNum1.addEventListener('change', function () { // 補筆記 change event
     //   calTotal(myInputNum1, myInputNum2, myInputText1)
