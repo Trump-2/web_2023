@@ -19,7 +19,7 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container mt-5">
 
 
     <table class="table table-success table-bordered table-hover text-center align-middle">
@@ -77,7 +77,7 @@
           </td>
         </tr>
         <tr>
-          <th>Result</th>
+          <th>總金額</th>
           <td colspan="2">
 
 
@@ -85,7 +85,7 @@
 
           </td>
           <td>
-            <button class="btn btn-dark myBtn">總計( 500 以上打 8 折)</button>
+            <button class="btn btn-dark myBtn">計算 ( 500 以上打 8 折)</button>
           </td>
           <!-- <td></td>
         <td></td> -->
@@ -148,8 +148,6 @@
     crossorigin="anonymous"></script>
 
   <script>
-    // const myInputNums = document.querySelectorAll('.myInputNumber')
-
     const myInputNum1 = document.querySelector('#myInputNumber1');
     const myInputNum2 = document.querySelector('#myInputNumber2');
     const myInputNum3 = document.querySelector('#myInputNumber3');
@@ -162,69 +160,19 @@
     const totalPrice = document.querySelector('.totalPrice');
     const myBtn = document.querySelector('.myBtn');
 
-    // let money2 = 0;
-    // let amount2 = 0;
-    // // 使用 querySelectorAll()
-    // myInputNums.forEach(function (val, idx) {
-    //   val.addEventListener('change', function () {
 
-    //   })
-    // })
-
-    // 沒有使用 querySelectorAll() 的版本，自己寫的
-    // let money1 = 0;
-    // let amount1 = 0;
-    // myInputNum1.addEventListener('change', function () {
-    //   money1 = +this.value;
-    //   myInputText1.value = money1 * amount1
-
-    // })
-
-    // myInputNum2.addEventListener('change', function () {
-    //   amount1 = +this.value;
-    //   myInputText1.value = money1 * amount1
-    // })
-
-    // let money2 = 0;
-    // let amount2 = 0;
-    // myInputNum3.addEventListener('change', function () {
-    //   money2 = +this.value;
-    //   myInputText2.value = money2 * amount2
-
-    // })
-
-    // myInputNum4.addEventListener('change', function () {
-    //   amount2 = +this.value;
-    //   myInputText2.value = money2 * amount2
-    // })
-
-    // let money3 = 0;
-    // let amount3 = 0;
-    // myInputNum5.addEventListener('change', function () {
-    //   money3 = +this.value;
-    //   myInputText3.value = money3 * amount3
-
-    // })
-
-    // myInputNum6.addEventListener('change', function () {
-    //   amount3 = +this.value;
-    //   myInputText3.value = money3 * amount3
-    // })
-
-    // myBtn.addEventListener('click')
-
-    // 沒有使用 querySelectorAll() 的版本，老師的
+    // 沒有使用 querySelectorAll() 的版本
 
     // 通用 function，計算出每一筆資料的總金額
     function calTotal(inputNum1, inputNum2, inputText) {
       let getPrice = +inputNum1.value;
       let getAmount = +inputNum2.value;
-      // console.log(getAmount) // 為甚麼沒寫會是 0
+      // console.log(getAmount) // 問為甚麼沒寫會是 0
       inputText.value = getPrice * getAmount
 
     }
 
-    myInputNum1.addEventListener('change', function () {
+    myInputNum1.addEventListener('change', function () { // 補筆記 change event
       calTotal(myInputNum1, myInputNum2, myInputText1)
     })
 
