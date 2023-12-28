@@ -127,12 +127,13 @@
       let sum = 0;
       items.forEach(function (val, idx) {
         sum += +val.value;
-        if (sum > 500) {
-          totalPrice.value = sum * 0.8
-        } else {
-          totalPrice.value = sum;
-        }
       })
+
+      if (sum > 500) {
+        totalPrice.value = sum * 0.8
+      } else {
+        totalPrice.value = sum;
+      }
     })
 
 
