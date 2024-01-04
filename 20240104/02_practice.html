@@ -96,6 +96,10 @@
         // attr() 用來取得元素的 attribute 的值
         const getDataPrice = +$(this).attr('data-price')
         const getDataLevel = $(this).attr('data-level');
+
+        // 這行的結果會跟上面一樣，.data() 可以只指定 dataset - 後的文本
+        // const getDataPrice = +$(this).data('price');
+
         // console.log(getDataPrice);
         // console.log(getDataLevel);
         const result = getDataPrice * levelObj[getDataLevel];
