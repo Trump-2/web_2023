@@ -137,7 +137,11 @@
       console.log(myBtn)
 
       myBtn.click(function () {
+        // 找到跟某個 button 同一組的 num1、num2、select、span
+
+        // .parent() 取得目前選取物件的上一層物件
         const nowRow = $(this).parent().parent().parent();
+        // .find() 取得目前選取物件的子孫物件，一定要指定 selector 作為參數
         const nowNum1 = nowRow.find('.myNum1');
         const nowNum2 = nowRow.find('.myNum2');
         const nowSelect = nowRow.find('.mySelect');
