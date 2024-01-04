@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width:400px">
+          <img class="card-img-top" src="https://picsum.photos/id/169/150/150" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">John Doe</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            <button class="btn btn-success myBtn" data-price="1000" data-level="A">取得優惠價</button>
+            <div id="" class="box text-danger mt-2 myBox">
+              <span class="mySpan">Lorem ipsum dolor sit amet.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width:400px">
+          <img class="card-img-top" src="https://picsum.photos/id/101/150/150" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">John Doe</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            <button class="btn btn-success myBtn" data-price="5000" data-level="B">取得優惠價</button>
+            <div id="" class="box text-danger mt-2 myBox">
+              <span class="mySpan">Lorem ipsum dolor sit amet.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width:400px">
+          <img class="card-img-top" src="https://picsum.photos/id/87/150/150" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">John Doe</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            <button class="btn btn-success myBtn" data-price="10000" data-level="A">取得優惠價</button>
+            <div id="" class="box text-danger mt-2 myBox">
+              <span class="mySpan">Lorem ipsum dolor sit amet.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+  <script>
+    $(document).ready(function () {
+      const mySpan = $(".mySpan");
+      const myBox = $(".myBox");
+      myBox.hide();
+      const myBtn = $(".myBtn");
+      // 創造等級物件，題目要求
+      const levelObj = {
+        "A": 0.7,
+        "B": 0.8,
+        "C": 0.9
+      }
+
+      myBtn.click(function () {
+
+        const nowCardBody = $(this).parent();
+        // console.log(nowCardBody)
+        const nowBox = nowCardBody.find(".myBox");
+        // console.log(nowBox)
+        const nowSpan = nowCardBody.find(".mySpan");
+        // console.log(nowSpan)
+
+
+
+        nowBox.show();
+
+        // attr() 用來取得元素的 attribute 的值
+        const getDataPrice = +$(this).attr('data-price')
+        const getDataLevel = $(this).attr('data-level');
+
+        // 將元素刪除
+        $(this).remove();
+
+        // 這行的結果會跟上面一樣，.data() 可以只指定 dataset - 後的文本
+        // const getDataPrice = +$(this).data('price');
+
+        // console.log(getDataPrice);
+        // console.log(getDataLevel);
+        const result = getDataPrice * levelObj[getDataLevel];
+        // console.log(result)
+        nowSpan.text(`優惠價 : ${result}`)
+      })
+
+    })
+  </script>
+</body>
+
+</html>
