@@ -16,51 +16,17 @@
   <div class="container mt-5">
     <div class="row">
       <div class="col">
-        <div class="d-grid gap-2">
-          <button class="btn btn-success myBtn" id="" data-price="1000" data-level="A">原價 1000</button>
+        <div class="card" style="width:400px">
+          <img class="card-img-top" src="https://picsum.photos/id/169/150/150" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">John Doe</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            <button class="btn btn-success myBtn" data-price="1000" data-level="A">取得優惠價</button>
+            <div id="myBox" class="box text-danger mt-2">
+              <span class="mySpan">Lorem ipsum dolor sit amet.</span>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <span class="mySpan" style="display:inline"></span>
-        <p class="myP mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit a magnam, tenetur
-          consectetur rerum
-          illum repudiandae unde assumenda. Quibusdam a dolor porro minus eligendi est hic debitis, nisi recusandae
-          fugiat placeat amet? Quaerat reiciendis nihil id, deserunt quia odit illo, vitae voluptate provident maiores,
-          dicta minima fuga delectus voluptas. Consequatur placeat nisi quasi quam dignissimos explicabo adipisci
-          tenetur quidem eum earum? Fuga consequatur architecto ducimus sapiente numquam maiores consequuntur dolor nam
-          animi qui. Inventore quod repellat dignissimos fuga enim explicabo incidunt illo tempora repellendus dolore!
-          Laudantium, eos ex? Deleniti explicabo recusandae nesciunt accusantium cupiditate repudiandae voluptatibus
-          consequatur, ducimus animi accusamus numquam quae ipsa dolores. Libero atque rerum saepe, dolorum mollitia
-          eius, distinctio neque ipsa dolorem velit voluptatum ut voluptate fugit laboriosam eum! Beatae optio quas in
-          sed unde dignissimos saepe voluptates consequuntur quidem eius magni debitis quasi voluptatum eaque
-          temporibus, explicabo voluptatibus hic corrupti ad tenetur accusantium quae nisi. Voluptatibus aspernatur
-          ipsam necessitatibus consequuntur, fugiat similique accusantium? Eos debitis sequi explicabo sunt tenetur,
-          quam facilis laborum provident repellat vero? Omnis sequi alias nisi ipsa aut. Ratione nam architecto
-          molestias, quisquam, sint fuga temporibus debitis labore illum perspiciatis eaque veritatis neque delectus
-          iste laborum nihil suscipit exercitationem veniam magni velit? Excepturi quisquam, sequi facilis molestiae ut
-          exercitationem reprehenderit distinctio deleniti quia fugiat dicta! Ullam, voluptatem eaque. Quia in
-          accusantium aut ducimus asperiores. Magnam nemo et illo voluptate similique corporis, unde sunt in, temporibus
-          natus sit voluptatibus, dolorum incidunt est cum hic iusto aspernatur placeat laudantium non nulla quod sed
-          tempora. Laudantium maiores quisquam aut vero similique quam alias magnam vel? Magnam vero omnis odio, harum
-          et eius maxime cupiditate provident quidem porro necessitatibus esse. Saepe deserunt deleniti maiores repellat
-          autem? Est enim deserunt ipsam repudiandae pariatur ratione, modi quia odio voluptates amet magnam eveniet
-          suscipit optio assumenda quos qui sit accusamus autem animi molestiae? Ab, autem accusamus sapiente assumenda
-          alias consectetur? Quasi tempora doloremque, possimus numquam, cupiditate voluptatum, culpa veniam facilis
-          enim dolor illum pariatur sunt voluptate eveniet dolorem labore quam asperiores harum quibusdam perspiciatis.
-          Quas quisquam quos dicta mollitia. Et porro a eius voluptates modi aliquid commodi nemo dicta, culpa quaerat
-          debitis quis eum qui maiores? Amet quasi tempore deserunt neque qui quod sit quo molestias laudantium soluta
-          magnam odit debitis, corrupti eligendi praesentium voluptate. Enim placeat quo porro fuga veniam quos
-          voluptatem quia, ex sit aperiam eligendi perferendis quae debitis quod accusantium soluta vitae quaerat quam.
-          Porro quod dolore voluptatum culpa tenetur itaque saepe nesciunt dignissimos sequi quis, iste provident,
-          explicabo laborum aperiam magni distinctio! Aliquid, fugit perspiciatis accusamus aut minima iure quibusdam,
-          tenetur dolorem, similique quidem ea delectus molestiae sunt eum mollitia corporis possimus iste placeat
-          reprehenderit? Soluta, aliquid nulla nobis labore id ipsa, possimus impedit autem odio aliquam accusantium
-          consequuntur. Nesciunt suscipit voluptatibus cumque tenetur, inventore, laudantium ea fugit fuga temporibus
-          quo ipsum voluptates animi, numquam sed optio sint a. Quo ipsum aliquam maiores porro dolorum ipsam nobis fuga
-          quod praesentium incidunt, adipisci nostrum quaerat ipsa similique tempora suscipit totam fugiat laborum
-          veritatis? Nulla mollitia perferendis veniam?</p>
       </div>
     </div>
   </div>
@@ -80,8 +46,8 @@
   <script>
     $(document).ready(function () {
       const mySpan = $(".mySpan");
-      const myP = $(".myP");
-      myP.hide();
+      const myBox = $("#myBox");
+      myBox.hide();
       const myBtn = $(".myBtn");
       // 創造等級物件，題目要求
       const levelObj = {
@@ -91,11 +57,14 @@
       }
 
       myBtn.click(function () {
-        myP.toggle();
+        myBox.show();
 
         // attr() 用來取得元素的 attribute 的值
         const getDataPrice = +$(this).attr('data-price')
         const getDataLevel = $(this).attr('data-level');
+
+        // 將元素刪除
+        myBtn.remove();
 
         // 這行的結果會跟上面一樣，.data() 可以只指定 dataset - 後的文本
         // const getDataPrice = +$(this).data('price');
