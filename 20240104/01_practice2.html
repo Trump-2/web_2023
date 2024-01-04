@@ -95,35 +95,35 @@
 
   <script>
     $(function () {
-      $("#myBtn").click(() => {
-        const getNum1 = $(".myNum1").val();
-        const getNum2 = $(".myNum2").val();
-        const getSelect = $(".mySelect").val();
-        // console.log(getNum1, getNum2, getSelect);
-        // console.log(+getNum1 + +getNum2)
+      const mySpan = $(".mySpan");
+      $(".myBtn").each(function (idx) {
+        $(this).click(() => {
+          const getNum1 = $(".myNum1").eq(idx).val();
+          const getNum2 = $(".myNum2").eq(idx).val();
+          const getSelect = $(".mySelect").eq(idx).val();
 
-        let result;
-        switch (getSelect) {
-          case "+":
-            result = +getNum1 + +getNum2;
-            break;
-          case "-":
-            result = +getNum1 - +getNum2;
-            break;
-          case "*":
-            result = +getNum1 * +getNum2;
-            break;
-          case "/":
-            result = +getNum1 / +getNum2;
-            break;
-        }
-        // console.log(result);
 
-        $("#mySpan").text(result);
-        $("#mySpan").css({ "font-size": "30px", "color": "red" });
 
-      })
-    })
+          let result;
+          switch (getSelect) {
+            case "+":
+              result = Number(getNum1) + Number(getNum2);
+              break;
+            case "-":
+              result = Number(getNum1) - Number(getNum2);
+              break;
+            case "*":
+              result = Number(getNum1) * Number(getNum2);
+              break;
+            case "/":
+              result = Number(getNum1) / Number(getNum2);
+              break;
+          }
+
+          mySpan.eq(idx).text(result).css({ "font-size": "30px", "color": "red" });
+        });
+      });
+    });
   </script>
 </body>
 
