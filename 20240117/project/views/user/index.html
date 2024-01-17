@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .container {
+      text-align: center;
+    }
+
+    table {
+      margin: auto;
+      background-color: burlywood;
+      width: 80%
+    }
+
+    table,
+    tr,
+    td,
+    th {
+      text-align: center;
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+
+
+    h3 {
+      text-align: center;
+      display: inline-block;
+    }
+
+    .text-end {
+      text-align: end;
+      margin-right: 150px;
+      margin-bottom: 20px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h3><span>User</span> List</h3>
+    <div class="text-end">
+      <a href="../../api/login/logout.php">
+        <button>Logout</button>
+      </a>
+    </div>
+    <div class="text-end">
+      <a href="../../views/user/create.php">
+        <button>Add</button>
+      </a>
+    </div>
+
+    <table>
+      <tr>
+        <th width="25%">id</th>
+        <th width="25%">name</th>
+        <th>operate</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>
+          <a href="../user/edit.html?id=1">Curry</a>
+        </td>
+
+        <td>
+          <a href="../../views/user/edit.html">
+            <button>Edit</button>
+          </a>
+          <a href="../../api/user/del.php">
+            <button>Del</button>
+          </a>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+
+</html>

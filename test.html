@@ -1,13 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    font-size: 30px; background: url(media/maldives_4.jpg); background-repeat:
-    no-repeat; background-attachment: fixed; background-position: center;
-    background-size: cover;
-  </body>
+<html>
+
+<head>
+  <style>
+    .container {
+      border: 1px solid #000;
+      /* 设置边框以便观察 */
+      line-height: 100px;
+      /* 设置行高 */
+    }
+
+    .inline-block {
+      display: inline-block;
+      /* 设置为行内块元素 */
+      width: 50px;
+      /* 宽度 */
+      height: 50px;
+      /* 高度 */
+      background-color: lightblue;
+      /* 背景颜色 */
+      vertical-align: bottom;
+      /* 垂直居中对齐 */
+    }
+
+    .text {
+      display: inline-block;
+      /* 设置为行内块元素 */
+      vertical-align: top;
+      /* 文本顶部对齐 */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <span class="inline-block"></span>
+    <span class="text">aaaa</span>
+  </div>
+
+</body>
+
 </html>
