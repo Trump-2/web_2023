@@ -53,6 +53,19 @@
           console.log("$(this)", $(this)); // 透過 $( ) 將this 指向的物件變成 jQuery 的物件
           // $(this).hide() // jQuery 的物件才能使用 jQuery 的方法
 
+          // js 將 DOM 元素隱藏起來
+        // this.style.display = 'none'
+
+        // jQuery 將 DOM 元素隱藏起來
+        // $(this).hide();
+
+        // jQuery 改變元素的 text
+        // $(this).text('clicked')
+
+        // jQuery 改變元素的 value
+        // $(this).val('good')
+
+
           // 等同於 js 中的 innerHTML，且這個寫法是 set 元素的文字內容
           $(this).text("jQuery button");
         });

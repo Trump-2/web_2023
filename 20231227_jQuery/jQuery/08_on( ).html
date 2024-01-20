@@ -59,19 +59,32 @@
     ></script>
 
     <script>
+      // .on() 用來註冊一個或多個事件和事件處理函數
+
+      // 一個事件的語法:兩個參數；第一個是事件名稱，第二個是事件處理函數
+
+      // $(".box").on("mouseenter",function(){
+      //   $(this).attr("class","bg-info box")
+      // })
+      // .on("mouseleave",function(){
+      //   $(this).attr('class','bg-success box')
+      // })
+
+      // 多個事件的語法:一個參數，物件
       $(function () {
         $(".box").on({
           mouseenter: function () {
-            $(this).attr("class", "bg-dark box");
+            // jq .attr() 用來設定元素的 attribute 值或回傳元素的 attribute 值
+            $(this).attr("class", "bg-dark box")
           },
           mouseleave: function () {
-            $(this).attr("class", "box bg-warning");
+            $(this).attr("class", "box bg-warning")
           },
           click: function () {
-            $(this).attr("class", "box bg-danger");
+            $(this).attr("class", "box bg-danger")
           },
-        });
-      });
+        })
+      })
     </script>
   </body>
 </html>

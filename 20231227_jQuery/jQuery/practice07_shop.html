@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <table class="table table-bordered text-center align-middle">
+        <tr>
+          <th>產品</th>
+          <th>單價</th>
+          <th>數量</th>
+          <th>總價</th>
+        </tr>
+        <tr>
+          <td>
+            <h3>咖啡</h3>
+            <img src="https://picsum.photos/300/200/?random=10" />
+          </td>
+          <td>
+            <input type="number" name="" id="item1Price" value="" />
+          </td>
+          <td>
+            <input type="number" name="" id="item1Num" />
+          </td>
+          <td>
+            <input type="text" name="" id="item1Total" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3>吐司</h3>
+            <img src="https://picsum.photos/300/200/?random=255" />
+          </td>
+          <td>
+            <input type="number" name="" id="item2Price" value="" />
+          </td>
+          <td>
+            <input type="number" name="" id="item2Num" />
+          </td>
+          <td>
+            <input type="text" name="" id="item2Total" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3>可可粉</h3>
+            <img src="https://picsum.photos/300/200/?random=11" />
+          </td>
+          <td>
+            <input type="number" name="" id="item3Price" value="" />
+          </td>
+          <td>
+            <input type="number" name="" id="item3Num" />
+          </td>
+          <td>
+            <input type="text" name="" id="item3Total" />
+          </td>
+        </tr>
+        <tr>
+          <td>總金額</td>
+          <td colspan="2" id="result"></td>
+          <td><button type="button" class="btn btn-success" id="myBtn">計算 ( 滿 500 元以上打 8 折 )</button></td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+
+    <script>
+      $(function () {
+        const item1Price = $("#item1Price");
+        const item1Num = $("#item1Num");
+        const item1Total = $("#item1Total");
+        const item2Price = $("#item2Price");
+        const item2Num = $("#item2Num");
+        const item2Total = $("#item2Total");
+        const item3Price = $("#item3Price");
+        const item3Num = $("#item3Num");
+        const item3Total = $("#item3Total");
+        const myBtn = $("#myBtn");
+        const tdResult = $("#result")
+
+        function calcItem1TotalPrice() {
+          // console.log(typeof item1Price.val())
+          const getItem1Price = +item1Price.val();
+          // console.log(getItem1Price)
+          const getItem1Num = +item1Num.val();
+          // console.log(getItem1Num)
+          item1Total.val(getItem1Price * getItem1Num);
+        }
+
+        function calcItem2TotalPrice() {
+          const getItem2Price = +item2Price.val();
+          const getItem2Num = +item2Num.val();
+          item2Total.val(getItem2Price * getItem2Num);
+        }
+        function calcItem3TotalPrice() {
+          const getItem3Price = +item3Price.val();
+          const getItem3Num = +item3Num.val();
+          item3Total.val(getItem3Price * getItem3Num);
+        }
+
+        // jQuery 中針對 change event 添加 event handler
+        // change event 是指**元素的 value 改變，只適用在 <input>、<option>
+        item1Price.change(function () {
+          calcItem1TotalPrice();
+        });
+
+        item1Num.change(function () {
+          calcItem1TotalPrice();
+        });
+
+        item2Price.change(function () {
+            calcItem2TotalPrice()
+        });
+
+        item2Num.change(function () {
+            calcItem2TotalPrice()
+        });
+
+        item3Price.change(function(){
+            calcItem3TotalPrice()
+        })
+
+        item3Num.change(function(){
+            calcItem3TotalPrice()
+        })
+        
+        myBtn.click(function(){
+          let result = +item1Total.val() + +item2Total.val() + +item3Total.val()
+          // console.log(result)
+
+          if(result >= 500) {
+            result = result * 0.8
+          }
+
+          tdResult.text(result)
+
+        })
+
+      });
+    </script>
+  </body>
+</html>
