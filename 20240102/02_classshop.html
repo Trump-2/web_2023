@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <table class="table table-bordered text-center align-middle mt-5">
+      <tr>
+        <th>品名</th>
+        <th>單價</th>
+        <th>數量</th>
+        <th>總價</th>
+      </tr>
+      <tr>
+        <td>
+          <img src="https://picsum.photos/300/200/?random=10" />
+        </td>
+        <td>
+          <input class="form-control myPrice" type="number" name="" id="" />
+        </td>
+        <td>
+          <input class="form-control myNum" type="number" name="" id="" />
+        </td>
+        <td>
+          <input class="form-control myTotal test" type="text" name="" id="" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="https://picsum.photos/300/200/?random=10" />
+        </td>
+        <td>
+          <input class="form-control myPrice" type="number" name="" id="" />
+        </td>
+        <td>
+          <input class="form-control myNum" type="number" name="" id="" />
+        </td>
+        <td>
+          <input class="form-control myTotal" type="text" name="" id="" />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <div class="result"></div>
+        </td>
+        <!-- <td></td>
+      <td></td>
+      <td></td> -->
+      </tr>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+      const myPrice = $(".myPrice")
+      const myNum = $(".myNum")
+      const myTotal = $(".myTotal")
+      const result = $(".result")
+
+      // jq .eq() 會回傳選擇的所有元素中具有指定索引的某元素
+      // 這裡用不到
+      // console.log(myTotal.eq(1))
+
+      // console.log(myPrice)
+      // console.log(myNum)
+      // console.log(myTotal)
+
+      function calcSum() {
+        let sum = 0
+        myTotal.each(function (idx, ele) {
+          // jq 的 .each() 會為每個符合的元素執行一個相同的指定函數
+          const getTotal = +$(this).val()
+          sum += getTotal
+        })
+
+        let resultText
+        if (sum >= 500) {
+          resultText = `恭喜你，打八折共 ${sum * 0.8} 元`
+
+          // jq .css() 用來回傳或設定所選元素的一個或多個 css property
+          // 設定的寫法
+          result.css({ color: "red", "font-size": "40px" })
+
+          // 回傳的寫法，這裡用不到
+          // result.css('color')
+        } else {
+          resultText = sum
+          result.css("color", "blue")
+        }
+
+        result.text(resultText)
+      }
+
+      // calcSum()
+
+      myNum.change((e) => {
+        // $(e.target) 是箭頭函數的 $(this)
+        // console.log($(e.target))
+
+        // jq .parent() 回傳所選元素的直接父母元素；這個方法可以串多個來找祖父母、曾祖父母...元素
+        const trObj = $(e.target).parent().parent()
+        // console.log(trObj)
+
+        // jq .find(param) 回傳所選元素的後代元素，後代指小孩、孫子、曾孫... 等
+        // 注意一定要指定一個參數，來過濾搜尋的後代元素，如果想回傳所有後代元素則使用 【* 選擇器】
+        const wMyPrice = trObj.find(".myPrice")
+        const wMyNum = $(e.target)
+        const wMyTotal = trObj.find(".myTotal")
+
+        // console.log(wMyPrice)
+        // console.log(wMyNum)
+        // console.log(wMyTotal)
+
+        const getWPrice = wMyPrice.val()
+        const getWNum = wMyNum.val()
+        wMyTotal.val(+getWPrice * +getWNum)
+
+        calcSum()
+      })
+    </script>
+  </body>
+</html>
