@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css' />
+
+  <style>
+    .box {
+      background:orange;
+      width:10vw;
+      height: 20vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <div class="box" id="myBox"></div>
+      </div>
+      <div class="col">
+        <div class="mt-5">
+          <button type="button" class="btn btn-success" id="showBtn">showBtn</button>
+          <button type="button" class="btn btn-info" id="hideBtn">hideBtn</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js' ></script>
+
+  <script>
+    const myBox = $("#myBox")
+    const showBtn = $("#showBtn")
+    const hideBtn = $("#hideBtn")
+
+    showBtn.click(function(){
+      myBox.show();
+    })
+
+    hideBtn.click(function(){
+      myBox.hide()
+    })
+  </script>
+</body>
+</html>
