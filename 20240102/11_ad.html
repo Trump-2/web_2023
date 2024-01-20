@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css' />
+</head>
+<body>
+  <div class="container mt-5 text-center">
+    <div class="row">
+      <div class="col">
+        <button data-p="#p1" data-type="toggle" type="button" class="myBtn btn btn-warning mb-4">toggle btn</button>
+        <p id="p1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum expedita beatae ut id. Esse explicabo a dolorum culpa veritatis voluptatibus eum aperiam inventore et, modi impedit eveniet minima nam perspiciatis, maxime expedita necessitatibus nisi. Magni neque est minima reiciendis odio blanditiis aspernatur iusto veniam harum, reprehenderit quae. Dolor, et dolorum!</p>
+      </div>
+      <div class="col">
+        <button data-p="#p2" data-type="fadeToggle" type="button" class="myBtn btn btn-dark mb-4">fadeToggle btn</button>
+        <p id="p2">默認一場，藥品已被落實以下物理情節去了愛情方式地方汽車版本，武器你好，網域名稱我和食物樂隊留在不良晶片，也就是某個規劃發生聲音授權，程式審核有所留學一年請求天下市場價，由於堅持隊伍我只原則各地估計醫療歐美推薦類似推出查看學生，忍不住廣泛你說或是受傷自己社會包裝這就是章節發表原創人大嘉義，關鍵反而形象藥品並非包括漸漸逐步後面感情提交沒有什麼，加大合作，幾次靜靜強烈劇情，去了生產原理導演本次歡迎您，時候好多技術不久意見提出榮譽，臺灣民眾各項，遠程下來服務來了校長良好求購咱們生態首頁作家就業，一位兩個快樂小子沒有什麼，強大一時，通知大戰基於戰士去了面向，主要做法閲讀設置保險思路最低能夠地區作出我還。</p>
+      </div>
+      <div class="col">
+        <button data-p="#p3" data-type="slideToggle" type="button" class="myBtn btn btn-success mb-4">slideToggle btn</button>
+        <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolor fugiat expedita debitis quidem? Sint nihil eveniet explicabo ratione est impedit repellat! Laborum molestias hic possimus alias, ratione aliquam sapiente saepe nobis! Delectus, tempore assumenda aspernatur possimus ducimus fuga praesentium libero dignissimos ipsam tempora consequatur est mollitia molestias placeat illo magni voluptatem ratione amet eligendi! Neque quod illo voluptatibus cum. Quod nisi, soluta et, nesciunt alias, enim dolore ratione praesentium non fugiat debitis. Itaque ipsa dolorem quisquam sapiente magnam, iusto error modi perferendis dolore fugit. Minus voluptas ad nobis nesciunt repudiandae sit provident quod assumenda corporis quae accusamus cum, ratione eos repellat, sequi mollitia eius officiis nemo delectus. Vero magni ex veritatis neque maxime </p>
+      </div>
+    </div>
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js' ></script>
+
+  <script>
+    const myBtn = $(".myBtn");
+
+    myBtn.click(function(){
+        const getDataP = $(this).data('p');
+        const getDataType = $(this).data('type')
+        switch (getDataType) {
+          case 'toggle':
+              $(getDataP).toggle();
+            break;
+          case 'fadeToggle':
+              $(getDataP).fadeToggle(2000);
+            break;
+          case 'slideToggle':
+              $(getDataP).slideToggle(2000);
+            break;
+        
+        }
+    })
+  </script>
+</body>
+</html>
