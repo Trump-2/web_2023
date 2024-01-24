@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css'/>
+<body>
+    <div class="container mt-5">
+        <div class="row text-center">
+            <div class="col">
+                <input type="text" name="" id="" class="form-control myNum1">
+            </div>
+            <div class="col">
+                <input type="text" name="" id="" class="form-control myNum2">
+            </div>
+            <div class="col">
+                <select name="" id="" class="form-select mySelect">
+                    <option value="1" selected>+</option>
+                    <option value="2">-</option>
+                    <option value="3">*</option>
+                    <option value="4">/</option>
+                </select>
+            </div>
+            <div class="col">
+                <button type="button" id="" class="btn btn-dark w-100 myBtn">計算</button>
+            </div>
+            <div class="col">
+                <span id="" class="myResult"></span>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row text-center">
+            <div class="col">
+                <input type="text" name="" id="" class="form-control myNum1">
+            </div>
+            <div class="col">
+                <input type="text" name="" id="" class="form-control myNum2">
+            </div>
+            <div class="col">
+                <select name="" id="" class="form-select mySelect">
+                    <option value="1" selected>+</option>
+                    <option value="2">-</option>
+                    <option value="3">*</option>
+                    <option value="4">/</option>
+                </select>
+            </div>
+            <div class="col">
+                <button type="button" id="" class="btn btn-dark w-100 myBtn">計算</button>
+            </div>
+            <div class="col">
+                <span id="" class="myResult"></span>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row text-center">
+            <div class="col">
+                <input type="text" name="" id="" class="form-control myNum1">
+            </div>
+            <div class="col">
+                <input type="text" name="" id="" class="form-control myNum2">
+            </div>
+            <div class="col">
+                <select name="" id="" class="form-select mySelect">
+                    <option value="1" selected>+</option>
+                    <option value="2">-</option>
+                    <option value="3">*</option>
+                    <option value="4">/</option>
+                </select>
+            </div>
+            <div class="col">
+                <button type="button" id="" class="btn btn-dark w-100 myBtn">計算</button>
+            </div>
+            <div class="col">
+                <span id="" class="myResult"></span>
+            </div>
+        </div>
+    </div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js'></script>
+
+<script>
+    const myBtn = $(".myBtn")
+
+    myBtn.click(()=>{
+        const getNum1 =  +$(event.target).parent().parent().find(".myNum1").val()
+        // console.log(getNum1)
+        const getNum2 = +$(event.target).parent().parent().find('.myNum2').val()
+        const getSelect = $(event.target).parent().parent().find('.mySelect').val()
+
+        let result;
+        switch(getSelect) {
+            case "1":
+                result = getNum1 + getNum2
+                break
+            case "2":
+                result = getNum1 - getNum2
+                break
+            case "3":
+                result = getNum1 * getNum2
+                break
+            case "4":
+                result = getNum1 / getNum2
+                break
+        }
+
+        const getSpan = $(event.target).parent().parent().find('.myResult')
+        getSpan.text(result);
+        getSpan.css("color","red")
+
+    })
+</script>
+</body>
+</html>
