@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css'/>
+<body>
+    <div class="container mt-5">
+        <div class="row text-center">
+            <div class="col">
+                <input type="text" name="" id="num1" class="form-control">
+            </div>
+            <div class="col">
+                <input type="text" name="" id="num2" class="form-control">
+            </div>
+            <div class="col">
+                <select name="" id="mySelect" class="form-select">
+                    <option value="1" selected>+</option>
+                    <option value="2">-</option>
+                    <option value="3">*</option>
+                    <option value="4">/</option>
+                </select>
+            </div>
+            <div class="col">
+                <button type="button" id="myBtn" class="btn btn-dark w-100">計算</button>
+            </div>
+            <div class="col">
+                <span id="result"></span>
+            </div>
+        </div>
+    </div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js'></script>
+
+<script>
+    const num1 = $("#num1")
+    const num2 = $("#num2")
+    const mySelect = $("#mySelect")
+    const myBtn = $("#myBtn")
+    const mySpan = $("#result")
+
+    myBtn.click(() => {
+        const getNum1 = +num1.val()
+        const getNum2 = +num2.val()
+        const getMySelect = mySelect.val();
+
+        console.log(getNum1,getNum2,getMySelect)
+        let result = 0;
+
+        switch(getMySelect){
+            case "1":
+                result = getNum1+getNum2
+                break;
+            case "2":
+                result = getNum1-getNum2
+                break;
+            case "3":
+                result = getNum1*getNum2
+                break;
+            case "4":
+                result = getNum1 / getNum2
+                break
+        }
+
+        mySpan.text(result);
+        mySpan.css({'color':'red', 'font-size':'24px', 'font-style':'italic'})
+    })
+</script>
+</body>
+</html>
