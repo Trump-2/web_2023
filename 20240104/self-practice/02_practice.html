@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css"
+  />
+  <body>
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col">
+          <h2>中國旅遊</h2>
+          <p>Image at the top (card-img-top):</p>
+          <div class="card" style="width: 400px">
+            <img src="https://picsum.photos/300/200/?random=10" style="width: 100%">
+            <div class="card-body">
+              <h4 class="card-title">北京</h4>
+              <p class="card-text">
+                當年觀察書記沒有什麼商機興奮現代化優秀再次成人，就是閲讀不再防止希望台北加入時間分別平台分析，房東幸福街道貼布資金，本公司，遵守東京學會無論土地選手下去制定更為主席花蓮不必明天而是，根本公斤沒什麼值得登錄特色本身搭配榮譽數學，關心美女一是球隊降低開通天氣你是所謂你會建設大盤，名字難得清除水溝網路直播主。
+              </p>
+              <button  class="btn btn-primary" data-price="1000" data-level="A">取得優惠價</button>
+              <div id="myBox" class="text-danger mt-2">
+                <span id="mySpan"></span>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            const myBtn = $("button");
+            const mySpan = $("#mySpan")
+            const myBox = $("myBox")
+
+            const levelObj = {
+                A:0.7,
+                B:0.8,
+                C:0.9
+            }
+
+            myBox.hide()
+
+            myBtn.click(function(){
+                const getPrice = +$(this).data("price")
+                const getLevel = $(this).data("level")
+                const total = getPrice * levelObj[getLevel]
+                $(this).remove()
+                myBox.show()
+                mySpan.text(`原價${getPrice}, 優惠價${total}`)
+            }) 
+        })
+    </script>
+  </body>
+</html>
