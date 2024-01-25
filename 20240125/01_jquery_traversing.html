@@ -17,16 +17,16 @@
                         ul
                         <li class="border border-primary p-3" data-name="li1">
                             li
-                            <span class="border border-danger p-3">
+                            <span class="border border-danger p-3 mySpan">
                                 my span
                             </span>
-                            <span class="border border-danger p-3">
+                            <span class="border border-danger p-3 mySpan">
                                 my span
                             </span>
                         </li>
                         <li class="border border-primary p-3 mt-3" data-name="li2">
                             li
-                            <b class="border border-danger p-3">
+                            <b id="myB" class="border border-danger p-3">
                                 b
                             </b>
                         </li>
@@ -37,5 +37,28 @@
     </div>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js' ></script>
+
+  <script>
+    // $(document).ready(function(){
+
+    // })
+    $(function(){
+        const mySpan = $(".mySpan")
+        const myB = $("#myB")
+
+        mySpan.click(function(){
+            // const getli1 = $(this).parent().data('name')
+            // console.log(getli1)
+            const getli = $(this).parent()
+            // jq .addClass
+            getli.addClass("text-bg-warning")
+        })
+
+        // myB.click(() => {
+        //     const getli2 = $(event.target).parent().data('name')
+        //     console.log(getli2)
+        // })
+    })
+  </script>
 </body>
 </html>
