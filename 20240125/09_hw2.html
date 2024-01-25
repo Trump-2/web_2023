@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
     />
-
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css' integrity='sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ==' crossorigin='anonymous'/>
     <style>
       .ml16 {
         color: #402d2d;
@@ -36,7 +36,7 @@
   <body>
     <div class="container mt-5">
       <div class="text-end">
-        <button type="button" class="addBtn btn btn-primary">Add</button>
+        <button type="button" class="addBtn btn btn-outline-warning">+</button>
       </div>
       <h1 class="ml16">Delete</h1>
 
@@ -55,7 +55,8 @@
         <div class="col">1</div>
         <div class="col">Jack</div>
         <div class="col">
-          <button type="button" class="myBtn btn btn-warning p-5">X</button>
+            <button type="button" class="cloneBtn btn btn-primary"><i class="fa-regular fa-copy"></i></button>
+            <button type="button" class="delBtn btn btn-danger"><i class="fa-solid fa-trash"></i></button>
         </div>
       </div>
       <div
@@ -65,7 +66,8 @@
         <div class="col">2</div>
         <div class="col">Allen</div>
         <div class="col">
-          <button type="button" class="myBtn btn btn-warning p-5">X</button>
+            <button type="button" class="cloneBtn btn btn-primary"><i class="fa-regular fa-copy"></i></button>
+            <button type="button" class="delBtn btn btn-danger"><i class="fa-solid fa-trash"></i></button>
         </div>
       </div>
       <div
@@ -75,7 +77,8 @@
         <div class="col">3</div>
         <div class="col">Ken</div>
         <div class="col">
-          <button type="button" class="myBtn btn btn-warning p-5">X</button>
+            <button type="button" class="cloneBtn btn btn-primary"><i class="fa-regular fa-copy"></i></button>
+            <button type="button" class="delBtn btn btn-danger"><i class="fa-solid fa-trash"></i></button>
         </div>
       </div>
     </div>
@@ -84,21 +87,49 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
     <script>
-      $(function () {
-        const myBtns = $(".myBtn");
-        const addBtn = $(".addBtn");
+      // $(function () {
+      //   const myBtns = $(".myBtn");
+      //   const addBtn = $(".addBtn");
 
-        myBtns.click(function () {
-          const getTr = $(this).closest(".row");
-          // console.log(getTr)
-          getTr.remove();
-        });
+      //   myBtns.click(function () {
+      //     const getTr = $(this).closest(".row");
+      //     // console.log(getTr)
+      //     getTr.remove();
+      //   });
 
-        addBtn.click(function () {
-          const getLastDiv = $(".container").find(".row").last();
-          getLastDiv.clone().appendTo("");
-        });
-      });
+      //   addBtn.click(function () {
+      //     const getLastDiv = $(".container").find(".row").last();
+      //     getLastDiv.clone().appendTo("");
+      //   });
+      // });
+
+      $(function() {
+        const addBtn = $(".addBtn")
+        const cloneBtn = $(".cloneBtn")
+        const delBtn = $(".delBtn")
+
+        addBtn.click(function() {
+          // 這樣的寫法得到的是 DOM 元素，不是 jQuery 物件
+          // const getDivRow = $(".container").find('.row')[3]
+
+          const getDivRow = $(".container").find('.row').last()
+         
+          getDivRow.clone().appendTo(".container")
+        })
+
+        cloneBtn.click(function(){
+          const getDivRow = $(this).closest(".row")
+          getDivRow.clone(true).appendTo(".container")
+        })
+
+
+        delBtn.click(function(){
+          // const getDivRow = $(this).closest(".row")
+          const getDivRow = $(this).parent().parent()
+          getDivRow.remove()
+        })
+      })
+
     </script>
 
     <script>
