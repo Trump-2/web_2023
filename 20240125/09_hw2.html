@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+    />
+
+    <style>
+      .ml16 {
+        color: #402d2d;
+        padding: 40px 0;
+        font-weight: 800;
+        font-size: 2em;
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
+        overflow: hidden;
+      }
+
+      .ml16 .letter {
+        display: inline-block;
+        line-height: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <h1 class="ml16">Delete</h1>
+      </div>
+      <div
+        class="row text-center border border-black align-items-center mb-3"
+        style="height: 15vh"
+      >
+        <div class="col">ID</div>
+        <div class="col">Name</div>
+        <div class="col">OPERATE</div>
+      </div>
+      <div
+        class="row text-center border border-black align-items-center mb-3"
+        style="height: 15vh"
+      >
+        <div class="col">1</div>
+        <div class="col">Jack</div>
+        <div class="col">
+          <button type="button" class="myBtn btn btn-warning p-5">X</button>
+        </div>
+      </div>
+      <div
+        class="row text-center border border-black align-items-center mb-3"
+        style="height: 15vh"
+      >
+        <div class="col">2</div>
+        <div class="col">Allen</div>
+        <div class="col">
+          <button type="button" class="myBtn btn btn-warning p-5">X</button>
+        </div>
+      </div>
+      <div
+        class="row text-center border border-black align-items-center mb-3"
+        style="height: 15vh"
+      >
+        <div class="col">3</div>
+        <div class="col">Ken</div>
+        <div class="col">
+          <button type="button" class="myBtn btn btn-warning p-5">X</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <script>
+      $(function () {
+        const myBtns = $(".myBtn");
+
+        myBtns.click(function () {
+          const getTr = $(this).closest(".row");
+          // console.log(getTr)
+          getTr.remove();
+        });
+      });
+    </script>
+
+    <script>
+      var textWrapper = document.querySelector(".ml16");
+      textWrapper.innerHTML = textWrapper.textContent.replace(
+        /\S/g,
+        "<span class='letter'>$&</span>"
+      );
+
+      anime
+        .timeline({ loop: true })
+        .add({
+          targets: ".ml16 .letter",
+          translateY: [-100, 0],
+          easing: "easeOutExpo",
+          duration: 1400,
+          delay: (el, i) => 30 * i,
+        })
+        .add({
+          targets: ".ml16",
+          opacity: 0,
+          duration: 1000,
+          easing: "easeOutExpo",
+          delay: 1000,
+        });
+    </script>
+  </body>
+</html>
