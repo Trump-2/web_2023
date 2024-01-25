@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        
+        <div class="col-9 offset-1">
+            <input type="search" id="mySearch" name="" class="form-control"/>
+        </div>
+        <div class="col-1">
+            <div class="d-grid">
+                <input type="submit" value="搜尋" class="btn btn-primary"/>
+            </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col text-center">
+            <button class="myBtn btn btn-outline-dark me-4" type="button">台北市</button>
+            <button class="myBtn btn btn-outline-dark me-4" type="button">新北市</button>
+            <button class="myBtn btn btn-outline-dark me-4" type="button">台中市</button>
+            <button class="myBtn btn btn-outline-dark me-4" type="button">雲林市</button>
+            <button class="myBtn btn btn-outline-dark" type="button">屏東市</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+      $(function () {
+        const mySearch = $("#mySearch")
+        const myBtns = $(".myBtn")
+
+        myBtns.click(function(){
+            const getText = $(this).text();
+            console.log(getText)
+            // mySearch.text(getText);
+
+            mySearch.val(getText)
+        })
+      });
+    </script>
+  </body>
+</html>
