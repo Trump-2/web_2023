@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="box">
+            <ul id="myUl">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+      $(function () {
+        const myUl = $("#myUl");
+        const insertText = "<li>none</li>";
+
+        // .append() : 加在最後面   .appendTo() : 加在最後面，差別在要插入的東西變成主詞
+        // .prepend() : 加在最前面  .prependTo() : 加在最前面，差別在要插入的東西變成主詞
+
+        // myUl.append(insertText);
+        // myUl.append(insertText);
+        // myUl.append(insertText);
+
+        $(insertText).appendTo(myUl);
+        $(insertText).appendTo(myUl);
+        $(insertText).appendTo(myUl);
+      });
+    </script>
+  </body>
+</html>
