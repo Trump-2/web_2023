@@ -48,21 +48,12 @@
 
         mySpan.click(function(){
            
-            //1.上一層
-            // const getli = $(this).parent()
-            // // jq .addClass
-            // getli.addClass("text-bg-warning")
-            
-            //2.上上層
-            const getul = $(this).parent().parent()
-            getul.addClass('text-warning')
+            const parents = $(this).parents()
+            parents.attr('class', 'border border-dark p-3 text-warning')
 
         })
 
-        // myB.click(() => {
-        //     const getli2 = $(event.target).parent().data('name')
-        //     console.log(getli2)
-        // })
+        
     })
   </script>
 </body>
