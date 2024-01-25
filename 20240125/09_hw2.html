@@ -24,15 +24,24 @@
         display: inline-block;
         line-height: 1em;
       }
+
+      .myDiv {
+        /* 添加阴影: 水平偏移 | 垂直偏移 | 模糊半径 | 扩展半径 | 颜色 */
+        box-shadow: 0px -5px 5px -5px rgba(0, 0, 0, 0.5),
+          /* 上方阴影 */ 5px 0px 5px -5px rgba(0, 0, 0, 0.5),
+          /* 右方阴影 */ 0px 5px 5px -5px rgba(0, 0, 0, 0.5); /* 下方阴影 */
+      }
     </style>
   </head>
   <body>
     <div class="container mt-5">
-      <div class="row">
-        <h1 class="ml16">Delete</h1>
+      <div class="text-end">
+        <button type="button" class="addBtn btn btn-primary">Add</button>
       </div>
+      <h1 class="ml16">Delete</h1>
+
       <div
-        class="row text-center border border-black align-items-center mb-3"
+        class="myDiv row text-center border border-black align-items-center mb-3"
         style="height: 15vh"
       >
         <div class="col">ID</div>
@@ -40,7 +49,7 @@
         <div class="col">OPERATE</div>
       </div>
       <div
-        class="row text-center border border-black align-items-center mb-3"
+        class="myDiv row text-center border border-black align-items-center mb-3"
         style="height: 15vh"
       >
         <div class="col">1</div>
@@ -50,7 +59,7 @@
         </div>
       </div>
       <div
-        class="row text-center border border-black align-items-center mb-3"
+        class="myDiv row text-center border border-black align-items-center mb-3"
         style="height: 15vh"
       >
         <div class="col">2</div>
@@ -60,7 +69,7 @@
         </div>
       </div>
       <div
-        class="row text-center border border-black align-items-center mb-3"
+        class="myDiv row text-center border border-black align-items-center mb-3"
         style="height: 15vh"
       >
         <div class="col">3</div>
@@ -77,11 +86,17 @@
     <script>
       $(function () {
         const myBtns = $(".myBtn");
+        const addBtn = $(".addBtn");
 
         myBtns.click(function () {
           const getTr = $(this).closest(".row");
           // console.log(getTr)
           getTr.remove();
+        });
+
+        addBtn.click(function () {
+          const getLastDiv = $(".container").find(".row").last();
+          getLastDiv.clone().appendTo("");
         });
       });
     </script>
