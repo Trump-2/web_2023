@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <div class="border border-success p-3 w-100">
+                <div class="box border border-success p-3 w-100">
                     div
                     <ul class="border border-dark p-3" style="list-style-type:lower-greek">
                         ul
@@ -43,16 +43,15 @@
 
     // })
     $(function(){
-        const mySpan = $(".mySpan")
-        const myB = $("#myB")
-
-        mySpan.click(function(){
-           
-            const parents = $(this).parents()
-            parents.attr('class', 'border border-dark p-3 text-warning')
-
+        const myBox = $(".box")
+        myBox.click(function(){
+            const getChildren = $(this).children()
+            console.log(getChildren)
+            const getChildrenChildren = $(this).children().children()
+            console.log(getChildrenChildren)
+            getChildren.addClass('text-danger')
+            getChildrenChildren.addClass('text-primary')
         })
-
         
     })
   </script>
