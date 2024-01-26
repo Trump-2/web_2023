@@ -33,7 +33,7 @@
                     </ul>
                 </div>
             </div>
-            
+        </div>
     </div>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js' ></script>
@@ -45,6 +45,9 @@
     $(function(){
         const mySpan = $(".mySpan")
         const myB = $("#myB")
+
+        //當一個函數獨立於任何對象被調用時（也就是說，它不是作為一個對象的方法被調用），this 會指向全局對象。在你的代碼中，colorChange 函數就是這樣被調用的，所以它的 this 會指向 window。
+
 
         function colorChange(correspondingThis) {
             console.log(this)

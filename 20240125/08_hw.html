@@ -13,7 +13,7 @@
     <div class="container mt-5">
       <div class="row">
         
-        <div class="col-9 offset-1">
+        <div class="col-9 offset-1"> <!-- 用來增加一個 column 的左邊 margin，透過 - 後面的數字來決定多寡；例如：offset-4 ( 代表 4 個 column ) -->
             <input type="search" id="mySearch" name="" class="form-control"/>
         </div>
         <div class="col-1">
@@ -24,11 +24,11 @@
       </div>
       <div class="row mt-4">
         <div class="col text-center">
-            <button class="myBtn btn btn-outline-dark me-4" type="button">台北市</button>
-            <button class="myBtn btn btn-outline-dark me-4" type="button">新北市</button>
-            <button class="myBtn btn btn-outline-dark me-4" type="button">台中市</button>
-            <button class="myBtn btn btn-outline-dark me-4" type="button">雲林市</button>
-            <button class="myBtn btn btn-outline-dark" type="button">屏東市</button>
+            <button class="myBtn btn btn-outline-dark me-4" type="button"  data-location="台北市">台北市</button>
+            <button class="myBtn btn btn-outline-dark me-4" type="button"  data-location="新北市">新北市</button>
+            <button class="myBtn btn btn-outline-dark me-4" type="button"  data-location="台中市">台中市</button>
+            <button class="myBtn btn btn-outline-dark me-4" type="button"  data-location="高雄市">雲林市</button>
+            <button class="myBtn btn btn-outline-dark" type="button" data-location="宜蘭市">屏東市</button>
         </div>
       </div>
     </div>
@@ -41,7 +41,7 @@
         const myBtns = $(".myBtn")
 
         myBtns.click(function(){
-            const getText = $(this).text();
+            const getText = $(this).data("location");
             console.log(getText)
             // mySearch.text(getText);
 

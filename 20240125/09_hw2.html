@@ -112,6 +112,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
     <script>
+      // 第一種寫法
       $(function () {
         const delBtns = $(".delBtn");
         const cloneBtns = $(".cloneBtn");
@@ -131,6 +132,49 @@
         cloneBtns.click(function () {
           const getLastDivRow = $(this).closest(".row");
           getLastDivRow.clone(true).appendTo(".container");
+        });
+      });
+
+      // $(function () {
+      //   const myBtns = $(".myBtn");
+      //   const addBtn = $(".addBtn");
+
+      //   myBtns.click(function () {
+      //     const getTr = $(this).closest(".row");
+      //     // console.log(getTr)
+      //     getTr.remove();
+      //   });
+
+      //   addBtn.click(function () {
+      //     const getLastDiv = $(".container").find(".row").last();
+      //     getLastDiv.clone().appendTo("");
+      //   });
+      // });
+
+      // 第二種寫法
+      $(function () {
+        const addBtn = $(".addBtn");
+        const cloneBtn = $(".cloneBtn");
+        const delBtn = $(".delBtn");
+
+        addBtn.click(function () {
+          // 這樣的寫法得到的是 DOM 元素，不是 jQuery 物件
+          // const getDivRow = $(".container").find('.row')[3]
+
+          const getDivRow = $(".container").find(".row").last();
+
+          getDivRow.clone().appendTo(".container");
+        });
+
+        cloneBtn.click(function () {
+          const getDivRow = $(this).closest(".row");
+          getDivRow.clone(true).appendTo(".container");
+        });
+
+        delBtn.click(function () {
+          // const getDivRow = $(this).closest(".row")
+          const getDivRow = $(this).parent().parent();
+          getDivRow.remove();
         });
       });
     </script>
