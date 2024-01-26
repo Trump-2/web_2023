@@ -8,7 +8,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
       .ml16 {
         color: #402d2d;
@@ -35,10 +41,17 @@
   </head>
   <body>
     <div class="container mt-5">
-      <div class="text-end">
-        <button type="button" class="addBtn btn btn-primary">Add</button>
+      <div class="row">
+        <div class="col text-end p-0">
+          <button type="button" class="addBtn btn btn-primary">+</button>
+        </div>
       </div>
-      <h1 class="ml16">Delete</h1>
+
+      <div class="row">
+        <div class="col p-0">
+          <h1 class="ml16">Delete</h1>
+        </div>
+      </div>
 
       <div
         class="myDiv row text-center border border-black align-items-center mb-3"
@@ -55,7 +68,12 @@
         <div class="col">1</div>
         <div class="col">Jack</div>
         <div class="col">
-          <button type="button" class="myBtn btn btn-warning p-5">X</button>
+          <button type="button" class="cloneBtn btn btn-primary">
+            <i class="fa-regular fa-copy"></i>
+          </button>
+          <button type="button" class="delBtn btn btn-danger">
+            <i class="fa-solid fa-trash"></i>
+          </button>
         </div>
       </div>
       <div
@@ -65,7 +83,12 @@
         <div class="col">2</div>
         <div class="col">Allen</div>
         <div class="col">
-          <button type="button" class="myBtn btn btn-warning p-5">X</button>
+          <button type="button" class="cloneBtn btn btn-primary">
+            <i class="fa-regular fa-copy"></i>
+          </button>
+          <button type="button" class="delBtn btn btn-danger">
+            <i class="fa-solid fa-trash"></i>
+          </button>
         </div>
       </div>
       <div
@@ -75,7 +98,12 @@
         <div class="col">3</div>
         <div class="col">Ken</div>
         <div class="col">
-          <button type="button" class="myBtn btn btn-warning p-5">X</button>
+          <button type="button" class="cloneBtn btn btn-primary">
+            <i class="fa-regular fa-copy"></i>
+          </button>
+          <button type="button" class="delBtn btn btn-danger">
+            <i class="fa-solid fa-trash"></i>
+          </button>
         </div>
       </div>
     </div>
@@ -85,18 +113,24 @@
 
     <script>
       $(function () {
-        const myBtns = $(".myBtn");
+        const delBtns = $(".delBtn");
+        const cloneBtns = $(".cloneBtn");
         const addBtn = $(".addBtn");
 
-        myBtns.click(function () {
+        delBtns.click(function () {
           const getTr = $(this).closest(".row");
           // console.log(getTr)
           getTr.remove();
         });
 
         addBtn.click(function () {
-          const getLastDiv = $(".container").find(".row").last();
-          getLastDiv.clone().appendTo("");
+          const getLastDivRow = $(".container").find(".row").last();
+          getLastDivRow.clone(true).appendTo(".container");
+        });
+
+        cloneBtns.click(function () {
+          const getLastDivRow = $(this).closest(".row");
+          getLastDivRow.clone(true).appendTo(".container");
         });
       });
     </script>
