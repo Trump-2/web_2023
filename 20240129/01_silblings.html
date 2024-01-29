@@ -29,12 +29,21 @@
 
     <script>
       $(function () {
-        const li33 = $("#li33");
-        li33.click(function (e) {
-          const otherli = li33.siblings();
+        // const li33 = $("#li33");
+        // const otherli = li33.siblings();
+
+        // li33.click(function (e) {
+        //   //   console.log(otherli);
+        //   li33.addClass("text-danger");
+        //   otherli.addClass("text-info");
+        // });
+        const allli = $("li");
+
+        allli.click(function (e) {
+          const otherli = $(this).siblings();
           console.log(otherli);
-          li33.addClass("text-danger");
-          otherli.addClass("text-info");
+          $(this).attr("class", "text-danger");
+          otherli.attr("class", "text-info");
         });
       });
     </script>
