@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body
+    style="
+      background-image: url(./img/bg.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    "
+  >
+    <div class="container mt-5 text-center">
+      <div class="row bg-dark p-5 rounded-pill">
+        <div class="col-3 my-3">
+          <button
+            class="btn btn-warning myBtn"
+            data-name="漢堡"
+            data-price="55"
+            data-img="./img/hamburger.jpg"
+          >
+            Hamburger
+          </button>
+        </div>
+        <div class="col-3 my-3">
+          <button
+            class="btn btn-warning myBtn"
+            data-name="薯條"
+            data-price="40"
+            data-img="./img/fried-potato.jpg"
+          >
+            Rried Potato
+          </button>
+        </div>
+        <div class="col-3 my-3">
+          <button
+            class="btn btn-warning myBtn"
+            data-name="炸機"
+            data-price="50"
+            data-img="./img/fried-chicken.jpg"
+          >
+            Fried Chicken
+          </button>
+        </div>
+        <div class="col-3 my-3">
+          <button
+            class="btn btn-warning myBtn"
+            data-name="可樂"
+            data-price="35"
+            data-img="./img/coke.jpg"
+          >
+            Coke
+          </button>
+        </div>
+        <div class="col-3 my-3">
+          <button
+            class="btn btn-warning myBtn"
+            data-name="餅乾"
+            data-price="35"
+            data-img="./img/cookie.jpg"
+          >
+            Cookie
+          </button>
+        </div>
+        <div class="col-3 my-3">
+          <button
+            class="btn btn-warning myBtn"
+            data-name="吐司"
+            data-price="35"
+            data-img="./img/toast.jpg"
+          >
+            Toast
+          </button>
+        </div>
+        <div class="col-3 my-3">
+          <button
+            class="btn btn-warning myBtn"
+            data-name="三明治"
+            data-price="35"
+            data-img="./img/sandwich.jpg"
+          >
+            Sandwitch
+          </button>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col p-0">
+          <table
+            class="myTable align-middle m-0 table-bordered rounded-3"
+            style="width: 100%; backdrop-filter: blur(5px)"
+          >
+            <tr>
+              <th style="width: 30%">品名</th>
+              <th style="width: 15%">單價</th>
+              <th style="width: 20%">數量</th>
+              <th style="width: 15%">金額</th>
+              <th style="width: 20%; color: white">操作</th>
+            </tr>
+            <!-- <tr class="result">
+              <td style="">總金額</td>
+              <td class=""></td>
+              <td class="">
+                <button type="button" class="btn btn-success" id="myBtn">
+                  計算 ( 滿 500 元以上打 8 折 )
+                </button>
+              </td>
+              <td></td>
+              <td></td>
+            </tr> -->
+          </table>
+          <div
+            style="height: 7vh"
+            class="bg-dark d-flex align-items-center result mb-5"
+          >
+            <div style="width: 50%; color: white">總金額</div>
+            <div style="width: 30%; color: white" id="total">
+              <span>&nbsp;元</span>
+            </div>
+            <div style="width: 20%" class="text-center">
+              <button
+                type="button"
+                class="btn myCalculate"
+                style="background: rgb(255, 224, 87); color: rgb(6, 6, 6)"
+              >
+                合計
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+      $(function () {
+        const myBtns = $(".myBtn");
+        const myTable = $(".myTable");
+        const myResultRow = $(".result");
+        const myCalculate = $(".myCalculate");
+
+        myBtns.click((e) => {
+          const getName = $(e.target).data("name");
+          console.log(getName);
+          const getPrice = $(e.target).data("price");
+          console.log(getPrice);
+          const getImg = $(e.target).data("img");
+          insertHtml = `<tr>
+             <td style="padding:15px;">${getName}<br><img src='${getImg}' style='width:150px;height:100px;'></td>
+             
+             <td><span class="myPrice">${getPrice}</span></td>
+             <td><input type='number' class='form-control myQty w-75 m-auto'></td>
+            
+             <td><span class="myTotal"></span></td>
+             <td>
+                <button style="background:black" type='button' class='btn cloneBtn'><i class="fa-regular fa-copy text-light"></i></button>
+                <button style="background:black" type='button' class='btn delBtn'><i class="fa-solid fa-trash text-light"></i></button>
+             </td>
+           </tr>`;
+
+          myTable.append(insertHtml);
+        });
+
+        myTable.on("change", ".myQty", (e) => {
+          console.log($(e.target));
+          const getMyPrice = $(e.target).closest("tr").find(".myPrice");
+
+          const getMyPriceValue = +getMyPrice.text();
+          const getMyQty = +$(e.target).val();
+          //   console.log(getMyPriceValue, getMyQty);
+
+          const calcTotal = getMyPriceValue * getMyQty;
+          const getMyTotal = $(e.target).closest("tr").find(".myTotal");
+          getMyTotal.text(calcTotal);
+        });
+
+        myTable.on("click", ".delBtn", (e) => {
+          const getTr = $(e.target).closest("tr");
+          getTr.remove();
+        });
+
+        myTable.on("click", ".cloneBtn", (e) => {
+          const getTr = $(e.target).closest("tr");
+          //   getTr.clone().prependTo(myTable);
+
+          // 把複製的 tr 放在原本 tr 的後面
+          getTr.clone().insertAfter(getTr);
+        });
+
+        myCalculate.click((e) => {
+          const getAllTotal = $(".myTotal");
+          let sum = 0;
+          // getAllTotal.each(() => {
+          //   money = +$(this).val();
+          //   console.log(money);
+          // });
+
+          getAllTotal.each(function (idx, ele) {
+            // console.log($(this));
+            // console.log(ele);
+            const money = +$(this).text();
+            // console.log(money);
+            sum += money;
+          });
+
+          $("#total").prepend(
+            `<span style='font-size:24px;color:yellow;'>${sum}</span>`
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
