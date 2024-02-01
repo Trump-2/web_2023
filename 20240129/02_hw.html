@@ -16,10 +16,28 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      table {
+        border-collapse:collapse;
+        border-radius:20px 20px 0 0;
+      }
+      
+      table {
+        /* border:2px solid black; */
+      }
+      td {
+        border-top: 2px solid black;
+      }
+
+      th {
+        padding:1em;
+      }
+    </style>
+    
   </head>
   <body
     style="
-      background-image: url(./img/bg.jpg);
+      background-color:rgb(255, 221, 27);
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -50,7 +68,7 @@
         <div class="col-3 my-3">
           <button
             class="btn btn-warning myBtn"
-            data-name="炸機"
+            data-name="炸雞"
             data-price="50"
             data-img="./img/fried-chicken.jpg"
           >
@@ -61,7 +79,7 @@
           <button
             class="btn btn-warning myBtn"
             data-name="可樂"
-            data-price="35"
+            data-price="30"
             data-img="./img/coke.jpg"
           >
             Coke
@@ -81,7 +99,7 @@
           <button
             class="btn btn-warning myBtn"
             data-name="吐司"
-            data-price="35"
+            data-price="45"
             data-img="./img/toast.jpg"
           >
             Toast
@@ -91,7 +109,7 @@
           <button
             class="btn btn-warning myBtn"
             data-name="三明治"
-            data-price="35"
+            data-price="50"
             data-img="./img/sandwich.jpg"
           >
             Sandwitch
@@ -102,8 +120,8 @@
       <div class="row mt-5">
         <div class="col p-0">
           <table
-            class="myTable align-middle m-0 table-bordered rounded-3"
-            style="width: 100%; backdrop-filter: blur(5px)"
+            class="myTable align-middle m-0"
+            style="width: 100%; backdrop-filter: blur(3px); background-color: rgba(128, 128, 128, 0.481);"
           >
             <tr>
               <th style="width: 30%">品名</th>
@@ -125,7 +143,7 @@
             </tr> -->
           </table>
           <div
-            style="height: 7vh"
+            style="height: 7vh;border-radius: 0 0 20px 20px;"
             class="bg-dark d-flex align-items-center result mb-5"
           >
             <div style="width: 50%; color: white">總金額</div>
@@ -164,10 +182,10 @@
           insertHtml = `<tr>
              <td style="padding:15px;">${getName}<br><img src='${getImg}' style='width:150px;height:100px;'></td>
              
-             <td><span class="myPrice">${getPrice}</span></td>
+             <td><span class="myPrice" style="color:white">${getPrice}</span></td>
              <td><input type='number' class='form-control myQty w-75 m-auto'></td>
             
-             <td><span class="myTotal"></span></td>
+             <td><span class="myTotal" style="font-weight:bold;font-size:24px; color:red;"></span></td>
              <td>
                 <button style="background:black" type='button' class='btn cloneBtn'><i class="fa-regular fa-copy text-light"></i></button>
                 <button style="background:black" type='button' class='btn delBtn'><i class="fa-solid fa-trash text-light"></i></button>
@@ -191,8 +209,21 @@
         });
 
         myTable.on("click", ".delBtn", (e) => {
-          const getTr = $(e.target).closest("tr");
-          getTr.remove();
+          const getThisTr = $(e.target).closest("tr");
+          const getTrCount = $('tr').length;
+          if(getTrCount > 2) {
+            getThisTr.remove();
+          } else {
+            const userResponse = confirm("目前只剩下一個項目，你確定要刪除嗎 ?")
+
+            if(userResponse){
+            getThisTr.remove();
+            setTimeout(() => {
+              alert("無購買項目，請至少選擇一項商品才能結帳 !!!")
+            }, 500);
+             
+            }
+          }
         });
 
         myTable.on("click", ".cloneBtn", (e) => {
