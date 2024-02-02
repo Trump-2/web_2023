@@ -10,10 +10,51 @@
     />
   </head>
   <body>
+    <div class="container">
+      <div class="row mt-3">
+        <div class="col">
+          <button type="button" class="testBtn btn btn-primary">testBtn</button>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col">
+          <button type="button" class="testBtn btn btn-primary">testBtn</button>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col">
+          <button type="button" class="testBtn btn btn-primary">testBtn</button>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col">
+          <button type="button" class="testBtn btn btn-primary">testBtn</button>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col">
+          <button type="button" class="testBtn btn btn-primary">testBtn</button>
+        </div>
+      </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script>
       $(function () {
+        const testBtn = $(".textBtn");
+
+        // 對每個 testBtn 綁定點擊事件處理器；這種寫法有 index 可用
+        testBtn.each(function (idx, ele) {
+          $(this).click(function (e) {
+            e.preventDefault();
+          });
+        });
+
+        // 一樣是對 testBtn 綁定點擊事件處理器
+        testBtn.click(function (e) {
+          e.preventDefault();
+        });
+
         const obj = {
           s1: "Amy",
           s2: "Tim",
