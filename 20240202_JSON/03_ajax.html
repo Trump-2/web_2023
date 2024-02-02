@@ -43,12 +43,18 @@
         $.get(`${url}`, function (res) {
           console.log(res); // 這裡的結果要用 xampp 察看結果；如果是 live server，console 中的結果會怪怪的
           res.forEach((element, idx) => {
+            console.log(element.id);
+            console.log(element.name);
+            console.log(element.price);
+            console.log(element.location);
+
+            // element.location 會是陣列，老師用 .toString() 將陣列轉成字串，但我的不用就可以成功把陣列顯示在畫面上，為什麼 ?
             let content = `
           <div class="row">
           <div class="col-2">${element.id}</div>
           <div class="col-2">${element["name"]}</div>
           <div class="col-2">${element["price"]}</div>
-          <div class="col-6">${element.location}</div>
+          <div class="col-6">${element.location.toString()}</div>
           </div>`;
 
             myContainer.append(content);
