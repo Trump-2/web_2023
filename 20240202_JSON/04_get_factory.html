@@ -8,14 +8,22 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css"
+    />
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
   </head>
   <body>
     <div class="container" id="myContainer">
       <div class="row">
-        <div class="col-2">id</div>
-        <div class="col-2">name</div>
-        <div class="col-2">price</div>
-        <div class="col-6">location</div>
+        <div class="col-1">id</div>
+        <div class="col-1">area</div>
+        <div class="col-1">city</div>
+        <div class="col-3">name</div>
+        <div class="col">location</div>
+        <div class="col">url</div>
       </div>
       <!-- <div class="row">
         <div class="col-2">1</div>
@@ -24,10 +32,39 @@
         <div class="col-6">台北</div>
       </div> -->
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <table id="myTable" class="display">
+            <thead>
+              <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Row 1 Data 1</td>
+                <td>Row 1 Data 2</td>
+              </tr>
+              <tr>
+                <td>Row 2 Data 1</td>
+                <td>Row 2 Data 2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
     <script>
+      // import DataTable from "datatables.net-dt";
+      let table = new DataTable("#myTable");
+
       $(function () {
         const url = "./data/factory.json";
+        const myContainer = $("#myContainer");
         $.ajax({
           type: "get",
           url: url,
@@ -41,6 +78,20 @@
             console.log("res[12].name", res[12].name);
             console.log("res[12].location", res[12].location);
             console.log("res[12].url", res[12].url);
+
+            res.forEach((element) => {
+              const content = `
+              <div class="row">
+                <div class="col-1">${element.id}</div>
+                <div class="col-1">${element.area}</div>
+                <div class="col-1">${element.city}</div>
+                <div class="col-3">${element.name}</div>
+                <div class="col">${element.location}</div>
+                <div class="col">${element.url}</div>
+              </div>`;
+
+              myContainer.append(content);
+            });
           },
         });
 
