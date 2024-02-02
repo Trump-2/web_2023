@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-3">
+      <div class="table-responsive">
+        <table id="myTable" class="display">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>area</th>
+              <th>city</th>
+              <th>name</th>
+              <th>location</th>
+              <th>url</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+    <script>
+      $(function () {
+        const tbody = $("tbody");
+        const url = "./data/factory.json";
+
+        $.ajax({
+          type: "get",
+          url: url,
+          data: "data",
+          dataType: "json",
+          success: function (res) {
+            res.forEach((element) => {
+              const content = `
+                <tr>
+                  <td>${element.id - 1}</td>
+                  <td>${element.area}</td>
+                  <td>${element.city}</td>
+                  <td>${element.name}</td>
+                  <td>${element.location}</td>
+                  <td>${element.url}</td>
+                </tr>
+            `;
+
+              tbody.append(content);
+            }); // .foreach 的
+            $("#myTable").DataTable();
+          }, // success() 的
+        }); // $.ajax() 的
+
+        // $function() 的結束標籤
+      });
+    </script>
+  </body>
+</html>
