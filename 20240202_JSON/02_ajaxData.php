@@ -25,7 +25,7 @@ $mobileArr = [
         'location' => ["台北", "台中", "高雄"],
     ]
 ];
-// 設定 header 為 JSON，通知接收端這是一個 JSON 格式的內容
+// 設定 header 為 JSON，通知接收端這是一個 JSON 格式的內容；這行非必要
 header('Content-Type: application/json');
 
 // // 將陣列轉換為 JSON 格式並輸出
