@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css"
+    />
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>area</th>
+              <th>city</th>
+              <th>name</th>
+              <th>location</th>
+              <th>url</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      $(function () {
+        $("#myTable").DataTable();
+        const thead = $("thead");
+        const url = "./data/factory.json";
+        const myContainer = $("#myContainer");
+        $.ajax({
+          type: "get",
+          url: url,
+          data: "data",
+          dataType: "json",
+          success: function (res) {
+            console.log(res);
+            console.log("res[12].id", res[12].id);
+            console.log("res[12].area", res[12].area);
+            console.log("res[12].city", res[12].city);
+            console.log("res[12].name", res[12].name);
+            console.log("res[12].location", res[12].location);
+            console.log("res[12].url", res[12].url);
+
+            res.forEach((element) => {
+              const content = `
+              <tbody>
+                <tr>
+                  <td>${element.id}</td>
+                  <td>${element.area}</td>
+                  <td>${element.city}</td>
+                  <td>${element.name}</td>
+                  <td>${element.location}</td>
+                  <td>${element.url}</td>
+                </tr>
+            </tbody>`;
+
+              thead.after(content);
+            });
+          },
+        });
+
+        // $function() 的結束標籤
+      });
+    </script>
+  </body>
+</html>
