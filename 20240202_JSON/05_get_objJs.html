@@ -25,25 +25,10 @@
       </div> -->
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/obj.js"></script>
     <script>
       $(function () {
-        const url = "./data/factory.json";
-        $.ajax({
-          type: "get",
-          url: url,
-          data: "data",
-          dataType: "json",
-          success: function (res) {
-            console.log(res);
-            console.log("res[12].id", res[12].id);
-            console.log("res[12].area", res[12].area);
-            console.log("res[12].city", res[12].city);
-            console.log("res[12].name", res[12].name);
-            console.log("res[12].location", res[12].location);
-            console.log("res[12].url", res[12].url);
-          },
-        });
-
+        console.log(factoryObj);
         // $function() 的結束標籤
       });
     </script>
