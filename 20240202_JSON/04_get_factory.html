@@ -59,10 +59,8 @@
     </div>
 
     <script>
-      // import DataTable from "datatables.net-dt";
-      let table = new DataTable("#myTable");
-
       $(function () {
+        $("#myTable").DataTable();
         const url = "./data/factory.json";
         const myContainer = $("#myContainer");
         $.ajax({
@@ -82,7 +80,7 @@
             res.forEach((element) => {
               const content = `
               <div class="row">
-                <div class="col-1">${element.id}</div>
+                <div class="col-1">${element.id - 1}</div>
                 <div class="col-1">${element.area}</div>
                 <div class="col-1">${element.city}</div>
                 <div class="col-3">${element.name}</div>
