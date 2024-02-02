@@ -1,95 +1,95 @@
 [
   {
     "id": 2,
-    "area": "area",
-    "city": "city",
+    "area": "北部",
+    "city": "宜蘭縣",
     "name": "台灣足鞋健康知識館",
     "location": "宜蘭縣五結鄉中興村中里路18號",
     "url": "www.drfoot.com.tw"
   },
   {
     "id": 3,
-    "area": "area",
-    "city": "city",
+    "area": "北部",
+    "city": "宜蘭縣",
     "name": "安永心食館",
     "location": "宜蘭縣蘇澳鎮中山路二段415號",
     "url": "www.anyomuseum.com/"
   },
   {
     "id": 4,
-    "area": "area",
-    "city": "city",
+    "area": "北部",
+    "city": "宜蘭縣",
     "name": "亞典蛋糕密碼館",
     "location": "宜蘭縣宜蘭市梅洲二路122號",
     "url": "www.rden.com.tw"
   },
   {
     "id": 5,
-    "area": "area",
-    "city": "city",
+    "area": "北部",
+    "city": "宜蘭縣",
     "name": "宜蘭餅發明館",
     "location": "宜蘭縣蘇澳鎮海山西路369號",
     "url": "www.diy-icake.com.tw"
   },
   {
     "id": 6,
-    "area": "area",
-    "city": "city",
+    "area": "北部",
+    "city": "宜蘭縣",
     "name": "金車噶瑪蘭威士忌酒廠",
     "location": "宜蘭縣員山鄉員山路二段326號",
     "url": "www.kavalanshisky.com"
   },
   {
     "id": 7,
-    "area": "area",
-    "city": "city",
+    "area": "北部",
+    "city": "宜蘭縣",
     "name": "博士鴨觀光工廠",
     "location": "宜蘭縣五結鄉福興村新五路1-1號",
     "url": "www.dr-duck.com.tw/"
   },
   {
     "id": 8,
-    "area": "area",
-    "city": "city",
+    "area": "北部",
+    "city": "宜蘭縣",
     "name": "菌寶貝博物館",
     "location": "宜蘭縣宜蘭市梅洲一路22號",
     "url": "www.bio-nin.com.tw"
   },
   {
     "id": 9,
-    "area": "area",
-    "city": "city",
+    "area": "北部",
+    "city": "宜蘭縣",
     "name": "綺麗博物館",
     "location": "宜蘭縣蘇澳鎮利工一路一段6號",
     "url": "tw.cljewels.com/index_down.php"
   },
   {
     "id": 10,
-    "area": "area",
-    "city": "city",
+    "area": "北部",
+    "city": "宜蘭縣",
     "name": "臺灣菸酒股份有限公司宜蘭酒廠觀光工廠",
     "location": "宜蘭縣宜蘭市舊城西路3號",
     "url": "event.ttl-eshop.com.tw/yl/"
   },
   {
     "id": 11,
-    "area": "area",
-    "city": "city",
+    "area": "北部",
+    "city": "宜蘭縣",
     "name": "蜡藝蜡筆城堡",
     "location": "宜蘭縣蘇澳鎮海山西路500號",
     "url": "www.lucky-art.com.tw"
   },
   {
     "id": 12,
-    "area": "area",
-    "city": "city",
+    "area": "北部",
+    "city": "宜蘭縣",
     "name": "橘之鄉蜜餞觀光工廠",
     "location": "宜蘭縣宜蘭市梅洲二路33號",
     "url": "www.agrioz.com.tw"
   },
   {
     "id": 13,
-    "area": "area",
+    "area": "北部",
     "city": "基隆市",
     "name": "一太e衛浴觀光工廠",
     "location": "基隆市安樂區大武崙工業區武訓街51號",
@@ -97,7 +97,7 @@
   },
   {
     "id": 14,
-    "area": "area",
+    "area": "北部",
     "city": "新北市",
     "name": "大黑松小倆口牛軋糖創意博物館",
     "location": "新北市土城區自強街31之2號",
@@ -105,7 +105,7 @@
   },
   {
     "id": 15,
-    "area": "area",
+    "area": "北部",
     "city": "新北市",
     "name": "工研益壽多文化館",
     "location": "新北市淡水區行忠路168號",
@@ -113,7 +113,7 @@
   },
   {
     "id": 16,
-    "area": "area",
+    "area": "北部",
     "city": "新北市",
     "name": "手信坊創意和菓子文化館",
     "location": "新北市土城區國際路55號",
@@ -121,7 +121,7 @@
   },
   {
     "id": 17,
-    "area": "area",
+    "area": "北部",
     "city": "新北市",
     "name": "王子創意文具國",
     "location": "新北市林口區粉寮路一段86號",
@@ -129,7 +129,7 @@
   },
   {
     "id": 18,
-    "area": "area",
+    "area": "北部",
     "city": "新北市",
     "name": "王鼎時間科藝體驗館",
     "location": "新北市土城區大暖路136號",
@@ -137,7 +137,7 @@
   },
   {
     "id": 19,
-    "area": "area",
+    "area": "北部",
     "city": "新北市",
     "name": "台灣不二衛生套知識館",
     "location": "新北市淡水區行忠路132號",
@@ -145,7 +145,7 @@
   },
   {
     "id": 20,
-    "area": "area",
+    "area": "北部",
     "city": "新北市",
     "name": "玉美人孕婦裝觀光工廠",
     "location": "新北市板橋區四川路２段16巷10號5樓",
@@ -153,7 +153,7 @@
   },
   {
     "id": 21,
-    "area": "area",
+    "area": "北部",
     "city": "新北市",
     "name": "吳福洋襪子故事館",
     "location": "新北市林口區工二工業區工九路3號",
@@ -161,7 +161,7 @@
   },
   {
     "id": 22,
-    "area": "area",
+    "area": "北部",
     "city": "新北市",
     "name": "宏洲磁磚觀光工廠",
     "location": "新北市鶯歌區中正三路230巷16號",
@@ -169,7 +169,7 @@
   },
   {
     "id": 23,
-    "area": "area",
+    "area": "北部",
     "city": "新北市",
     "name": "亞洛美精靈國度 AROMATE WONDERLAND",
     "location": "新北市鶯歌區中正三路156巷59號",
@@ -177,7 +177,7 @@
   },
   {
     "id": 24,
-    "area": "area",
+    "area": "北部",
     "city": "新北市",
     "name": "茶山房肥皂文化體驗館",
     "location": "新北市三峽區白雞64之11號",
@@ -185,7 +185,7 @@
   },
   {
     "id": 25,
-    "area": "area",
+    "area": "北部",
     "city": "新北市",
     "name": "許新旺陶瓷紀念博物館",
     "location": "新北市鶯歌區尖山埔路81號",
@@ -193,7 +193,7 @@
   },
   {
     "id": 26,
-    "area": "area",
+    "area": "北部",
     "city": "新北市",
     "name": "連淨綠色科技概念館",
     "location": "新北市新店區寶興路45巷9弄2號",
@@ -201,7 +201,7 @@
   },
   {
     "id": 27,
-    "area": "area",
+    "area": "北部",
     "city": "新北市",
     "name": "聖瑪莉丹麥麵包莊園",
     "location": "新北市土城區中山路21號",
@@ -209,7 +209,7 @@
   },
   {
     "id": 28,
-    "area": "area",
+    "area": "北部",
     "city": "新北市",
     "name": "維格餅家 鳳梨酥夢工場",
     "location": "新北市五股區成泰路一段87號",
@@ -217,7 +217,7 @@
   },
   {
     "id": 29,
-    "area": "area",
+    "area": "北部",
     "city": "桃園市",
     "name": "GFun機能服飾紡織生活館",
     "location": "桃園市觀音區樹林里工業六路3號",
@@ -225,7 +225,7 @@
   },
   {
     "id": 30,
-    "area": "area",
+    "area": "北部",
     "city": "桃園市",
     "name": "大溪老茶廠",
     "location": "桃園市大溪區復興路二段732巷80號",
@@ -233,7 +233,7 @@
   },
   {
     "id": 31,
-    "area": "area",
+    "area": "北部",
     "city": "桃園市",
     "name": "太平洋自行車博物館",
     "location": "桃園市新屋區永安里永福路686號",
@@ -241,7 +241,7 @@
   },
   {
     "id": 32,
-    "area": "area",
+    "area": "北部",
     "city": "桃園市",
     "name": "卡司．蒂菈樂園",
     "location": "桃園市蘆竹區宏竹村大竹北路90-66號",
@@ -249,7 +249,7 @@
   },
   {
     "id": 33,
-    "area": "area",
+    "area": "北部",
     "city": "桃園市",
     "name": "巧克力共和國",
     "location": "桃園市八德區介壽路二段巧克力街底(巧克力共和國",
@@ -257,7 +257,7 @@
   },
   {
     "id": 34,
-    "area": "area",
+    "area": "北部",
     "city": "桃園市",
     "name": "江記豆腐乳文化館",
     "location": "桃園市中壢區月眉路2段248巷85號",
@@ -265,7 +265,7 @@
   },
   {
     "id": 35,
-    "area": "area",
+    "area": "北部",
     "city": "桃園市",
     "name": "老K舒眠文化館",
     "location": "桃園市新屋區梅高路３段97號",
@@ -273,7 +273,7 @@
   },
   {
     "id": 36,
-    "area": "area",
+    "area": "北部",
     "city": "桃園市",
     "name": "東和音樂體驗館",
     "location": "桃園市大溪區信義路226號",
@@ -281,7 +281,7 @@
   },
   {
     "id": 37,
-    "area": "area",
+    "area": "北部",
     "city": "桃園市",
     "name": "南僑桃園觀光體驗工廠",
     "location": "桃園市龜山區興邦路35號",
@@ -289,7 +289,7 @@
   },
   {
     "id": 38,
-    "area": "area",
+    "area": "北部",
     "city": "桃園市",
     "name": "祥儀機器人夢工廠  未來館",
     "location": "桃園市桃園區桃鶯路461號",
@@ -297,7 +297,7 @@
   },
   {
     "id": 39,
-    "area": "area",
+    "area": "北部",
     "city": "桃園市",
     "name": "蛋寶生技不老村",
     "location": "桃園市平鎮區金陵路三段105號",
@@ -305,7 +305,7 @@
   },
   {
     "id": 40,
-    "area": "area",
+    "area": "北部",
     "city": "桃園市",
     "name": "郭元益糕餅博物館",
     "location": "桃園市楊梅區幼獅工業區青年路9巷1號",
@@ -313,7 +313,7 @@
   },
   {
     "id": 41,
-    "area": "area",
+    "area": "北部",
     "city": "桃園市",
     "name": "雅聞魅力博覽館",
     "location": "桃園市楊梅區中山北路1段21巷1號",
@@ -321,7 +321,7 @@
   },
   {
     "id": 42,
-    "area": "area",
+    "area": "北部",
     "city": "桃園市",
     "name": "源友咖啡文化園區",
     "location": "桃園市平鎮區工業五路8號",
@@ -329,7 +329,7 @@
   },
   {
     "id": 43,
-    "area": "area",
+    "area": "北部",
     "city": "桃園市",
     "name": "義美生產‧生態‧生活廠區",
     "location": "桃園市蘆竹區南工路一段11號",
@@ -337,7 +337,7 @@
   },
   {
     "id": 44,
-    "area": "area",
+    "area": "北部",
     "city": "桃園市",
     "name": "葡萄王健康活力能量館",
     "location": "桃園市平鎮區金陵路二段402號",
@@ -345,7 +345,7 @@
   },
   {
     "id": 45,
-    "area": "area",
+    "area": "北部",
     "city": "桃園市",
     "name": "臺灣菸酒(股)公司桃園觀光酒廠",
     "location": "桃園市龜山區文化一路55號 ",
@@ -353,7 +353,7 @@
   },
   {
     "id": 46,
-    "area": "area",
+    "area": "北部",
     "city": "新竹市",
     "name": "春池綠能玻璃觀光工廠",
     "location": "新竹市香山區牛埔南路372號",
@@ -361,7 +361,7 @@
   },
   {
     "id": 47,
-    "area": "area",
+    "area": "北部",
     "city": "新竹縣",
     "name": "濟生Beauty兩岸觀光生醫美學健康館",
     "location": "新竹縣湖口鄉新竹工業區實踐路3號",

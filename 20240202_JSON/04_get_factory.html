@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container" id="myContainer">
+      <div class="row">
+        <div class="col-2">id</div>
+        <div class="col-2">name</div>
+        <div class="col-2">price</div>
+        <div class="col-6">location</div>
+      </div>
+      <!-- <div class="row">
+        <div class="col-2">1</div>
+        <div class="col-2">iphone1</div>
+        <div class="col-2">10000</div>
+        <div class="col-6">台北</div>
+      </div> -->
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        const url = "./data/factory.json";
+        $.ajax({
+          type: "get",
+          url: url,
+          data: "data",
+          dataType: "json",
+          success: function (res) {
+            console.log(res);
+            console.log("res[12].id", res[12].id);
+            console.log("res[12].area", res[12].area);
+            console.log("res[12].city", res[12].city);
+            console.log("res[12].name", res[12].name);
+            console.log("res[12].location", res[12].location);
+            console.log("res[12].url", res[12].url);
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
