@@ -10,11 +10,25 @@
     />
   </head>
   <body>
+    <div class="container" id="myContainer">
+      <div class="row">
+        <div class="col-2">id</div>
+        <div class="col-2">name</div>
+        <div class="col-2">price</div>
+        <div class="col-6">location</div>
+      </div>
+      <!-- <div class="row">
+        <div class="col-2">1</div>
+        <div class="col-2">iphone1</div>
+        <div class="col-2">10000</div>
+        <div class="col-6">台北</div>
+      </div> -->
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
       $(function () {
         const url = "./02_ajaxData.php";
-
+        const myContainer = $("#myContainer");
         // 等於下面的 $.get( )
         // $.ajax({
         //   type: "get",
@@ -28,6 +42,17 @@
 
         $.get(`${url}`, function (res) {
           console.log(res); // 這裡的結果要用 xampp 察看結果；如果是 live server，console 中的結果會怪怪的
+          res.forEach((element, idx) => {
+            let content = `
+          <div class="row">
+          <div class="col-2">${element.id}</div>
+          <div class="col-2">${element["name"]}</div>
+          <div class="col-2">${element["price"]}</div>
+          <div class="col-6">${element.location}</div>
+          </div>`;
+
+            myContainer.append(content);
+          });
         });
       });
     </script>
