@@ -89,21 +89,50 @@
           console.log(ele);
         });
 
-        const telStore = [
+        // 我自己定義的
+        // const telStore = [
+        //   {
+        //     name: "台北店",
+        //     item: ["ipone10", "iphone11", "iphone13"],
+        //     price: [10000, 20000, 40000],
+        //   },
+        //   {
+        //     name: "台中店",
+        //     item: ["iphone11", "iphone13"],
+        //     price: [20000, 40000],
+        //   },
+        //   {
+        //     name: "高雄店",
+        //     item: ["iphone12", "iphone13"],
+        //     price: [30000, 40000],
+        //   },
+        // ];
+
+        // 老師定義的
+        const mobileArr = [
           {
-            name: "台北店",
-            item: ["ipone10", "iphone11", "iphone13"],
-            price: [10000, 20000, 40000],
+            id: 1,
+            name: "iphone10",
+            price: 10000,
+            location: ["台北"],
           },
           {
-            name: "台中店",
-            item: ["iphone11", "iphone13"],
-            price: [20000, 40000],
+            id: 2,
+            name: "iphone11",
+            price: 20000,
+            location: ["台北", "台中"],
           },
           {
-            name: "高雄店",
-            item: ["iphone12", "iphone13"],
-            price: [30000, 40000],
+            id: 3,
+            name: "iphone12",
+            price: 30000,
+            location: ["高雄"],
+          },
+          {
+            id: 4,
+            name: "iphone13",
+            price: 40000,
+            location: ["台北", "台中", "高雄"],
           },
         ];
       });
