@@ -53,7 +53,8 @@
             //   console.log(idx, val);
             // });
 
-            $.each(nowLocation, function (idx, val) {
+            // nowLocation 是 js 的物件，所以用 $() 包起來
+            $(nowLocation).each(function (idx, val) {
               // console.log(idx, val);
               // const nowLocationName = val.locationName;
               // console.log(nowLocationName);
