@@ -11,6 +11,8 @@
     <script src="../ignore/js/pw.js"></script>
   </head>
   <body>
+    <ul id="result"></ul>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
       $(function () {
@@ -19,8 +21,25 @@
           url: weatherPW, // 這個 weatherPW 是從 ignore/js/pw.js 來的 ( 在 ignore/js/pw.js 宣告 weatherPW )，
           //   data: "data",
           //   dataType: "dataType",
-          success: function (response) {
-            console.log(response);
+          success: function (res) {
+            console.log(res);
+
+            // 因為需要的資料放在 res / records / location 這裡面
+            const nowLocation = res.records.location;
+            console.log(res.records.location);
+            // res.records.location.each(function (idx, val) {
+            //   console.log(idx, val);
+            // });
+
+            $.each(nowLocation, function (idx, val) {
+              // console.log(idx, val);
+              const nowLocationName = val.locationName;
+              // console.log(nowLocationName);
+              const content = `
+              <li>${nowLocationName}</li>
+              `;
+              $("#result").append(content);
+            });
           },
         });
       });
