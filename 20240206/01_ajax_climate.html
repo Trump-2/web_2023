@@ -13,9 +13,18 @@
   <body>
     <ul id="result"></ul>
 
+    <table class="table table-hover text-center" id="myTable">
+      <thead>
+        <th width="30%">id</th>
+        <th class="text-start">name</th>
+      </thead>
+      <tbody></tbody>
+    </table>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
       $(function () {
+        const myTable = $("#myTable");
         $.ajax({
           type: "get",
           url: weatherPW, // 這個 weatherPW 是從 ignore/js/pw.js 來的 ( 在 ignore/js/pw.js 宣告 weatherPW )，
@@ -33,12 +42,23 @@
 
             $.each(nowLocation, function (idx, val) {
               // console.log(idx, val);
-              const nowLocationName = val.locationName;
+              // const nowLocationName = val.locationName;
               // console.log(nowLocationName);
+
+              // const content = `
+              // <li>${nowLocationName}</li>
+              // `;
+              const nowID = String(idx + 1);
+              const nowLocationName = val.locationName;
+
               const content = `
-              <li>${nowLocationName}</li>
+              <tr>
+                <td>${nowID}</td>
+                <td class="text-start">${nowLocationName}</td>
+              </tr>
               `;
-              $("#result").append(content);
+
+              $("tbody").append(content);
             });
           },
         });
