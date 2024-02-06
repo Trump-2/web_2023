@@ -22,14 +22,17 @@
       <table id="myTable" class="display">
         <thead>
           <tr>
-            <th>id</th>
+            <th style="width: 10%">id</th>
             <th>name</th>
+            <th style="width: 25%" id="title12"></th>
+            <th style="width: 25%" id="title24"></th>
+            <th style="width: 25%" id="title36"></th>
           </tr>
         </thead>
         <tbody></tbody>
       </table>
     </div>
-
+    <img src="./images/" alt="" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <!-- 要記得 dataTables 的 js 要放在 jquery 的下面 -->
@@ -38,6 +41,9 @@
     <script>
       $(function () {
         const myTable = $("#myTable");
+        const title12 = $("#title12");
+        const title24 = $("#title24");
+        const title36 = $("#title36");
         $.ajax({
           type: "get",
           url: weatherPW, // 這個 weatherPW 是從 ignore/js/pw.js 來的 ( 在 ignore/js/pw.js 宣告 weatherPW )，
@@ -49,12 +55,10 @@
             // 因為需要的資料放在 res / records / location 這裡面
             const nowLocation = res.records.location;
             console.log(res.records.location);
-            // res.records.location.each(function (idx, val) {
-            //   console.log(idx, val);
-            // });
 
             // nowLocation 是 js 的物件，所以用 $() 包起來
             $(nowLocation).each(function (idx, val) {
+              console.log(nowLocation);
               // console.log(idx, val);
               // const nowLocationName = val.locationName;
               // console.log(nowLocationName);
@@ -62,13 +66,67 @@
               // const content = `
               // <li>${nowLocationName}</li>
               // `;
+
               const nowID = String(idx + 1).padStart(3, "0");
               const nowLocationName = val.locationName;
+
+              const title12Text = val.weatherElement[0].time[0].startTime;
+              const title24Text = val.weatherElement[0].time[1].startTime;
+              const title36Text = val.weatherElement[0].time[2].startTime;
+
+              const nowLocationMaxT12 =
+                val.weatherElement[4].time[0].parameter.parameterName;
+
+              const nowLocationminT12 =
+                val.weatherElement[2].time[0].parameter.parameterName;
+
+              const nowLocationWxName12 =
+                val.weatherElement[0].time[0].parameter.parameterName;
+
+              const nowLocationWxValue12 =
+                val.weatherElement[0].time[0].parameter.parameterValue;
+
+              const imgUrl12 = `${nowLocationWxValue12}.svg`;
+
+              const nowLocationMaxT24 =
+                val.weatherElement[4].time[1].parameter.parameterName;
+
+              const nowLocationminT24 =
+                val.weatherElement[2].time[1].parameter.parameterName;
+
+              const nowLocationWxName24 =
+                val.weatherElement[0].time[1].parameter.parameterName;
+
+              const nowLocationWxValue24 =
+                val.weatherElement[0].time[1].parameter.parameterValue;
+
+              const imgUrl24 = `${nowLocationWxValue24}.svg`;
+
+              const nowLocationMaxT36 =
+                val.weatherElement[4].time[2].parameter.parameterName;
+
+              const nowLocationminT36 =
+                val.weatherElement[2].time[2].parameter.parameterName;
+
+              const nowLocationWxName36 =
+                val.weatherElement[0].time[2].parameter.parameterName;
+
+              const nowLocationWxValue36 =
+                val.weatherElement[0].time[2].parameter.parameterValue;
+
+              const imgUrl36 = `${nowLocationWxValue36}.svg`;
+
+              title12.text(title12Text);
+              title24.text(title24Text);
+              title36.text(title36Text);
 
               const content = `
               <tr>
                 <td>${nowID}</td>
                 <td>${nowLocationName}</td>
+                <td>${nowLocationMaxT12} - ${nowLocationminT12}°C ${nowLocationWxName12} <img src="./images/day/${imgUrl12}" alt=""></td>
+                <td>${nowLocationMaxT24} - ${nowLocationminT24}°C ${nowLocationWxName24} <img src="./images/day/${imgUrl24}" alt=""></td>
+                <td>${nowLocationMaxT36} - ${nowLocationminT36}°C ${nowLocationWxName36} <img src="./images/day/${imgUrl36}" alt=""></td>
               </tr>
               `;
 
