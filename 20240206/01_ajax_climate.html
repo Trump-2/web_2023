@@ -57,6 +57,17 @@
             const nowLocation = res.records.location;
             console.log(res.records.location);
 
+            const title12Text =
+              nowLocation[1].weatherElement[0].time[0].startTime;
+            const title24Text =
+              nowLocation[1].weatherElement[0].time[1].startTime;
+            const title36Text =
+              nowLocation[1].weatherElement[0].time[2].startTime;
+
+            title12.text(title12Text);
+            title24.text(title24Text);
+            title36.text(title36Text);
+
             // nowLocation 是 js 的陣列，所以用 $() 包起來，才能使用 .each( )
             $(nowLocation).each(function (idx, val) {
               console.log(nowLocation);
@@ -68,12 +79,8 @@
               // <li>${nowLocationName}</li>
               // `;
 
-              const nowID = String(idx + 1).padStart(3, "0");
+              const nowID = String(idx + 1).padStart(2, "0");
               const nowLocationName = val.locationName;
-
-              const title12Text = val.weatherElement[0].time[0].startTime;
-              const title24Text = val.weatherElement[0].time[1].startTime;
-              const title36Text = val.weatherElement[0].time[2].startTime;
 
               const nowLocationMaxT12 =
                 val.weatherElement[4].time[0].parameter.parameterName;
@@ -116,10 +123,6 @@
                 val.weatherElement[0].time[2].parameter.parameterValue;
 
               const imgUrl36 = `${nowLocationWxValue36}.svg`;
-
-              title12.text(title12Text);
-              title24.text(title24Text);
-              title36.text(title36Text);
 
               const content = `
               <tr>
