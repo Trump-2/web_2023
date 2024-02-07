@@ -68,6 +68,43 @@
             title24.text(title24Text);
             title36.text(title36Text);
 
+            const time12 = new Date(title12Text);
+            const time24 = new Date(title24Text);
+            const time36 = new Date(title36Text);
+
+            // 用 .getHours( ) 來取得 【時】，回傳的結果為一數字
+            const time12Hour = time12.getHours();
+            const time24Hour = time24.getHours();
+            const time36Hour = time36.getHours();
+            // console.log(time12Hour);
+
+            let dayNight12 = "day";
+            let dayNight24 = "day";
+            let dayNight36 = "day";
+
+            switch (time12Hour) {
+              case 0:
+              case 18:
+                dayNight12 = "night";
+                break;
+            }
+
+            switch (time24Hour) {
+              case 0:
+              case 18:
+                dayNight24 = "night";
+                break;
+            }
+
+            switch (time36Hour) {
+              case 0:
+              case 18:
+                dayNight36 = "night";
+                break;
+            }
+
+            // console.log(dayNight12, dayNight24, dayNight36);
+
             // nowLocation 是 js 的陣列，所以用 $() 包起來，才能使用 .each( )
             $(nowLocation).each(function (idx, val) {
               console.log(nowLocation);
@@ -128,11 +165,12 @@
               <tr>
                 <td>${nowID}</td>
                 <td>${nowLocationName}</td>
-                <td>${nowLocationMaxT12} - ${nowLocationminT12}°C ${nowLocationWxName12} <img src="./images/day/${imgUrl12}" alt=""></td>
-                <td>${nowLocationMaxT24} - ${nowLocationminT24}°C ${nowLocationWxName24} <img src="./images/day/${imgUrl24}" alt=""></td>
-                <td>${nowLocationMaxT36} - ${nowLocationminT36}°C ${nowLocationWxName36} <img src="./images/day/${imgUrl36}" alt=""></td>
-              </tr>
-              `;
+                <td>${nowLocationMaxT12} - ${nowLocationminT12} °C &nbsp;&nbsp;${nowLocationWxName12} &nbsp;&nbsp;&nbsp;<img src="./images/${dayNight12}/${imgUrl12}" alt=""></td>
+                <td>${nowLocationMaxT24} - ${nowLocationminT24} °C &nbsp;&nbsp;${nowLocationWxName24} &nbsp;&nbsp;&nbsp;<img src="./images/${dayNight24}/${imgUrl24}" alt=""></td>
+                <td>${nowLocationMaxT36} - ${nowLocationminT36} °C &nbsp;&nbsp;${nowLocationWxName36} &nbsp;&nbsp;&nbsp;<img src="./images/${dayNight36}/${imgUrl36}" alt=""></td>
+                </tr>
+                `;
+              // 想要的結果 <img src="./images/day or night/${imgUrl36}" alt="">
 
               $("tbody").append(content);
             });
