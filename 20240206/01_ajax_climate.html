@@ -55,14 +55,14 @@
 
             // 因為需要的資料放在 res / records / location 這裡面
             const nowLocation = res.records.location;
-            console.log(res.records.location);
+            // console.log(res.records.location);
 
             const title12Text =
               nowLocation[1].weatherElement[0].time[0].startTime;
             const title24Text =
-              nowLocation[1].weatherElement[0].time[1].startTime;
+              nowLocation[1].weatherElement[0].time[1].endTime;
             const title36Text =
-              nowLocation[1].weatherElement[0].time[2].startTime;
+              nowLocation[1].weatherElement[0].time[2].endTime;
 
             title12.text(title12Text);
             title24.text(title24Text);
@@ -107,7 +107,7 @@
 
             // nowLocation 是 js 的陣列，所以用 $() 包起來，才能使用 .each( )
             $(nowLocation).each(function (idx, val) {
-              console.log(nowLocation);
+              // console.log(nowLocation);
               // console.log(idx, val);
               // const nowLocationName = val.locationName;
               // console.log(nowLocationName);
