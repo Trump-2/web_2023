@@ -18,25 +18,24 @@
     <script src="../ignore/js/pw.js"></script>
   </head>
   <body>
-    <div class="container mt-3">
+    <div class="container-fluid my-4">
       <!-- display 類別是必要的，因為它是 DataTables 插件用來識別哪個表格需要應用其功能的方式。如果你移除 display 類別，DataTables 插件將無法正確地應用於你的表格。  -->
       <table id="myTable" class="display">
         <thead>
           <tr>
-            <th style="width: 10%">id</th>
+            <th style="width: 7%">id</th>
             <th>name</th>
-            <th style="width: 25%" id="title12"></th>
-            <th style="width: 25%" id="title24"></th>
-            <th style="width: 25%" id="title36"></th>
+            <th style="width: 27%" id="title12"></th>
+            <th style="width: 27%" id="title24"></th>
+            <th style="width: 27%" id="title36"></th>
           </tr>
         </thead>
         <tbody></tbody>
       </table>
     </div>
-    <img src="./images/" alt="" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-    <!-- 要記得 dataTables 的 js 要放在 jquery 的下面 -->
+    <!-- 要記得 dataTables 的 js 要放在 jquery 的 js下面 -->
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
 
     <script>
@@ -45,6 +44,7 @@
         const title12 = $("#title12");
         const title24 = $("#title24");
         const title36 = $("#title36");
+
         $.ajax({
           type: "get",
           url: weatherPW, // 這個 weatherPW 是從 ignore/js/pw.js 來的 ( 在 ignore/js/pw.js 宣告 weatherPW )，
@@ -57,7 +57,7 @@
             const nowLocation = res.records.location;
             console.log(res.records.location);
 
-            // nowLocation 是 js 的物件，所以用 $() 包起來
+            // nowLocation 是 js 的陣列，所以用 $() 包起來，才能使用 .each( )
             $(nowLocation).each(function (idx, val) {
               console.log(nowLocation);
               // console.log(idx, val);
